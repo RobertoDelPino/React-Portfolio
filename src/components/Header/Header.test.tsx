@@ -18,4 +18,13 @@ describe("Header", () => {
         expect(navbar).toBeInTheDocument()
 
     });
+
+    it("contains title page", function () {
+        render(<Header/>)
+
+        const title = screen.getByRole("heading")
+
+        expect(title).toBeInTheDocument()
+    });
+
 })
