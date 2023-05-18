@@ -2,18 +2,12 @@ import {useEffect, useState} from "react";
 
 export const DarkModeSwitcher = () => {
 
-    const [theme, setTheme] = useState("");
-
-    useEffect(() => {
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            setTheme("dark");
-        } else {
-            setTheme("light");
-        }
-    }, []);
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "" );
 
     const handleThemeSwitch = () => {
-        setTheme(theme === 'dark' ? 'light' : 'dark');
+        const newTheme = theme === 'dark' ? 'light' : 'dark'
+        setTheme(newTheme);
+        localStorage.setItem("theme", newTheme)
     };
 
     useEffect(() => {
