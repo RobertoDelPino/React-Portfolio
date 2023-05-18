@@ -29,7 +29,7 @@ export const DarkModeSwitcher = () => {
             <button
                 type="button"
                 onClick={handleThemeSwitch}
-                className=" text-lg p-1 rounded-md"
+                className=" text-lg p-1 rounded-md mr-6"
                 role="button"
                 aria-label="dark-mode"
             >
