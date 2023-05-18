@@ -27,4 +27,12 @@ describe("Header", () => {
         expect(title).toBeInTheDocument()
     });
 
+    it("contains dark mode switch", function () {
+        render(<Header/>)
+
+        const title = screen.getByRole("button", {name: "dark-mode"})
+
+        expect(title).toBeInTheDocument()
+    });
+
 })
