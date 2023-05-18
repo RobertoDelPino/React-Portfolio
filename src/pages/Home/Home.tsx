@@ -1,6 +1,7 @@
+import {Header} from "@components/Header/Header.tsx";
 
 export const Home = () => (
-    <section>
-
-    </section>
+    <>
+        <Header />
+    </>
 );
