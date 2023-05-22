@@ -17,4 +17,12 @@ describe("Home", () => {
 
         expect(header).toBeInTheDocument()
     })
+
+    it("has an img as a personal photo", function () {
+        render(<Home />)
+
+        const personalImg = screen.getByRole("img")
+
+        expect(personalImg).toBeInTheDocument()
+    });
 })
