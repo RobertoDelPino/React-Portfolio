@@ -21,7 +21,7 @@ export const Header = () => {
     return (
         <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 dark:bg-gray-800 flex flex-wrap content-center justify-between" >
 
-            <h2 className="inline-block leading-10 dark:text-white text-xl font-bold w-[50%]"><a className="" href="#">Roberto del Pino</a></h2>
+            <h2 className="inline-block leading-10 dark:text-white text-xl font-bold w-[50%]"><a className="" href="#">roberto.ph</a></h2>
             <div className="flex">
                 <div className="hidden lg:block">{navList}</div>
                 <DarkModeSwitcher/>
