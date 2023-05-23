@@ -1,8 +1,10 @@
+import {Technology} from "@components/Technology/Technology.tsx";
+
 export interface TechnologiesListProps {
-    list: Technology[];
+    list: ITechnology[];
 }
 
-export interface Technology {
+export interface ITechnology {
     name: string;
     image: string;
 }
@@ -10,13 +12,10 @@ export interface Technology {
 export const TechnologiesList = ({ list }: TechnologiesListProps )  => {
     return (
         <>
-            <section className="flex justify-center flex-wrap py-10 px-5 w-[80%] m-auto">
+            <section className="flex justify-center flex-wrap py-10 px-5 max-w-screen-lg m-auto">
                 {
                     list.map((tech, index) => (
-                        <article key={index} aria-label="technology" className="mx-4 lg:mx-12 my-4">
-                            <img src={tech.image} alt={tech.name} className="w-24 lg:w-28"/>
-                            <p className="hidden">{tech.name}</p>
-                        </article>
+                        <Technology key={index} tech={tech}/>
                     ))
                 }
             </section>
