@@ -1,7 +1,7 @@
 import {Collapse, Navbar} from "@material-tailwind/react";
 import {DarkModeSwitcher} from "@components/DarkModeSwitcher/DarkModeSwitcher.tsx";
 import {useState} from "react";
-import { BsInstagram, BsTwitter, GoMail, HiMenuAlt3 } from "react-icons/all";
+import {BsGithub, BsInstagram, GoMail, HiMenuAlt3} from "react-icons/all";
 
 export const Header = () => {
 
@@ -18,7 +18,7 @@ export const Header = () => {
                 <li className="inline-block mx-1 p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600" role="link"><a href="#">Contact</a></li>
                 <ul className="flex ">
                     <li className="text-2xl p-1 mr-3 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600"><a href="#"> <BsInstagram/> </a></li>
-                    <li className="text-2xl p-1 mr-3 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600"><a href="#"> <BsTwitter/> </a></li>
+                    <li className="text-2xl p-1 mr-3 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600"><a href="#"> < BsGithub /> </a></li>
                     <li className="text-2xl p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600"><a href="#"> <GoMail /> </a></li>
                 </ul>
             </ul>
