@@ -1,6 +1,6 @@
 import {Header} from "@components/Header/Header.tsx";
 import personalPhoto from "../../assets/fotoPerfil-1.jpg"
-import {TechnologiesList, Technology} from "@components/TecnologiesList/TechnologiesList.tsx";
+import {TechnologiesList, ITechnology} from "@components/TecnologiesList/TechnologiesList.tsx";
 import javascript from "../../assets/TechIcons/javascript.png"
 import bootstrap from "../../assets/TechIcons/bootstrap.png"
 import css from "../../assets/TechIcons/css-3.png"
@@ -13,7 +13,7 @@ import typescript from "../../assets/TechIcons/typescript.png"
 
 export const Home = () => {
 
-    const techList: Technology[] = [
+    const techList: ITechnology[] = [
         {
             name: "Javascript",
             image: javascript
