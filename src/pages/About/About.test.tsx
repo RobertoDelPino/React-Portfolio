@@ -24,5 +24,11 @@ describe("About page", () => {
         expect(workExperience).toBeInTheDocument()
     });
 
+    it("contains an 'Eduacation' section", function () {
+        render(<About/>)
 
+        const eduaction = screen.getByRole("region", {name: "Education region"})
+
+        expect(eduaction).toBeInTheDocument()
+    });
 })
