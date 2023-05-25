@@ -1,4 +1,3 @@
-import {Header} from "@components/Header/Header.tsx";
 import personalPhoto from "../../assets/fotoPerfil-1.jpg"
 import {TechnologiesList, ITechnology} from "@components/TecnologiesList/TechnologiesList.tsx";
 import javascript from "../../assets/TechIcons/javascript.png"
@@ -50,10 +49,6 @@ export const Home = () => {
 
     return (
         <>
-            <Header/>
-
-            <hr className="max-w-screen-xl m-auto"/>
-
             <section className=" max-w-screen-xl m-auto flex flex-wrap w-[100%] justify-around py-10 lg:py-32 dark:bg-gray-800 ">
                 <div className="flex content-center flex-wrap px-6 mb-9">
                     <h1 className="text-2xl dark:text-white w-[100%] lg:text-4xl">

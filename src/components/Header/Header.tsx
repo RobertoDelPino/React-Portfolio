@@ -26,23 +26,24 @@ export const Header = () => {
     )
 
     return (
-        <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 dark:bg-gray-800 flex flex-wrap content-center justify-between" >
+        <>
+            <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 dark:bg-gray-800 flex flex-wrap content-center justify-between" >
 
-            <h2 className="inline-block leading-10 dark:text-white text-xl font-bold w-[70%] lg:w-[25%]"><a className="" href="#">roberto.ph</a></h2>
-            <div className="flex justify-end w-[30%] lg:w-[75%]">
-                <div className="hidden lg:block w-[90%]">{navList}</div>
-                <DarkModeSwitcher/>
-                <button onClick={toggleOpen} className="lg:hidden">
-                    <HiMenuAlt3 role="graphics-document" className="dark:text-white"></HiMenuAlt3>
-                </button>
-            </div>
-            <Collapse open={openNav} className="hidden w-[100%]">
-                <div className="lg:hidden">
-                    {openNav && navList}
+                <h2 className="inline-block leading-10 dark:text-white text-xl font-bold w-[70%] lg:w-[25%]"><a className="" href="#">roberto.ph</a></h2>
+                <div className="flex justify-end w-[30%] lg:w-[75%]">
+                    <div className="hidden lg:block w-[90%]">{navList}</div>
+                    <DarkModeSwitcher/>
+                    <button onClick={toggleOpen} className="lg:hidden">
+                        <HiMenuAlt3 role="graphics-document" className="dark:text-white"></HiMenuAlt3>
+                    </button>
                 </div>
-            </Collapse>
-
-
-        </Navbar>
+                <Collapse open={openNav} className="hidden w-[100%]">
+                    <div className="lg:hidden">
+                        {openNav && navList}
+                    </div>
+                </Collapse>
+            </Navbar>
+            <hr className="max-w-screen-xl m-auto"/>
+        </>
     );
 };
