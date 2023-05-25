@@ -15,4 +15,14 @@ describe("About page", () => {
 
         expect(aboutMePage).toBeInTheDocument()
     });
+
+    it("contains an 'Work experience' section", function () {
+        render(<About/>)
+
+        const workExperience = screen.getByRole("region", {name: "Work experience region"})
+
+        expect(workExperience).toBeInTheDocument()
+    });
+
+
 })
