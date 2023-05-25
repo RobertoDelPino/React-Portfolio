@@ -14,6 +14,10 @@ export const About = () => {
             <section role="region" aria-label="About me region">
 
             </section>
+
+            <section role="region" aria-label="Work experience region">
+
+            </section>
         </>
     )
 }
