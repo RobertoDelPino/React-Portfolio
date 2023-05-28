@@ -61,7 +61,7 @@ export const Home = () => {
                      className="w-72 lg:w-80 rounded-full border-black border-2 dark:border-white"/>
             </section>
 
-            <section className="dark:bg-gray-800 dark:text-white">
+            <section className="dark:bg-gray-800 dark:text-white max-w-screen-xl m-auto">
                 <h2 className="text-2xl text-bold text-center pt-10">My Tech Stack</h2>
                 <p className="text-center mt-3">Tools I've using in recent projects</p>
                 < TechnologiesList list={techList} />
