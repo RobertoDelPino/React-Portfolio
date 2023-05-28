@@ -31,4 +31,12 @@ describe("About page", () => {
 
         expect(eduaction).toBeInTheDocument()
     });
+
+    it("contains an 'Events' section", function () {
+        render(<About/>)
+
+        const eduaction = screen.getByRole("region", {name: "Events region"})
+
+        expect(eduaction).toBeInTheDocument()
+    });
 })
