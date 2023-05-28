@@ -22,6 +22,11 @@ export const About = () => {
 
                 </article>
 
+                <article role="region" aria-label="Events region">
+                    <h2 className="text-2xl font-bold dark:text-white my-4">Eventos asistidos</h2>
+
+                </article>
+
                 <article role="region" aria-label="Education region">
                     <h2 className="text-2xl font-bold dark:text-white my-4">Educación</h2>
                 </article>
