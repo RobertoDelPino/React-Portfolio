@@ -14,7 +14,7 @@ Education       --> Educación
 export const About = () => {
     return (
         <>
-            <section className="dark:bg-gray-800 max-w-screen-xl m-auto lg:p-8 p-4">
+            <section className="dark:bg-gray-800 max-w-screen-xl m-auto lg:p-8 p-4 lg:h-[90%]">
                 <article role="region" aria-label="About me region" className="">
                     <h2 className="text-2xl font-extrabold tracking-wide dark:text-white my-4">Sobre mi</h2>
                     <p className="dark:text-gray-100">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum,
