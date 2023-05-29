@@ -15,7 +15,7 @@ export function WorkExperienceList() {
     ]
     
     return (
-        <section className="border-b-2 pb-4 md:w-[70%] my-10">
+        <section className="md:w-[70%] ">
 
             {
                 list.map(work => <WorkExperienceCard  work={work}/>)

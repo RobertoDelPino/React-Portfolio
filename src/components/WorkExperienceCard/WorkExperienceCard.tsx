@@ -5,7 +5,7 @@ interface WorkExperienceCardProps {
 }
 
 export const WorkExperienceCard = ({work}: WorkExperienceCardProps) => <section>
-    <article className="hidden md:block">
+    <article className="hidden md:block border-b-2 pb-4 ">
         <article className="md:flex justify-between">
             <h3 className="text-xl font-bold dark:text-white">{work.name}</h3>
             <p className="inline-block bg-green-300 w-24 text-center rounded-3xl text-green-700 font-bold">{work.workday}</p>
@@ -18,7 +18,7 @@ export const WorkExperienceCard = ({work}: WorkExperienceCardProps) => <section>
         </article>
     </article>
 
-    <article className="block md:hidden">
+    <article className="block md:hidden border-b-2 pb-4 my-8">
         <h3 className="text-lg font-bold dark:text-white">{work.name}</h3>
         <article className="flex justify-between mt-4">
             <p><a href={work.urlCompany} target="_blank"
