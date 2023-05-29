@@ -1,8 +1,8 @@
 import {WorkExperienceCard} from "@components/WorkExperienceCard/WorkExperienceCard.tsx";
 import {workday, WorkExperience} from "@domain/Interfaces/WorkExperience.tsx";
 
-export function WorkExperienceList() {
-    
+export const WorkExperienceList = () => {
+
     const list: WorkExperience[] = [
         {
             name: "Prácticas de Web Developer",
@@ -13,7 +13,7 @@ export function WorkExperienceList() {
             workday: workday.FullTime
         }
     ]
-    
+
     return (
         <section className="md:w-[70%] ">
 
@@ -23,4 +23,4 @@ export function WorkExperienceList() {
 
         </section>
     )
-}
+};
