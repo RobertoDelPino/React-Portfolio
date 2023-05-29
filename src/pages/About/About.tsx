@@ -1,4 +1,4 @@
-import {WorkExperienceCard} from "@components/WorkExperienceCard.tsx";
+import {WorkExperienceList} from "@components/WorkExperienceList/WorkExperienceList.tsx";
 
 {/*
 
@@ -22,15 +22,7 @@ export const About = () => {
 
                 <article role="region" aria-label="Work experience region">
                     <h2 className="text-2xl font-bold dark:text-white my-4">Experiencia de Trabajo</h2>
-                    <section>
-                        <section className="border-b-2 pb-4 md:w-[70%] my-10">
-
-                            <WorkExperienceCard/>
-
-                        </section>
-
-                    </section>
-
+                    <WorkExperienceList/>
                 </article>
 
                 <article role="region" aria-label="Events region">
