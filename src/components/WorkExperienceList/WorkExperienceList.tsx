@@ -7,7 +7,7 @@ export function WorkExperienceList() {
         {
             name: "Prácticas de Web Developer",
             company: "LeanMind",
-            urlCompany: "http://www.leanmind.es",
+            urlCompany: "https://www.leanmind.es",
             time: "Marzo 2023 - Mayo 2023",
             workplace: "San Cristóbal de La Laguna",
             workday: workday.FullTime
