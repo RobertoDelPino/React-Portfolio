@@ -1,12 +1,13 @@
 import {WorkExperienceList} from "@components/WorkExperienceList/WorkExperienceList.tsx";
+import {EducationExperienceList} from "@components/EducationExperienceList/EducationExperienceList.tsx";
 
 {/*
 
-            About me        --> Sobre mi
-            Work experience --> Experiencia de trabajo
-            Education       --> Educación
+About me        --> Sobre mi
+Work experience --> Experiencia de trabajo
+Education       --> Educación
 
-            */}
+*/}
 
 
 export const About = () => {
@@ -27,11 +28,11 @@ export const About = () => {
 
                 <article role="region" aria-label="Events region">
                     <h2 className="text-2xl font-bold dark:text-white my-4">Eventos asistidos</h2>
-
                 </article>
 
                 <article role="region" aria-label="Education region">
                     <h2 className="text-2xl font-bold dark:text-white my-4">Educación</h2>
+                    <EducationExperienceList/>
                 </article>
             </section>
         </>
