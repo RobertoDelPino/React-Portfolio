@@ -1,19 +1,5 @@
 import {WorkExperienceCard} from "@components/WorkExperienceCard/WorkExperienceCard.tsx";
-
-enum workday {
-    FullTime = "Full time",
-    PartTime = "Part time"
-}
-
-interface WorkExperience {
-    name: string
-    company: string
-    urlCompany: string
-    time: string
-    workday: workday,
-    workplace: string
-
-}
+import {workday, WorkExperience} from "@domain/Interfaces/WorkExperience.tsx";
 
 export function WorkExperienceList() {
     
@@ -31,7 +17,9 @@ export function WorkExperienceList() {
     return (
         <section className="border-b-2 pb-4 md:w-[70%] my-10">
 
-            <WorkExperienceCard/>
+            {
+                list.map(work => <WorkExperienceCard  work={work}/>)
+            }
 
         </section>
     )
