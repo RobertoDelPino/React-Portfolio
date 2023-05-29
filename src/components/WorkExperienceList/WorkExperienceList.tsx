@@ -18,7 +18,7 @@ export function WorkExperienceList() {
         <section className="md:w-[70%] ">
 
             {
-                list.map(work => <WorkExperienceCard  work={work}/>)
+                list.map((work, index) => <WorkExperienceCard key={index} work={work}/>)
             }
 
         </section>
