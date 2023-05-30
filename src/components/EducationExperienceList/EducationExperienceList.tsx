@@ -6,7 +6,7 @@ export const EducationExperienceList = () => {
     const list: EducationExperience[] = [
         {
             name: "Desarrollo de Aplicaciones Web (DAW)",
-            time: "Marzo 2023 - Mayo 2023",
+            time: "Septiembre 2021 - Mayo 2023",
             place: "San Cristóbal de La Laguna",
             institute: "CIFP César Manrique",
             instituteUrl: "https://www.cifpcesarmanrique.es"
