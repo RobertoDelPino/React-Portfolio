@@ -12,13 +12,13 @@ export const ProjectsPage = () => {
         new Project(
             "https://www.github.com",
             "Mi portfolio",
-            "Te presento el código de esta página, mi portfolio. Si deseas enviarme cualquier feedback contacta conmigo a través de mi correo",
+            "Te presento el código de esta página, mi portfolio. Si deseas enviarme cualquier feedback contacta conmigo a través de mi correo.",
             "https://robertodelpino.netlify.com",
             robertoPortfolio),
         new Project(
             "https://www.github.com",
             "Hiriambg portfolio",
-            "Te presento el portfolio de una estudiante de fotografía, Hiriam Bartolomé, quien ha estado en diversos eventos internacionales como JSDay Canarias",
+            "Te presento el portfolio de una estudiante de fotografía, Hiriam Bartolomé, quien ha estado en diversos eventos internacionales como JSDay Canarias.",
             "https://hiriambg.netlify.com",
             hiriamPortfolio)
     ]
