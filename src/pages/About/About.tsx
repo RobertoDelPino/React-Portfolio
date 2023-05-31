@@ -18,7 +18,7 @@ export const About = () => {
                 <section className="dark:bg-gray-800 max-w-screen-xl m-auto lg:p-8 p-4">
                     <article role="region" aria-label="About me region" className="my-10">
                         <h2 className="text-2xl font-extrabold tracking-wide dark:text-white my-4">Sobre mi</h2>
-                        <p className="dark:text-gray-100">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum,
+                        <p className="dark:text-gray-100 w-[100%] lg:w-[70%]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum,
                             deserunt dolorem eius esse officia quidem. Ad cum debitis, deleniti dolore eius molestiae
                             pariatur reiciendis reprehenderit sapiente sed suscipit voluptatibus. Eius?</p>
                     </article>
