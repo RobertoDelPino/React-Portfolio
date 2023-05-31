@@ -10,7 +10,7 @@ export const ProjectsPage = () => {
 
     const list: Project[] = [
         new Project(
-            "https://www.github.com",
+            "https://github.com/RobertoDelPino/React-Portfolio",
             "Mi portfolio",
             "Te presento el código de esta página, mi portfolio. Si deseas enviarme cualquier feedback contacta conmigo a través de mi correo.",
             "https://robertodelpino.netlify.com",
