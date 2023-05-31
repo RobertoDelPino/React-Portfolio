@@ -9,7 +9,7 @@ export const ProjectsList = ({list}:ProjectsListProps) => (
     <section role="region" aria-label="Project List Section" className="flex justify-center flex-wrap">
         {
             list.map((project: Project, index) => (
-                <article role="article" aria-label="Project" key={index} className="m-3 w-64 md:w-80 bg-gray-600 rounded-2xl">
+                <article role="article" aria-label="Project" key={index} className="m-3 w-52 md:w-72 bg-gray-600 rounded-2xl">
                     <img src={project.image} alt={project.title}/>
                     <article className="p-4">
                         <h3 className="font-bold text-xl">{project.title}</h3>

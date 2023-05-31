@@ -10,70 +10,24 @@ export const ProjectsPage = () => {
     const list: Project[] = [
         new Project(
             "https://www.github.com",
-            "Portfolio",
-            "This is sample project description random things " +
-            "are here in description This is sample project lorem " +
-            "ipsum generator for dummy content",
+            "Mi portfolio",
+            "Te presento el código de esta página, mi portfolio. Si deseas enviarme cualquier feedback contacta conmigo a través de mi correo",
             "https://robertodelpino.netlify.com",
             projectExample),
         new Project(
             "https://www.github.com",
-            "Portfolio",
-            "This is sample project description random things " +
-            "are here in description This is sample project lorem " +
-            "ipsum generator for dummy content",
-            "https://robertodelpino.netlify.com",
-            projectExample),
-        new Project(
-            "https://www.github.com",
-            "Portfolio",
-            "This is sample project description random things " +
-            "are here in description This is sample project lorem " +
-            "ipsum generator for dummy content",
-            "https://robertodelpino.netlify.com",
-            projectExample),
-        new Project(
-            "https://www.github.com",
-            "Portfolio",
-            "This is sample project description random things " +
-            "are here in description This is sample project lorem " +
-            "ipsum generator for dummy content",
-            "https://robertodelpino.netlify.com",
-            projectExample),
-        new Project(
-            "https://www.github.com",
-            "Portfolio",
-            "This is sample project description random things " +
-            "are here in description This is sample project lorem " +
-            "ipsum generator for dummy content",
-            "https://robertodelpino.netlify.com",
-            projectExample),
-        new Project(
-            "https://www.github.com",
-            "Portfolio",
-            "This is sample project description random things " +
-            "are here in description This is sample project lorem " +
-            "ipsum generator for dummy content",
-            "https://robertodelpino.netlify.com",
-            projectExample),
-        new Project(
-            "https://www.github.com",
-            "Portfolio",
-            "This is sample project description random things " +
-            "are here in description This is sample project lorem " +
-            "ipsum generator for dummy content",
-            "https://robertodelpino.netlify.com",
-            projectExample),
+            "Hiriambg portfolio",
+            "Te presento el portfolio de una estudiante de fotografía, Hiriam Bartolomé, quien ha estado en diversos eventos internacionales como JSDay Canarias",
+            "https://hiriambg.netlify.com",
+            projectExample)
     ]
 
     return (
-        <section className=" 2xl:min-h-[95%] md:min-h-[80%] dark:bg-gray-800">
+        <section className=" 2xl:min-h-[95%] xl:min-h-[70%] md:min-h-[80%] dark:bg-gray-800">
             <article className="max-w-screen-xl m-auto dark:text-white mt-20">
                 <h2 className="text-3xl font-bold text-center">Proyectos</h2>
                 <p className="text-center text-lg">Proyectos que he creado hasta ahora</p>
-
                 <ProjectsList list={list}/>
-
             </article>
         </section>
     );
