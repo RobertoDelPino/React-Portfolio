@@ -8,6 +8,8 @@ export const ProjectsPage = () => {
                 <h2 className="text-3xl font-bold text-center">Proyectos</h2>
                 <p className="text-center text-lg">Proyectos que he creado hasta ahora</p>
 
+                <section role="region" aria-label="Project List Section"></section>
+
             </article>
         </section>
     );
