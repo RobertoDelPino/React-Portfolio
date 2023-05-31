@@ -73,7 +73,7 @@ export const Home = () => {
 
     return (
         <>
-            <section className="w-[100%] dark:bg-gray-800 min-h-[95%]">
+            <section className="w-[100%] dark:bg-gray-800 min-h-[95%] pb-14">
                 <section className=" max-w-screen-xl m-auto flex flex-wrap w-[100%] justify-around py-10 lg:py-32 dark:bg-gray-800 ">
                     <div className="flex content-center flex-wrap px-6 mb-9">
                         <h1 className="text-2xl dark:text-white w-[100%] md:text-start lg:text-4xl text-center">
