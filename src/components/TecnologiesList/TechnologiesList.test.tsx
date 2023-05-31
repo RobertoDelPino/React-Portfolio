@@ -1,11 +1,11 @@
 import {render, within} from "@testing-library/react";
-import {TechnologiesList, Technology} from "@components/TecnologiesList/TechnologiesList.tsx";
+import {TechnologiesList, ITechnology} from "@components/TecnologiesList/TechnologiesList.tsx";
 import javascript from "../../assets/TechIcons/javascript.png"
 
 describe("TechnologiesList", () => {
     it("show item list", function () {
 
-        const technologies: Technology[] = [{
+        const technologies: ITechnology[] = [{
             name: "javascript",
             image: javascript
         }]
