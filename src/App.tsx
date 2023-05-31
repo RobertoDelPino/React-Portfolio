@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Header} from "@components/Header/Header.tsx";
 import {About} from "@pages/About/About.tsx";
 import {Footer} from "@components/Footer/Footer.tsx";
+import {ProjectsPage} from "@pages/ProjectsPage/ProjectsPage.tsx";
 
 const App = () => (
     <div className="dark:bg-gray-800 h-[100%]">
@@ -11,6 +12,7 @@ const App = () => (
             <Routes>
                 <Route path="/" element={ <Home />}/>
                 <Route path="/about" element={ <About />}/>
+                <Route path="/projects" element={ <ProjectsPage />}/>
                 {/*<Route path='*' element={<Navigate to='/pokemon' replace />} />*/}
             </Routes>
             <Footer />
