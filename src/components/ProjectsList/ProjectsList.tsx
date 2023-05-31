@@ -1,0 +1,1 @@
+export const ProjectsList = () => <section role="region" aria-label="Project List Section"></section>;
