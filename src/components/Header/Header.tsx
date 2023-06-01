@@ -31,7 +31,7 @@ export const Header = () => {
         <>
             <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 dark:bg-gray-800 flex flex-wrap content-center justify-between rounded-md" >
 
-                <h2 className="inline-block leading-10 dark:text-white text-xl font-bold w-[70%] lg:w-[25%]"><a className="" href="/">roberto.ph</a></h2>
+                <h2 className="inline-block leading-10 dark:text-white text-xl font-bold w-[70%] lg:w-[25%]"><Link to="/">roberto.ph</Link></h2>
                 <div className="flex justify-end w-[30%] lg:w-[75%]">
                     <div className="hidden lg:block w-[90%]">{navList}</div>
                     <DarkModeSwitcher/>
