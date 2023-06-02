@@ -5,7 +5,7 @@ interface EducationCardProps {
 }
 
 export const EducationCard = ({education}: EducationCardProps) => <section>
-    <article className="hidden md:block border-b-2 pb-4">
+    <article className="hidden md:block border-b-2 pb-4 mt-3">
         <article className="md:flex justify-between">
             <h3 className="text-xl font-bold dark:text-white">{education.name}</h3>
             <p className="text-gray-500 dark:text-gray-300">📅{education.time}</p>

@@ -6,7 +6,7 @@ interface EventCardProps {
 }
 
 export const EventCard = ({event}: EventCardProps) => <>
-    <article className="hidden md:block border-b-2 pb-4">
+    <article className="hidden md:block border-b-2 pb-4 mt-3">
         <article className="flex justify-between">
             <h3 className="text-xl font-bold dark:text-white">{event.name}</h3>
             <a href={event.website} target="_blank"><p
