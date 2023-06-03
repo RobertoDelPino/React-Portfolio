@@ -1,18 +1,18 @@
-import personalPhoto from "../../assets/fotoPerfil-1.jpg"
+import personalPhoto from "../../assets/fotoPerfil-1.webp"
 import {TechnologiesList, ITechnology} from "@components/TecnologiesList/TechnologiesList.tsx";
-import javascript from "../../assets/TechIcons/javascript.png"
-import bootstrap from "../../assets/TechIcons/bootstrap.png"
-import css from "../../assets/TechIcons/css-3.png"
-import html from "../../assets/TechIcons/html-5.png"
-import github from "../../assets/TechIcons/github.png"
-import mysql from "../../assets/TechIcons/mysql.png"
-import react from "../../assets/TechIcons/react.png"
-import typescript from "../../assets/TechIcons/typescript.png"
-import visualStudio from "../../assets/TechIcons/visual-studio.png"
-import visualStudioCode from "../../assets/TechIcons/vscode.png"
-import webstorm from "../../assets/TechIcons/webstorm.png"
-import netCore from "../../assets/TechIcons/netcore.png"
-import tailwind from "../../assets/TechIcons/tailwind.png"
+import javascript from "../../assets/TechIcons/javascript.webp"
+import bootstrap from "../../assets/TechIcons/bootstrap.webp"
+import css from "../../assets/TechIcons/css-3.webp"
+import html from "../../assets/TechIcons/html-5.webp"
+import github from "../../assets/TechIcons/github.webp"
+import mysql from "../../assets/TechIcons/mysql.webp"
+import react from "../../assets/TechIcons/react.webp"
+import typescript from "../../assets/TechIcons/typescript.webp"
+import visualStudio from "../../assets/TechIcons/visual-studio.webp"
+import visualStudioCode from "../../assets/TechIcons/vscode.webp"
+import webstorm from "../../assets/TechIcons/webstorm.webp"
+import netCore from "../../assets/TechIcons/netcore.webp"
+import tailwind from "../../assets/TechIcons/tailwind.webp"
 
 export const Home = () => {
 
@@ -81,7 +81,7 @@ export const Home = () => {
                         </h1>
                         <h1 className="text-xl dark:text-white mt-1.5 lg:text-2xl w-[100%] text-center md:text-start">Software Developer</h1>
                     </div>
-                    <img src={personalPhoto} alt="Photo of Roberto del Pino Hormiga"
+                    <img loading="lazy" src={personalPhoto} alt="Photo of Roberto del Pino Hormiga"
                          className="w-72 lg:w-80 rounded-full border-black border-2 dark:border-white"/>
                 </section>
 

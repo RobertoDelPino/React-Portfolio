@@ -1,7 +1,7 @@
 import {ProjectsList} from "@components/ProjectsList/ProjectsList.tsx";
 import {Project} from "@domain/Entities/Project.tsx";
-import robertoPortfolio from "@assets/ProjectsPhotos/RobertoProject.png"
-import hiriamPortfolio from "@assets/ProjectsPhotos/HiriamProject.png"
+import robertoPortfolio from "@assets/ProjectsPhotos/RobertoProject.webp"
+import hiriamPortfolio from "@assets/ProjectsPhotos/HiriamProject.webp"
 
 
 export const ProjectsPage = () => {

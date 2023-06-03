@@ -1,7 +1,10 @@
-import {Collapse, Navbar} from "@material-tailwind/react";
+import {Navbar} from "@material-tailwind/react/components/Navbar";
+import {Collapse} from "@material-tailwind/react/components/Collapse";
 import {DarkModeSwitcher} from "@components/DarkModeSwitcher/DarkModeSwitcher.tsx";
 import {useState} from "react";
-import {BsGithub, BsInstagram, BsLinkedin, GoMail, HiMenuAlt3} from "react-icons/all";
+import {BsGithub, BsInstagram, BsLinkedin} from "react-icons/bs"
+import {GoMail} from "react-icons/go"
+import {HiMenuAlt3} from "react-icons/hi"
 import {Link} from "react-router-dom";
 
 export const Header = () => {
