@@ -18,8 +18,8 @@ export const Header = () => {
                 <li className="inline-block mx-1 p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600" role="link"><Link to="/">Inicio</Link></li>
                 <li className="inline-block mx-1 p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600" role="link"><Link to="/about">Sobre mi</Link></li>
                 <li className="inline-block mx-1 p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600" role="link"><Link to="/projects">Proyectos</Link></li>
-                <li className="inline-block mx-1 p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600" role="link"><Link to="#">Blog</Link></li>
-                <li className="inline-block mx-1 p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600" role="link"><Link to="#">Contacto</Link></li>
+                /*<li className="inline-block mx-1 p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600" role="link"><Link to="#">Blog</Link></li>
+                <li className="inline-block mx-1 p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600" role="link"><Link to="#">Contacto</Link></li>*/
                 <ul className="flex ">
                     <li className="text-2xl p-1 mr-3 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600"><a href="https://www.linkedin.com/in/robertodelpinohormiga/" target="_blank"> < BsLinkedin /> </a></li>
                     <li className="text-2xl p-1 mr-3 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600"><a href="https://github.com/RobertoDelPino" target="_blank"> < BsGithub /> </a></li>
