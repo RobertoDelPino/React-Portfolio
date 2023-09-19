@@ -25,29 +25,37 @@ export const BlogPage = () => {
           )
         },
         p: (p: any) =>{
+            const children = p.children;
+            if(typeof(children[0]) == "string"){
+                if(children[0].includes("title")){
+                    console.log("esto es el titulo")
+                    console.log(JSON.parse(children[0]))
+                }
+            }
+
             return (
-              <p className='dark:text-white my-10'>
+              <p className='dark:text-white mt-4'>
                 {p.children}
               </p>
             )
         },
         h1: (h1: any) =>{
             return (
-              <h1 className='text-2xl dark:text-white'>
+              <h1 className='text-2xl dark:text-white mt-12 mb-6 font-bold'>
                 {h1.children}
               </h1>
             )
-        },
+        }, //margin: 48px 0 24px;
         h2: (h2: any) =>{
             return (
-              <h2 className='text-xl dark:text-white'>
+              <h2 className='text-xl dark:text-white mt-10 mb-6 font-bold'>
                 {h2.children}
               </h2>
             )
         },
         h3: (h2: any) =>{
             return (
-              <h2 className='text-xl dark:text-white'>
+              <h2 className='text-xl dark:text-white mt-10 mb-6 font-bold'>
                 {h2.children}
               </h2>
             )
