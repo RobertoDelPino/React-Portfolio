@@ -19,14 +19,14 @@ export const Header = () => {
     const navList = (
         <>
             <ul className="justify-end mr-3 mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6  dark:text-white h-[100%]" role="list" aria-label="links-pages-container">
-                <li className="inline-block mx-1 p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600" role="link"><Link to="/">Inicio</Link></li>
-                <li className="inline-block mx-1 p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600" role="link"><Link to="/about">Sobre mi</Link></li>
-                <li className="inline-block mx-1 p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600" role="link"><Link to="/projects">Proyectos</Link></li>
+                <li className="inline-block mx-1 transition duration-300" role="link"><Link className="w-[100%] block p-2 rounded-md hover:bg-blue-50 dark:hover:bg-gray-600" to="/">Inicio</Link></li>
+                <li className="inline-block mx-1 transition duration-300" role="link"><Link className="w-[100%] block p-2 rounded-md hover:bg-blue-50 dark:hover:bg-gray-600" to="/about">Sobre mi</Link></li>
+                <li className="inline-block mx-1 transition duration-300" role="link"><Link className="w-[100%] block p-2 rounded-md hover:bg-blue-50 dark:hover:bg-gray-600" to="/projects">Proyectos</Link></li>
                 <ul className="flex ">
-                    <li className="text-2xl p-1 mr-3 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600"><a href="https://www.linkedin.com/in/robertodelpinohormiga/" target="_blank"> < BsLinkedin /> </a></li>
-                    <li className="text-2xl p-1 mr-3 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600"><a href="https://github.com/RobertoDelPino" target="_blank"> < BsGithub /> </a></li>
-                    <li className="text-2xl p-1 mr-3 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600"><a href="https://www.instagram.com/roberto.ph03/" target="_blank"> <BsInstagram/> </a></li>
-                    <li className="text-2xl p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600"><a href="mailto:robertodelpino11@gmail.com" target="_blank"> <GoMail /> </a></li>
+                    <li className="text-2xl mr-3 transition duration-300"><a className="p-2 h-[50px] flex items-center rounded-md hover:bg-blue-50 dark:hover:bg-gray-600" href="https://www.linkedin.com/in/robertodelpinohormiga/" target="_blank"> < BsLinkedin /> </a></li>
+                    <li className="text-2xl mr-3 transition duration-300"><a className="p-2 h-[50px] flex items-center rounded-md hover:bg-blue-50 dark:hover:bg-gray-600" href="https://github.com/RobertoDelPino" target="_blank"> < BsGithub /> </a></li>
+                    <li className="text-2xl mr-3 transition duration-300"><a className="p-2 h-[50px] flex items-center rounded-md hover:bg-blue-50 dark:hover:bg-gray-600" href="https://www.instagram.com/roberto.ph03/" target="_blank"> <BsInstagram/> </a></li>
+                    <li className="text-2xl transition duration-300"><a className="p-2 h-[50px] flex items-center rounded-md hover:bg-blue-50 dark:hover:bg-gray-600" href="mailto:robertodelpino11@gmail.com" target="_blank"> <GoMail /> </a></li>
                 </ul>
             </ul>
         </>
