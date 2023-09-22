@@ -14,7 +14,7 @@ export const Header = () => {
 
     // Para añadir en un futuro
     /*<li className="inline-block mx-1 p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600" role="link"><Link to="#">Blog</Link></li>
-                <li className="inline-block mx-1 p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600" role="link"><Link to="#">Contacto</Link></li>*/
+    <li className="inline-block mx-1 p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600" role="link"><Link to="#">Contacto</Link></li>*/
     
     const navList = (
         <>
