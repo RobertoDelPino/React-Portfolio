@@ -7,7 +7,7 @@ import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript';
 import python from 'highlight.js/lib/languages/python';
 
-export const BlogPage = () => {
+export const BlogEntry = () => {
     SyntaxHighlighter.registerLanguage('markdown', markdown);
     setTimeout(() => {
         hljs.registerLanguage('javascript', javascript);    

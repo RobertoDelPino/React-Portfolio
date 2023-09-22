@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export const BlogPage = () => {
   const blogFilesNames = [
     {
@@ -7,7 +9,7 @@ export const BlogPage = () => {
       "topic":"javascript"
     },
     {
-      "title":"¿Cómo mejorar como desarrollador de aplicaciones?", 
+      "title":"Maneras de mejorar como desarrollador de aplicaciones", 
       "date":"2023-02-10",
       "description":"Ideas de proyectos para mejorar como desarollador",
       "topic":"python"
@@ -28,8 +30,26 @@ export const BlogPage = () => {
 
 
 
-  return 
+  return (
     <section>
-      
+        {
+          blogFilesNames.map((blogFile, index) => {
+            const filePath = blogFile.title.replaceAll(" ", "-");
+            console.log(filePath)
+            return (
+              <Link to={"/blog/" + filePath}>
+                <div key={index}>
+                  <img src={`../../assets/TechIcons/${blogFile.topic}.webp`} alt="" />
+                  <div>
+                    <h4>{blogFile.title}</h4>
+                    <p>{blogFile.date}</p>
+                  </div>
+                </div>
+              </Link>
+              
+            )
+          })
+        }
     </section>
+  )
 }
