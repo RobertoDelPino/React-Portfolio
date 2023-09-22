@@ -95,7 +95,7 @@ export const Home = () => {
           "title":"Nuevos métodos de EMC 6", 
           "date":"2022-03-23",
           "description":"Te comparto 5 métodos de javascript para desarrolladores que están comenzando en el mundo de la programación",
-          "topic":"netcore"
+          "topic":"net core"
         }
       ]
 
@@ -120,10 +120,11 @@ export const Home = () => {
                         {
                         blogFilesNames.map((blogFile, index) => {
                             const filePath = blogFile.title.replaceAll(" ", "-");
+                            const image = techList.find(x => x.name.toLowerCase().includes(blogFile.topic))?.image
                             return (
                             <Link to={"/blog/" + filePath} key={index}>
                                 <div className="flex my-5 dark:hover:bg-slate-50/[.4] p-3 rounded group items-center">
-                                    <img className="w-[50px] h-[50px] group-hover:scale-[1.2] transition duration-500 opacity-80" src={`../../../src/assets/TechIcons/${blogFile.topic}.webp`} alt="" />
+                                    <img className="w-[50px] h-[50px] group-hover:scale-[1.2] transition duration-500 opacity-80" src={image} alt="" />
                                     <div className="ml-5">
                                         <h4 className="dark:text-white text-xl">{blogFile.title}</h4>
                                         <p className="dark:text-white text-sm">{blogFile.date}</p>
