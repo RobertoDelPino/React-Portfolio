@@ -12,7 +12,7 @@ export const BlogPage = () => {
       "title":"Maneras de mejorar como desarrollador de aplicaciones", 
       "date":"2023-02-10",
       "description":"Ideas de proyectos para mejorar como desarollador",
-      "topic":"python"
+      "topic":"javascript"
     },
     {
       "title":"Empezar bien el año siendo programador", 
@@ -24,25 +24,26 @@ export const BlogPage = () => {
       "title":"Nuevos métodos de EMC 6", 
       "date":"2022-03-23",
       "description":"Te comparto 5 métodos de javascript para desarrolladores que están comenzando en el mundo de la programación",
-      "topic":"javascript"
+      "topic":"netcore"
     }
   ]
 
 
 
   return (
-    <section>
+    <section className="max-w-xl min-h-full h-4/5 m-auto">
+      <h1 className="text-2xl dark:text-white font-semibold">Últimos articulos publicados...</h1>
+
         {
           blogFilesNames.map((blogFile, index) => {
             const filePath = blogFile.title.replaceAll(" ", "-");
-            console.log(filePath)
             return (
-              <Link to={"/blog/" + filePath}>
-                <div key={index}>
-                  <img src={`../../assets/TechIcons/${blogFile.topic}.webp`} alt="" />
-                  <div>
-                    <h4>{blogFile.title}</h4>
-                    <p>{blogFile.date}</p>
+              <Link to={"/blog/" + filePath} key={index}>
+                <div className="flex my-5 dark:hover:bg-slate-50/[.4] p-3 rounded group">
+                  <img className="w-[50px] group-hover:scale-[1.2] transition duration-500 opacity-80" src={`../../../src/assets/TechIcons/${blogFile.topic}.webp`} alt="" />
+                  <div className="ml-5">
+                    <h4 className="dark:text-white text-lg">{blogFile.title}</h4>
+                    <p className="dark:text-white text-sm">{blogFile.date}</p>
                   </div>
                 </div>
               </Link>
