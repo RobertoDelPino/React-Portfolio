@@ -28,8 +28,8 @@ export const BlogEntry = () => {
             const children = [...(p.children as string[])];
             if(typeof(children[0]) == "string"){
               if(children[0].includes("title")){
-                  console.log("esto es el titulo")
-                  console.log(JSON.parse(children[0]))
+                  // USAR PARA GENERAR EL TITLE DEL ARTICLE
+                  JSON.parse(children[0])
                   // DESARROLLAR COMPONENTE DE HEADER PARA CADA ARTICULO DEL BLOG
                   // PENSAR CÓMO HACER EL BLOG LIST Y MOSTRAR CADA BLOG
               }
