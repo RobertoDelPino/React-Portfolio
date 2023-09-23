@@ -6,6 +6,7 @@ import markdown from 'react-syntax-highlighter/dist/cjs/languages/prism/markdown
 import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript';
 import python from 'highlight.js/lib/languages/python';
+import {useParams} from 'react-router-dom';
 
 export const BlogEntry = () => {
     SyntaxHighlighter.registerLanguage('markdown', markdown);
@@ -24,7 +25,7 @@ export const BlogEntry = () => {
           )
         },
         p: (p: React.DetailedHTMLProps<React.ParamHTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>) =>{
-            /*const children = p.children;
+            const children = [...(p.children as string[])];
             if(typeof(children[0]) == "string"){
               if(children[0].includes("title")){
                   console.log("esto es el titulo")
@@ -32,7 +33,7 @@ export const BlogEntry = () => {
                   // DESARROLLAR COMPONENTE DE HEADER PARA CADA ARTICULO DEL BLOG
                   // PENSAR CÓMO HACER EL BLOG LIST Y MOSTRAR CADA BLOG
               }
-            }*/
+            }
 
             return (
               <p className='dark:text-white mt-4'>
@@ -65,15 +66,16 @@ export const BlogEntry = () => {
       }
 
       const [article, setArticle] = useState("");
+      const {fileName} = useParams();
 
       useEffect(() => {
         const image = async () => {
-          const data = await import(`../../assets/BlogFiles/5-consejos-para-desarrolladores-junior.md?raw`);
+          const data = await import(`../../assets/BlogFiles/${fileName?.toLowerCase()}.md?raw`);
           setArticle(data.default)
         }
         
         image();
-      }, [])
+      }, [fileName])
       
       
       return (
