@@ -1,3 +1,4 @@
+import { BlogEntryList } from "@components/BlogEntryList/BlogEntryList"
 import { Link } from "react-router-dom"
 
 export const BlogPage = () => {
@@ -33,23 +34,8 @@ export const BlogPage = () => {
   return (
     <section className="max-w-xl min-h-full h-4/5 m-auto">
       <h1 className="text-2xl dark:text-white font-semibold">Últimos articulos publicados...</h1>
-
         {
-          blogFilesNames.map((blogFile, index) => {
-            const filePath = blogFile.title.replaceAll(" ", "-");
-            return (
-              <Link to={"/blog/" + filePath} key={index}>
-                <div className="flex my-5 dark:hover:bg-slate-50/[.4] p-3 rounded group">
-                  <img className="w-[50px] group-hover:scale-[1.2] transition duration-500 opacity-80" src={`../../../src/assets/TechIcons/${blogFile.topic}.webp`} alt="" />
-                  <div className="ml-5">
-                    <h4 className="dark:text-white text-lg">{blogFile.title}</h4>
-                    <p className="dark:text-white text-sm">{blogFile.date}</p>
-                  </div>
-                </div>
-              </Link>
-              
-            )
-          })
+          <BlogEntryList />
         }
     </section>
   )
