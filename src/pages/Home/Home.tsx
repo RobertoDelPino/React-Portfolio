@@ -102,11 +102,11 @@ export const Home = () => {
     return (
         <>
             <section className="w-[100%] dark:bg-gray-800 min-h-[95%] pb-10">
-                <section className=" max-w-screen-xl m-auto flex flex-wrap w-[100%] justify-around py-10 lg:py-32 dark:bg-gray-800 ">
-                    <div className="flex justify-center flex-wrap px-6 mb-9 w-[45%]">
+                <section className=" max-w-screen-xl m-auto flex flex-wrap w-[100%] justify-around py-12 dark:bg-gray-800 ">
+                    <div className="flex justify-center flex-wrap px-6 mb-9 md:w-[45%] w-[100%]">
                         <div>
                             <img loading="lazy" src={personalPhoto} alt="Photo of Roberto del Pino Hormiga"
-                            className="w-72 lg:w-70 rounded-full border-black border-2 dark:border-white
+                            className="w-48 lg:w-72 rounded-full border-black border-2 dark:border-white
                             mb-5"/>
                         </div>
                         <h1 className=" dark:text-white w-[100%] lg:text-4xl">
@@ -114,7 +114,8 @@ export const Home = () => {
                         </h1>
                         <h1 className="text-xl dark:text-white mt-1.5 lg:text-2xl w-[100%] text-center">Software Developer</h1>
                     </div>
-                    <section className="max-w-xl min-h-full h-4/5 m-auto">
+
+                    <section className="lg:max-w-xl min-h-full h-4/5 m-auto w-[95%]">
                         <h1 className="text-2xl dark:text-white font-semibold">Últimos articulos</h1>
 
                         {
