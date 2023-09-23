@@ -1,6 +1,6 @@
+import { useEffect, useState } from 'react'
 import remarkGfm from 'remark-gfm'
 import ReactMarkdown from 'react-markdown'
-import prueba from '../../assets/BlogFiles/5-consejos-para-desarrolladores-junior.md?raw'
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import markdown from 'react-syntax-highlighter/dist/cjs/languages/prism/markdown';
 import hljs from 'highlight.js/lib/core';
@@ -16,23 +16,23 @@ export const BlogEntry = () => {
     }, 10);
 
     const components = {
-        a: (a: any) =>{
+        a: (a: React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>) =>{
           return (
             <a href={a.href} className='olaaaaa' target="_blank">
               {a.children}
             </a>
           )
         },
-        p: (p: any) =>{
-            const children = p.children;
+        p: (p: React.DetailedHTMLProps<React.ParamHTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>) =>{
+            /*const children = p.children;
             if(typeof(children[0]) == "string"){
-                if(children[0].includes("title")){
-                    console.log("esto es el titulo")
-                    console.log(JSON.parse(children[0]))
-                    // DESARROLLAR COMPONENTE DE HEADER PARA CADA ARTICULO DEL BLOG
-                    // PENSAR CÓMO HACER EL BLOG LIST Y MOSTRAR CADA BLOG
-                }
-            }
+              if(children[0].includes("title")){
+                  console.log("esto es el titulo")
+                  console.log(JSON.parse(children[0]))
+                  // DESARROLLAR COMPONENTE DE HEADER PARA CADA ARTICULO DEL BLOG
+                  // PENSAR CÓMO HACER EL BLOG LIST Y MOSTRAR CADA BLOG
+              }
+            }*/
 
             return (
               <p className='dark:text-white mt-4'>
@@ -40,21 +40,21 @@ export const BlogEntry = () => {
               </p>
             )
         },
-        h1: (h1: any) =>{
+        h1: (h1: React.DetailedHTMLProps<React.ParamHTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>) =>{
             return (
               <h1 className='text-2xl dark:text-white mt-12 mb-6 font-bold'>
                 {h1.children}
               </h1>
             )
         }, //margin: 48px 0 24px;
-        h2: (h2: any) =>{
+        h2: (h2: React.DetailedHTMLProps<React.ParamHTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>) =>{
             return (
               <h2 className='text-xl dark:text-white mt-10 mb-6 font-bold'>
                 {h2.children}
               </h2>
             )
         },
-        h3: (h2: any) =>{
+        h3: (h2: React.DetailedHTMLProps<React.ParamHTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>) =>{
             return (
               <h2 className='text-xl dark:text-white mt-10 mb-6 font-bold'>
                 {h2.children}
@@ -64,19 +64,31 @@ export const BlogEntry = () => {
 
       }
 
-    return (
-        <section className=" 2xl:min-h-[95%] xl:min-h-[70%] md:min-h-[80%] dark:bg-gray-800">
-            <code>algo</code>
-            <article className="max-w-screen-xl m-auto dark:algo mt-7">
-                <ReactMarkdown 
-                    className='markdown-body' 
-                    components={components}
-                    remarkPlugins={[remarkGfm]}
-                    
-                    >
-                    {prueba}
-                </ReactMarkdown>
-            </article>
-        </section>
+      const [article, setArticle] = useState("");
+
+      useEffect(() => {
+        const image = async () => {
+          const data = await import(`../../assets/BlogFiles/5-consejos-para-desarrolladores-junior.md?raw`);
+          setArticle(data.default)
+        }
+        
+        image();
+      }, [])
+      
+      
+      return (
+          <section className=" 2xl:min-h-[95%] xl:min-h-[70%] md:min-h-[80%] dark:bg-gray-800">
+              <code>algo</code>
+              <article className="max-w-screen-xl m-auto dark:algo mt-7">
+                  <ReactMarkdown 
+                      className='markdown-body' 
+                      components={components}
+                      remarkPlugins={[remarkGfm]}
+                      
+                      >
+                      {article}
+                  </ReactMarkdown>
+              </article>
+          </section>
     );
 }
