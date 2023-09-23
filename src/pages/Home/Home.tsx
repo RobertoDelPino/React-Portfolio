@@ -13,7 +13,6 @@ import visualStudioCode from "../../assets/TechIcons/vscode.webp"
 import webstorm from "../../assets/TechIcons/webstorm.webp"
 import netCore from "../../assets/TechIcons/netcore.webp"
 import tailwind from "../../assets/TechIcons/tailwind.webp"
-import { Link } from "react-router-dom";
 import { BlogEntryList } from "@components/BlogEntryList/BlogEntryList";
 
 export const Home = () => {
