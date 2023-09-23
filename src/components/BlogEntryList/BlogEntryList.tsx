@@ -20,12 +20,6 @@ export const BlogEntryList = () => {
           "date":"2023-01-01",
           "description":"Te muestro distintas ideas creativas para empezar con mucha motivación este 2023",
           "topic":"javascript"
-        },
-        {
-          "title":"Nuevos métodos de EMC 6", 
-          "date":"2022-03-23",
-          "description":"Te comparto 5 métodos de javascript para desarrolladores que están comenzando en el mundo de la programación",
-          "topic":"netcore"
         }
     ]
     return (
