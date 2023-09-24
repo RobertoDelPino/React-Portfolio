@@ -8,7 +8,6 @@ import javascript from 'highlight.js/lib/languages/javascript';
 import python from 'highlight.js/lib/languages/python';
 import {useParams} from 'react-router-dom';
 import { BlogEntryTitle } from '@components/BlogEntryTitle/BlogEntryTitle';
-import { BlogEntryData } from '@domain/Entities/BlogEntryData';
 
 export const BlogEntry = () => {
     SyntaxHighlighter.registerLanguage('markdown', markdown);
@@ -36,14 +35,14 @@ export const BlogEntry = () => {
             }
 
             return (
-              <p className='dark:text-white mt-4'>
+              <p className='dark:text-white mt-6'>
                 {p.children}
               </p>
             )
         },
         h1: (h1: React.DetailedHTMLProps<React.ParamHTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>) =>{
             return (
-              <h1 className='text-2xl dark:text-white mt-12 mb-6 font-bold'>
+              <h1 className='text-2xl dark:text-white my-8 font-bold'>
                 {h1.children}
               </h1>
             )
