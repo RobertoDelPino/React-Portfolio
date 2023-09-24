@@ -7,6 +7,8 @@ import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript';
 import python from 'highlight.js/lib/languages/python';
 import {useParams} from 'react-router-dom';
+import { BlogEntryTitle } from '@components/BlogEntryTitle/BlogEntryTitle';
+import { BlogEntryData } from '@domain/Entities/BlogEntryData';
 
 export const BlogEntry = () => {
     SyntaxHighlighter.registerLanguage('markdown', markdown);
@@ -28,10 +30,8 @@ export const BlogEntry = () => {
             const children = [...(p.children as string[])];
             if(typeof(children[0]) == "string"){
               if(children[0].includes("title")){
-                  // USAR PARA GENERAR EL TITLE DEL ARTICLE
-                  JSON.parse(children[0])
-                  // DESARROLLAR COMPONENTE DE HEADER PARA CADA ARTICULO DEL BLOG
-                  // PENSAR CÓMO HACER EL BLOG LIST Y MOSTRAR CADA BLOG
+                  const data = JSON.parse(children[0])
+                  return <BlogEntryTitle data={data} />
               }
             }
 
@@ -80,8 +80,7 @@ export const BlogEntry = () => {
       
       return (
           <section className=" 2xl:min-h-[95%] xl:min-h-[70%] md:min-h-[80%] dark:bg-gray-800">
-              <code>algo</code>
-              <article className="max-w-screen-xl m-auto dark:algo mt-7">
+              <article className="max-w-screen-xl m-auto dark:algo">
                   <ReactMarkdown 
                       className='markdown-body' 
                       components={components}

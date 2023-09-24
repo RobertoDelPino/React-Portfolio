@@ -1,6 +1,6 @@
 {
   "title":"5 consejos para desarrolladores Junior", 
-  "date":"2022-03-23",
+  "date":"23 de marzo de 2023",
   "description":"Te comparto 5 consejos para desarrolladores que están comenzando en el mundo de la programación",
   "topic":"javascript",
   "toc":true
