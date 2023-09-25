@@ -65,8 +65,8 @@ export const Home = () => {
                 <section className=" max-w-screen-xl m-auto flex flex-wrap w-[100%] justify-around py-12 dark:bg-gray-800 ">
                     <div className="flex justify-center flex-wrap px-6 mb-9 md:w-[45%] w-[100%]">
                         <div>
-                            <img loading="lazy" src={personalPhoto} alt="Photo of Roberto del Pino Hormiga"
-                            className="w-48 lg:w-72 rounded-full border-black border-2 dark:border-white
+                            <img src={personalPhoto} alt="Photo of Roberto del Pino Hormiga"
+                            className="w-48 h-48 lg:w-72 lg:h-72 rounded-full border-black border-2 dark:border-white
                             mb-5"/>
                         </div>
                         <h1 className=" dark:text-white w-[100%] lg:text-4xl">
