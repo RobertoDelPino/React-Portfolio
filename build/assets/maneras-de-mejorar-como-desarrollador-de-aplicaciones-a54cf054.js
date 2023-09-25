@@ -1,6 +1,6 @@
 const e=`{\r
   "title":"5 consejos para desarrolladores Junior", \r
-  "date":"2022-03-23",\r
+  "date":"23 de marzo de 2023",\r
   "description":"Te comparto 5 consejos para desarrolladores que están comenzando en el mundo de la programación",\r
   "topic":"javascript",\r
   "toc":true\r
