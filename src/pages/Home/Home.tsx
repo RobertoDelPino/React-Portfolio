@@ -1,75 +1,62 @@
-import personalPhoto from "../../assets/fotoPerfil-1.webp"
 import {TechnologiesList, ITechnology} from "@components/TecnologiesList/TechnologiesList.tsx";
-import javascript from "../../assets/TechIcons/javascript.webp"
-import bootstrap from "../../assets/TechIcons/bootstrap.webp"
-import css from "../../assets/TechIcons/css-3.webp"
-import html from "../../assets/TechIcons/html-5.webp"
-import github from "../../assets/TechIcons/github.webp"
-import mysql from "../../assets/TechIcons/mysql.webp"
-import react from "../../assets/TechIcons/react.webp"
-import typescript from "../../assets/TechIcons/typescript.webp"
-import visualStudio from "../../assets/TechIcons/visual-studio.webp"
-import visualStudioCode from "../../assets/TechIcons/vscode.webp"
-import webstorm from "../../assets/TechIcons/webstorm.webp"
-import netCore from "../../assets/TechIcons/netcore.webp"
-import tailwind from "../../assets/TechIcons/tailwind.webp"
 import { BlogEntryList } from "@components/BlogEntryList/BlogEntryList";
+import { findImage } from "@assets/Images/Images";
 
 export const Home = () => {
-
+    const personalPhoto = findImage("personalPhoto");
     const techList: ITechnology[] = [
         {
             name: "HTML",
-            image: html
+            image: findImage("html")
         },
         {
             name: "CSS",
-            image: css
+            image: findImage("css")
         },
         {
             name: "Javascript",
-            image: javascript
+            image: findImage("javascript")
         },
         {
             name: "Bootstrap",
-            image: bootstrap
+            image: findImage("bootstrap")
         },
         {
             name: "Tailwind",
-            image: tailwind
+            image: findImage("tailwind")
         },
         {
             name: "Github",
-            image: github
+            image: findImage("github")
         },
         {
             name: "React",
-            image: react
+            image: findImage("react")
         },
         {
             name: "Typescript",
-            image: typescript
+            image: findImage("typescript")
         },
         {
             name: "ASP.NET Core",
-            image: netCore
+            image: findImage("netcore")
         },
         {
             name: "MySQL",
-            image: mysql
+            image: findImage("mysql")
         },
         {
             name: "Visual Studio",
-            image: visualStudio
+            image: findImage("visualStudio")
         },
         {
             name: "Visual Studio Code",
-            image: visualStudioCode
+            image: findImage("visualStudioCode")
         },
         {
             name: "WebStorm",
-            image: webstorm
-        }
+            image: findImage("webstorm")
+        },
     ]
 
     return (

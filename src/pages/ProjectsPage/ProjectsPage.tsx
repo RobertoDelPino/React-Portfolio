@@ -1,7 +1,6 @@
+import { findImage } from "@assets/Images/Images";
 import {ProjectsList} from "@components/ProjectsList/ProjectsList.tsx";
 import {Project} from "@domain/Entities/Project.tsx";
-import robertoPortfolio from "@assets/ProjectsPhotos/RobertoProject.webp"
-import hiriamPortfolio from "@assets/ProjectsPhotos/HiriamProject.webp"
 
 
 export const ProjectsPage = () => {
@@ -14,13 +13,13 @@ export const ProjectsPage = () => {
             "Mi portfolio",
             "Te presento el código de esta página, mi portfolio. Si deseas enviarme cualquier feedback contacta conmigo a través de mi correo.",
             "https://robertodelpino.netlify.com",
-            robertoPortfolio),
+            findImage("robertoPortfolio")),
         new Project(
             "https://www.github.com",
             "Hiriambg portfolio",
             "Te presento el portfolio de una estudiante de fotografía, Hiriam Bartolomé, quien ha estado en diversos eventos internacionales como JSDay Canarias.",
             "https://hiriambg.netlify.com",
-            hiriamPortfolio)
+            findImage("hiriamPortfolio"))
     ]
 
     return (
