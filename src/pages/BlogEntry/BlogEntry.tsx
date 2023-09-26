@@ -20,7 +20,7 @@ export const BlogEntry = () => {
     const components = {
         a: (a: React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>) =>{
           return (
-            <a href={a.href} className='olaaaaa' target="_blank">
+            <a href={a.href} className='underline hover:text-gray-800/[.5] dark:hover:text-white/60' target="_blank">
               {a.children}
             </a>
           )
