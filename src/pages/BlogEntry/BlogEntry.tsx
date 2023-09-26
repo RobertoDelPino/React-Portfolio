@@ -4,16 +4,12 @@ import ReactMarkdown from 'react-markdown'
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import markdown from 'react-syntax-highlighter/dist/cjs/languages/prism/markdown';
 import hljs from 'highlight.js/lib/core';
-import javascript from 'highlight.js/lib/languages/javascript';
-import python from 'highlight.js/lib/languages/python';
 import {useParams} from 'react-router-dom';
 import { BlogEntryTitle } from '@components/BlogEntryTitle/BlogEntryTitle';
 
 export const BlogEntry = () => {
     SyntaxHighlighter.registerLanguage('markdown', markdown);
     setTimeout(() => {
-        hljs.registerLanguage('javascript', javascript);    
-        hljs.registerLanguage('python', python);   
         hljs.highlightAll();
     }, 10);
 
@@ -69,15 +65,24 @@ export const BlogEntry = () => {
 
       useEffect(() => {
         const image = async () => {
-          const data = await import(`../../assets/BlogFiles/${fileName?.toLowerCase()}.md?raw`);
-          setArticle(data.default)
+          try {
+            const data = await import(`../../assets/BlogFiles/${fileName?.toLowerCase()}.md?raw`);
+            setArticle(data.default)
+          } catch (error) {
+          }
+          
         }
         
         image();
       }, [fileName])
       
-      
-      return (
+      return article == "" 
+        ? (
+          <section className='h-[75%] dark:bg-gray-800 flex items-center justify-center'>
+            <h1 className='text-2xl dark:text-white font-bold text-center'>No se ha encontrado el articulo</h1>
+          </section>
+        )
+        : (
           <section className=" 2xl:min-h-[95%] xl:min-h-[70%] md:min-h-[80%] dark:bg-gray-800">
               <article className="max-w-screen-xl m-auto dark:algo">
                   <ReactMarkdown 
