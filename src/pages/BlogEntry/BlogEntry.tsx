@@ -6,10 +6,12 @@ import markdown from 'react-syntax-highlighter/dist/cjs/languages/prism/markdown
 import hljs from 'highlight.js/lib/core';
 import {useParams} from 'react-router-dom';
 import { BlogEntryTitle } from '@components/BlogEntryTitle/BlogEntryTitle';
+import javascript from 'highlight.js/lib/languages/javascript';
 
 export const BlogEntry = () => {
     SyntaxHighlighter.registerLanguage('markdown', markdown);
     setTimeout(() => {
+        hljs.registerLanguage('javascript', javascript);    
         hljs.highlightAll();
     }, 10);
 
