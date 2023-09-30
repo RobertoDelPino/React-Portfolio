@@ -1,6 +1,7 @@
 import { BlogEntryList } from "@components/BlogEntryList/BlogEntryList"
 import articles from "@domain/Repository/Articles.tsx";
 import { useState } from "react";
+import { findImage } from "@assets/Images/Images";
 
 export const BlogPage = () => {
 
@@ -16,11 +17,11 @@ export const BlogPage = () => {
   }
 
   return (
-    <section className="p-4 min-h-full m-auto w-[80%] md:w-[100%]">
+    <section className="p-4 min-h-full m-auto max-w-screen-xl md:w-[100%]">
       <h1 className="text-2xl dark:text-white font-semibold mt-7">Todos los artículos publicados</h1>
-      <section>
-        <label htmlFor="searchArticles_input"></label>
-        <input type="text" id="searchArticles_input" onKeyUp={(input) => searchArticle(input.currentTarget.value)} />
+      <section className="mt-3 relative w-72">
+        <label htmlFor="searchArticles_input" className="w-5 absolute right-0 h-[100%] align-middle mr-2 flex items-center"> <img src={findImage("searchSymbol")} alt="" /></label>
+        <input className="p-1 border rounded w-[100%]" type="text" id="searchArticles_input" onKeyUp={(input) => searchArticle(input.currentTarget.value)} placeholder="Busca un artículo" />
       </section>
 
       <section className="grid md:grid-cols-2">
