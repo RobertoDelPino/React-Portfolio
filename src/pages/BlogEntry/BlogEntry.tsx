@@ -82,6 +82,7 @@ export const BlogEntry = () => {
         ? (
           <section className='h-[75%] dark:bg-gray-800 flex items-center justify-center'>
             <h1 className='text-2xl dark:text-white font-bold text-center'>No se ha encontrado el articulo</h1>
+            
           </section>
         )
         : (

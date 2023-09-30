@@ -77,9 +77,8 @@ export const Home = () => {
 
                     <section className="lg:max-w-xl min-h-full h-4/5 m-auto w-[95%]">
                         <h1 className="text-2xl dark:text-white font-semibold">Últimos articulos</h1>
-
                         {
-                            < BlogEntryList />
+                            < BlogEntryList  allList={false} />
                         }
                     </section>
                 </section>
