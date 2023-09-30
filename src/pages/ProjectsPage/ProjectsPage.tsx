@@ -23,8 +23,8 @@ export const ProjectsPage = () => {
     ]
 
     return (
-        <section className=" 2xl:min-h-[95%] xl:min-h-[70%] md:min-h-[80%] dark:bg-gray-800">
-            <article className="max-w-screen-xl m-auto dark:text-white mt-20">
+        <section className="dark:bg-gray-800 min-h-screen lg:min-h-[50%] py-10">
+            <article className="max-w-screen-xl m-auto dark:text-white">
                 <h2 className="text-3xl font-bold text-center">Proyectos</h2>
                 <p className="text-center text-lg">Proyectos que he creado hasta ahora</p>
                 <ProjectsList list={list}/>
