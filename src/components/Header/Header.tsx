@@ -22,6 +22,7 @@ export const Header = () => {
                 <li className="inline-block mx-1 transition duration-300"><Link className="w-[100%] block p-2 rounded-md hover:bg-gray-800/[.1] dark:hover:bg-gray-600" to="/">Inicio</Link></li>
                 <li className="inline-block mx-1 transition duration-300"><Link className="w-[100%] block p-2 rounded-md hover:bg-gray-800/[.1] dark:hover:bg-gray-600" to="/about">Sobre mi</Link></li>
                 <li className="inline-block mx-1 transition duration-300"><Link className="w-[100%] block p-2 rounded-md hover:bg-gray-800/[.1] dark:hover:bg-gray-600" to="/projects">Proyectos</Link></li>
+                <li className="inline-block mx-1 transition duration-300"><Link className="w-[100%] block p-2 rounded-md hover:bg-gray-800/[.1] dark:hover:bg-gray-600" to="/blog">Blog</Link></li>
                 <li>
                     <ul className="flex ">
                         <li className="text-2xl mr-3 transition duration-300"><a aria-label="Link hacia mi LinkedIn page" className="p-2 h-[50px] flex items-center rounded-md hover:bg-gray-800/[.1] dark:hover:bg-gray-600" href="https://www.linkedin.com/in/robertodelpinohormiga/" target="_blank"> < BsLinkedin /> </a></li>
@@ -36,7 +37,7 @@ export const Header = () => {
 
     return (
         <>
-            <Navbar className="text-current mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 dark:bg-gray-800 flex flex-wrap content-center justify-between rounded-md" >
+            <Navbar className="border-0 text-current mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 dark:bg-gray-800 flex flex-wrap content-center justify-between rounded-md" >
 
                 <h1 className="inline-block leading-10 dark:text-white text-xl font-bold w-[70%] lg:w-[25%]"><Link to="/">roberto.ph</Link></h1>
                 <div className="flex justify-end w-[30%] lg:w-[75%]">
