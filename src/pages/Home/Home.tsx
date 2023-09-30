@@ -1,6 +1,7 @@
 import {TechnologiesList, ITechnology} from "@components/TecnologiesList/TechnologiesList.tsx";
 import { BlogEntryList } from "@components/BlogEntryList/BlogEntryList";
 import { findImage } from "@assets/Images/Images";
+import articles from "@domain/Repository/Articles.tsx";
 
 export const Home = () => {
     const personalPhoto = findImage("personalPhoto");
@@ -78,7 +79,7 @@ export const Home = () => {
                     <section className="lg:max-w-xl min-h-full h-4/5 m-auto w-[95%]">
                         <h1 className="text-2xl dark:text-white font-semibold">Últimos articulos</h1>
                         {
-                            < BlogEntryList  allList={false} />
+                            < BlogEntryList blogEntryList={articles.slice(0,4)} />
                         }
                     </section>
                 </section>

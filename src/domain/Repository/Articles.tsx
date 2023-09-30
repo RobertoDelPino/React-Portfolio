@@ -53,7 +53,7 @@ const blogEntriesList : BlogEntryData[] = [
       "title":"Empezar bien el año siendo programador", 
       "date":"2023-01-01",
       "description":"Te muestro distintas ideas creativas para empezar con mucha motivación este 2023",
-      "topic":"javascript"
+      "topic":"netCore"
     },
     {
       "title":"5 consejos para desarrolladores Junior", 

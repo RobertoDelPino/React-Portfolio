@@ -1,19 +1,35 @@
 import {BlogEntryData} from "@domain/Entities/BlogEntryData.tsx";
 import {BlogEntryCard} from "@components/BlogEntryCard/BlogEntryCard.tsx";
-import articlesData from "@domain/Repository/Articles.tsx";
 
-type BlogEntryListProps = { allList?: boolean };
+type BlogEntryListProps = { blogEntryList?: BlogEntryData[] };
 
-export const BlogEntryList = ({ allList = false }: BlogEntryListProps ) => {
+export const BlogEntryList = ({ blogEntryList = null }: BlogEntryListProps ) => {
     
-  let articlesDataToShow = [];
-  allList ? articlesDataToShow = articlesData : articlesDataToShow = articlesData.slice(0,4) ;
+  if(blogEntryList.length == 0){
+    return (
+      <>
+        <p>No se han encontrado artículos</p>
+      </>
+    )
+  }
 
+  if(blogEntryList && blogEntryList.length > 0){
+    return (
+      <>
+        {
+            blogEntryList.map((blogEntry: BlogEntryData, index) => (
+                <BlogEntryCard key={index} blogEntry={blogEntry}/>
+            ))
+        }
+    </>
+    )
+  }
 
+  
   return (
     <>
         {
-            articlesDataToShow.map((blogEntry: BlogEntryData, index) => (
+            blogEntryList.map((blogEntry: BlogEntryData, index) => (
                 <BlogEntryCard key={index} blogEntry={blogEntry}/>
             ))
         }
