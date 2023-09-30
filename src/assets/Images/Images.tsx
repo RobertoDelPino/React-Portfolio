@@ -14,6 +14,7 @@ import tailwind from "../../assets/TechIcons/tailwind.webp"
 import personalPhoto from "../../assets/fotoPerfil-1.webp"
 import robertoPortfolio from "@assets/ProjectsPhotos/RobertoProject.webp"
 import hiriamPortfolio from "@assets/ProjectsPhotos/HiriamProject.webp"
+import searchSymbol from "@assets/search-symbol.png";
 
 const IMAGES : Record<string, string> = {
     javascript: javascript,
@@ -31,7 +32,8 @@ const IMAGES : Record<string, string> = {
     tailwind: tailwind,
     personalPhoto: personalPhoto,
     robertoPortfolio: robertoPortfolio,
-    hiriamPortfolio: hiriamPortfolio
+    hiriamPortfolio: hiriamPortfolio,
+    searchSymbol: searchSymbol
 }
 
 function findImage(name: string): string{
