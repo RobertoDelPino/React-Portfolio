@@ -7,3 +7,24 @@ body, html, #root{
     height: 100%;
     width: 100%;
 }
+
+
+[data-tooltip]::before {
+
+    /* customizable */
+    transition: all 0.15s ease;
+    padding: 10px;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px silver;
+}
+
+[data-tooltip]:hover::before {
+
+    /* customizable */
+    background: yellow;
+}
+
+[data-tooltip]:not([data-tooltip-persistent])::before {
+    pointer-events: none;
+}
