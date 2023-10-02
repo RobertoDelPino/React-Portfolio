@@ -14,6 +14,7 @@ import tailwind from "../../assets/TechIcons/tailwind.webp"
 import personalPhoto from "../../assets/fotoPerfil-1.webp"
 import robertoPortfolio from "@assets/ProjectsPhotos/RobertoProject.webp"
 import hiriamPortfolio from "@assets/ProjectsPhotos/HiriamProject.webp"
+import javascriptProjects from "@assets/javascriptProjects.webp";
 import searchSymbol from "@assets/search-symbol.png";
 
 const IMAGES : Record<string, string> = {
@@ -33,6 +34,7 @@ const IMAGES : Record<string, string> = {
     personalPhoto: personalPhoto,
     robertoPortfolio: robertoPortfolio,
     hiriamPortfolio: hiriamPortfolio,
+    javascriptProjects: javascriptProjects,
     searchSymbol: searchSymbol
 }
 

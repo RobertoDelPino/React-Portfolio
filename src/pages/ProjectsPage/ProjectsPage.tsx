@@ -19,7 +19,13 @@ export const ProjectsPage = () => {
             "Hiriambg portfolio",
             "Te presento el portfolio de una estudiante de fotografía, Hiriam Bartolomé, quien ha estado en diversos eventos internacionales como JSDay Canarias.",
             "https://hiriambg.netlify.com",
-            findImage("hiriamPortfolio"))
+            findImage("hiriamPortfolio")),
+        new Project(
+            "https://github.com/RobertoDelPino/Javascript-Course-Projects",
+            "Proyetos de aprendizaje de Javascript",
+            "Aqui podrás ver todos los proyectos en los que he estado trabajando para poder aprender y mejorar en Javascript",
+            "https://github.com/RobertoDelPino/Javascript-Course-Projects",
+            findImage("javascriptProjects"))
     ]
 
     return (
