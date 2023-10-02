@@ -95,7 +95,7 @@ export const BlogEntry = () => {
       
       return article == "" 
         ? (
-          <section className='dark:bg-gray-800 flex items-center justify-center h-[450px]'>
+          <section className='dark:bg-gray-800 flex items-center justify-center h-[85%]'>
             <h1 className='text-2xl dark:text-white font-bold text-center'>No se ha encontrado el articulo</h1>
           </section>
         )
