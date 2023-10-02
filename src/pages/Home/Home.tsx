@@ -1,88 +1,89 @@
-import personalPhoto from "../../assets/fotoPerfil-1.webp"
 import {TechnologiesList, ITechnology} from "@components/TecnologiesList/TechnologiesList.tsx";
-import javascript from "../../assets/TechIcons/javascript.webp"
-import bootstrap from "../../assets/TechIcons/bootstrap.webp"
-import css from "../../assets/TechIcons/css-3.webp"
-import html from "../../assets/TechIcons/html-5.webp"
-import github from "../../assets/TechIcons/github.webp"
-import mysql from "../../assets/TechIcons/mysql.webp"
-import react from "../../assets/TechIcons/react.webp"
-import typescript from "../../assets/TechIcons/typescript.webp"
-import visualStudio from "../../assets/TechIcons/visual-studio.webp"
-import visualStudioCode from "../../assets/TechIcons/vscode.webp"
-import webstorm from "../../assets/TechIcons/webstorm.webp"
-import netCore from "../../assets/TechIcons/netcore.webp"
-import tailwind from "../../assets/TechIcons/tailwind.webp"
+import { BlogEntryList } from "@components/BlogEntryList/BlogEntryList";
+import { findImage } from "@assets/Images/Images";
+import articles from "@domain/Repository/Articles.tsx";
 
 export const Home = () => {
-
+    const personalPhoto = findImage("personalPhoto");
     const techList: ITechnology[] = [
         {
             name: "HTML",
-            image: html
+            image: findImage("html")
         },
         {
             name: "CSS",
-            image: css
+            image: findImage("css")
         },
         {
             name: "Javascript",
-            image: javascript
+            image: findImage("javascript")
         },
         {
             name: "Bootstrap",
-            image: bootstrap
+            image: findImage("bootstrap")
         },
         {
             name: "Tailwind",
-            image: tailwind
+            image: findImage("tailwind")
         },
         {
             name: "Github",
-            image: github
+            image: findImage("github")
         },
         {
             name: "React",
-            image: react
+            image: findImage("react")
         },
         {
             name: "Typescript",
-            image: typescript
+            image: findImage("typescript")
         },
         {
             name: "ASP.NET Core",
-            image: netCore
+            image: findImage("netcore")
         },
         {
             name: "MySQL",
-            image: mysql
+            image: findImage("mysql")
         },
         {
             name: "Visual Studio",
-            image: visualStudio
+            image: findImage("visualStudio")
         },
         {
             name: "Visual Studio Code",
-            image: visualStudioCode
+            image: findImage("visualStudioCode")
         },
         {
             name: "WebStorm",
-            image: webstorm
-        }
+            image: findImage("webstorm")
+        },
     ]
 
     return (
         <>
-            <section className="w-[100%] dark:bg-gray-800 min-h-[95%] pb-14">
-                <section className=" max-w-screen-xl m-auto flex flex-wrap w-[100%] justify-around py-10 lg:py-32 dark:bg-gray-800 ">
-                    <div className="flex content-center flex-wrap px-6 mb-9">
-                        <h1 className="text-2xl dark:text-white w-[100%] md:text-start lg:text-4xl text-center">
-                            <b>Roberto del Pino Hormiga</b>
+            <section className="w-[100%] dark:bg-gray-800 min-h-[95%] pb-10">
+                <section className=" max-w-screen-xl m-auto flex flex-wrap w-[100%] justify-around py-12 dark:bg-gray-800 ">
+                    <div className="flex justify-center flex-wrap px-6 mb-9 md:w-[45%] w-[100%]">
+                        <div>
+                            <img src={personalPhoto} alt="Photo of Roberto del Pino Hormiga"
+                            className="w-48 h-48 lg:w-72 lg:h-72 rounded-full border-black border-2 dark:border-white
+                            mb-5"/>
+                        </div>
+                        <h1 className=" dark:text-white w-[100%] lg:text-4xl">
+                            <b className="text-2xl text-center w-[100%] block">Roberto del Pino Hormiga</b>
                         </h1>
-                        <h1 className="text-xl dark:text-white mt-1.5 lg:text-2xl w-[100%] text-center md:text-start">Software Developer</h1>
+                        <h1 className="text-xl dark:text-white mt-1.5 lg:text-2xl w-[100%] text-center">Software Developer</h1>
                     </div>
-                    <img loading="lazy" src={personalPhoto} alt="Photo of Roberto del Pino Hormiga"
-                         className="w-72 lg:w-80 rounded-full border-black border-2 dark:border-white"/>
+
+                    <section className="lg:max-w-xl min-h-full h-4/5 m-auto w-[95%]">
+                        <h1 className="text-2xl dark:text-white font-semibold text-center lg:text-left">Últimos articulos</h1>
+                        <section className="flex justify-center">
+                            {
+                                < BlogEntryList blogEntryList={articles.slice(0,4)} />
+                            }
+                        </section>
+                    </section>
                 </section>
 
                 <section className="dark:bg-gray-800 dark:text-white max-w-screen-xl m-auto">
