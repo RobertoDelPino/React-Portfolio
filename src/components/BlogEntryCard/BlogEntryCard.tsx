@@ -4,7 +4,7 @@ import {findImage} from "@assets/Images/Images";
 
 
 export const BlogEntryCard = (props: { blogEntry: BlogEntryData }) => {
-  const filePath = props.blogEntry.title.replaceAll(" ", "-");
+  const filePath = props.blogEntry.title.replaceAll(" ", "-").toLowerCase();
   const image = findImage(props.blogEntry.topic);
   return (
     <article className="max-w-xl">

@@ -44,7 +44,7 @@ export const BlogEntry = () => {
                 {h1.children}
               </h1>
             )
-        }, //margin: 48px 0 24px;
+        },
         h2: (h2: React.DetailedHTMLProps<React.ParamHTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>) =>{
             return (
               <h2 className='text-xl dark:text-white mt-10 mb-6 font-bold'>
