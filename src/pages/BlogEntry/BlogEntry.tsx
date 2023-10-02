@@ -59,6 +59,21 @@ export const BlogEntry = () => {
               </h2>
             )
         },
+        ul: (ul: React.DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLUListElement>, HTMLUListElement>) =>{
+          return (
+            <ul className='list-disc ml-8'>
+              {ul.children}
+            </ul>
+          )
+        },
+
+        li: (li: React.DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLLIElement>, HTMLLIElement>) =>{
+          return (
+            <li className='text-xl dark:text-white'>
+              {li.children}
+            </li>
+          )
+        },
 
       }
 

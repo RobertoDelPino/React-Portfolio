@@ -78,9 +78,11 @@ export const Home = () => {
 
                     <section className="lg:max-w-xl min-h-full h-4/5 m-auto w-[95%]">
                         <h1 className="text-2xl dark:text-white font-semibold text-center lg:text-left">Últimos articulos</h1>
-                        {
-                            < BlogEntryList blogEntryList={articles.slice(0,4)} />
-                        }
+                        <section className="flex justify-center">
+                            {
+                                < BlogEntryList blogEntryList={articles.slice(0,4)} />
+                            }
+                        </section>
                     </section>
                 </section>
 
