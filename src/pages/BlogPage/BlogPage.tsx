@@ -24,7 +24,7 @@ export const BlogPage = () => {
         <input className="p-1 border rounded w-[100%]" type="text" id="searchArticles_input" onKeyUp={(input) => searchArticle(input.currentTarget.value)} placeholder="Busca un artículo" />
       </section>
 
-      <section className="grid md:grid-cols-2 min-h-screen">
+      <section className="grid md:grid-cols-2 min-h-screen auto-rows-max">
         {
           <BlogEntryList blogEntryList={articlesSearched}/>
         }
