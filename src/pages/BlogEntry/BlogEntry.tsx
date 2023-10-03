@@ -78,6 +78,7 @@ export const BlogEntry = () => {
       }
 
       const [article, setArticle] = useState("");
+      const [isLoading, setIsLoading] = useState(true);
       const {fileName} = useParams();
 
       useEffect(() => {
@@ -85,7 +86,9 @@ export const BlogEntry = () => {
           try {
             const data = await import(`../../assets/BlogFiles/${fileName?.toLowerCase()}.md?raw`);
             setArticle(data.default)
+            setIsLoading(false)
           } catch (error) {
+            setIsLoading(false)
           }
           
         }
@@ -93,6 +96,15 @@ export const BlogEntry = () => {
         image();
       }, [fileName])
       
+
+      if(isLoading){
+        return (
+          <section className='dark:bg-gray-800 flex items-center justify-center h-[85%]'>
+            <h1 className='text-2xl dark:text-white font-bold text-center'>Cargando...</h1>
+          </section>
+        )
+      }
+
       return article == "" 
         ? (
           <section className='dark:bg-gray-800 flex items-center justify-center h-[85%]'>
