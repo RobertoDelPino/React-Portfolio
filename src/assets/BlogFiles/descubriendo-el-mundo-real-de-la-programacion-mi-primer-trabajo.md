@@ -6,9 +6,6 @@
   "toc":true
 }
 
-
-# Descubriendo el Mundo Real de la Programación: Mi Primer Trabajo
-
 Llevo desde junio, al acabar los estudios, trabajando en una empresa como programador web. Hoy os quiero contar todo lo que he aprendido hasta ahora, desde las prácticas de empresa hasta lo que he aprendido en el trabajo.
 
 ## Antes de empezar las prácticas de empresa
@@ -28,11 +25,11 @@ Supe de la existencia de los patrones de diseño, como la arquitectura hexagonal
 Gracias a ellos conocí a la empresa en la que trabajo actualmente y pude prepararme bien dicha entrevista (hablaré de esto en una futura publicación).
 
 
-## La empresa
+## La empresa en la que trabajo
 
 Es una empresa de producto, es decir, crea su propio software y lo comercializa. Tiene 15 años de proyectos de software. Si, 15 años en donde han desarrollado multitud de software propio.
 
-Bendito sea que aprendí muchos conceptos sobre arquitectura hexagonal y TDD, me ahorró meses de aprendizaje en solitario.
+Bendito sea que aprendí muchos conceptos sobre arquitectura hexagonal y TDD, me ahorró meses de aprendizaje.
 
 A pesar de haber aprendido TDD y la arquitectura hexagonal, durante el primer mes apenas toqué código. Esto se debió a que en la empresa utilizan CQRS, otro patrón, que posee un nivel de abstracción bastante elevado. Además, me enseñaron todas las convenciones que el equipo había acordado para desarrollar un software similar de manera uniforme y correcta.
 
@@ -40,11 +37,17 @@ Por otro lado, tuve que aprender ciertas nociones sobre el conjunto de herramien
 
 En cuanto a los compañeros de trabajo, tengo que admitir que otra vez he tenido suerte. En un principio estaba bastante nervioso porque soy el más joven de todos pero han sido muy amables y siempre han estado ahí cuando he necesitado un cable.
 
+Por último, deseo destacar que ha sido importante para mi poder entrar a trabajar en el sector tecnológico de la mano de una empresa con tanta experiencia. Ayuda mucho al aprendizaje ver diferentes formas/convenciones de trabajo, tanto acuales como pasadas.
 
-## Resumen
+
+## Puntos a destacar
+
+He tenido la suerte de tener los compañeros durante estas tres etapas( ciclo, practicas del ciclo y empresa ) que me han permitido crecer como profesional para cada día ser un mejor programador. 
 
 - Es muy importante la empresa en la que realices las prácticas.
 - Tener curiosidad por aprender siempre abre las puertas a nuevas oportunidades.
+- El programador que soy hoy es gracias a todas estas experiencias y dificultades a las que cada día me he tenido que enfrentar desde que empecé el ciclo hasta ahora.
 - Las empresas, cada vez más, utilizan patrones de diseño y metodologías para hacer un código más mantenible.
+
 
 
