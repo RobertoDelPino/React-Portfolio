@@ -3,7 +3,7 @@ import {BsGithub, BsLink} from "react-icons/bs";
 
 
 export const ProjectCard = (props: { project: Project }) => 
-    <article role="article" aria-label="Project"className="m-3 w-52 md:w-72 dark:bg-gray-600 rounded-2xl border-2 dark:border-0">
+    <article role="article" aria-label="Project"className="m-3 w-72 dark:bg-gray-600 rounded-2xl border-2 dark:border-0">
         <img loading="lazy" className="h-[199px] object-cover rounded-t-2xl" src={props.project.image} alt={props.project.title}/>
         <article className="p-4">
             <h3 className="font-bold text-xl mb-2">{props.project.title}</h3>

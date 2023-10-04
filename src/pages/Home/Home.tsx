@@ -88,7 +88,7 @@ export const Home = () => {
 
                 <section className="dark:bg-gray-800 dark:text-white max-w-screen-xl m-auto">
                     <h2 className="text-2xl text-bold text-center pt-10">Mi Stack Tecnológico</h2>
-                    <p className="text-center mt-3">Herramientas que he estado utilizando en proyectos recientes</p>
+                    <p className="text-center mt-3 px-10">Herramientas que he estado utilizando en proyectos recientes</p>
                     < TechnologiesList list={techList} />
                 </section>
             </section>
