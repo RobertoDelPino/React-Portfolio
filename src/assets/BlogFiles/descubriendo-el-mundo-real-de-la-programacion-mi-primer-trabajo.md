@@ -42,8 +42,6 @@ Por último, deseo destacar que ha sido importante para mi poder entrar a trabaj
 
 ## Puntos a destacar
 
-He tenido la suerte de tener los compañeros durante estas tres etapas( ciclo, practicas del ciclo y empresa ) que me han permitido crecer como profesional para cada día ser un mejor programador. 
-
 - Es muy importante la empresa en la que realices las prácticas.
 - Tener curiosidad por aprender siempre abre las puertas a nuevas oportunidades.
 - El programador que soy hoy es gracias a todas estas experiencias y dificultades a las que cada día me he tenido que enfrentar desde que empecé el ciclo hasta ahora.
