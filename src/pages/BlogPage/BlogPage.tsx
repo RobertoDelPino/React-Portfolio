@@ -19,7 +19,7 @@ export const BlogPage = () => {
   return (
     <section className="px-5 min-h-full m-auto max-w-screen-xl md:w-[100%] dark:bg-gray-800">
       <h1 className="text-2xl dark:text-white font-semibold mt-7">Todos los artículos publicados</h1>
-      <section className="mt-3 relative w-72">
+      <section className="mt-3 relative w-full md:w-72">
         <label htmlFor="searchArticles_input" className="w-5 absolute right-0 h-[100%] align-middle mr-2 flex items-center"> <img src={findImage("searchSymbol")} alt="" /></label>
         <input className="p-1 border rounded w-[100%]" type="text" id="searchArticles_input" onKeyUp={(input) => searchArticle(input.currentTarget.value)} placeholder="Busca un artículo" />
       </section>
