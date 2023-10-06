@@ -37,7 +37,7 @@ Por otro lado, tuve que aprender ciertas nociones sobre el conjunto de herramien
 
 En cuanto a los compañeros de trabajo, tengo que admitir que otra vez he tenido suerte. En un principio estaba bastante nervioso porque soy el más joven de todos pero han sido muy amables y siempre han estado ahí cuando he necesitado un cable.
 
-Por último, deseo destacar que ha sido importante para mi poder entrar a trabajar en el sector tecnológico de la mano de una empresa con tanta experiencia. Ayuda mucho al aprendizaje ver diferentes formas/convenciones de trabajo, tanto acuales como pasadas.
+Por último, deseo destacar que ha sido importante para mi poder entrar a trabajar en el sector tecnológico de la mano de una empresa con tanta experiencia. Ayuda mucho al aprendizaje ver diferentes formas/convenciones de trabajo, tanto actuales como pasadas.
 
 
 ## Puntos a destacar
