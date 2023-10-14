@@ -9,7 +9,7 @@ export const BlogEntryCard = (props: { blogEntry: BlogEntryData }) => {
   return (
     <article className="max-w-xl">
       <Link to={"/blog/" + filePath}>
-        <div className="flex items-center my-5 hover:bg-gray-800/[.1] dark:hover:bg-slate-50/[.4] p-3 rounded group">
+        <div className="flex items-center mb-0.5 hover:bg-gray-800/[.1] dark:hover:bg-slate-50/[.4] p-3 rounded group">
           <img className="w-[50px] h-[50px] group-hover:scale-[1.2] transition duration-500 opacity-80" src={image} alt="" />
           <div className="ml-5">
             <p className="dark:text-white text-lg">{props.blogEntry.title}</p>

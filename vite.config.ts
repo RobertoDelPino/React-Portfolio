@@ -32,6 +32,13 @@ export default defineConfig(({ command, mode }) => {
         outDir: "build",
         chunkSizeWarningLimit: 1000,
         minify: "esbuild",
+        rollupOptions: {
+          output: {
+            entryFileNames: `assets/[name].js`,
+            chunkFileNames: `assets/[name].js`,
+            assetFileNames: `assets/[name].[ext]`
+          }
+        }
       },
       resolve: {
         alias: getAliases(),

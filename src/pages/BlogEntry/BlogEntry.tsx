@@ -69,7 +69,7 @@ export const BlogEntry = () => {
 
         li: (li: React.DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLLIElement>, HTMLLIElement>) =>{
           return (
-            <li className='text-xl dark:text-white'>
+            <li className='dark:text-white'>
               {li.children}
             </li>
           )
