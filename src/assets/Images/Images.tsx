@@ -17,10 +17,6 @@ import hiriamPortfolio from "@assets/ProjectsPhotos/HiriamProject.webp"
 import javascriptProjects from "@assets/javascriptProjects.webp";
 import searchSymbol from "@assets/search-symbol.png";
 import fakeTableResult from "@assets/BlogImages/resultado-sql-fake-table.png"
-import mutiplesDBCalls from "@assets/BlogImages/extraer-datos-iterando-array-multiples-llamadas.png"
-import oneDBCall from "@assets/BlogImages/extraer-datos-where-array-una-unica-llamada.png"
-import extractAllColunms from "@assets/BlogImages/extraer-todos-datos-con-todas-columnas.png"
-import extractSomeColumns from "@assets/BlogImages/extraer-todos-datos-con-tres-props.png"
 
 const IMAGES : Record<string, string> = {
     javascript: javascript,
@@ -42,10 +38,6 @@ const IMAGES : Record<string, string> = {
     javascriptProjects: javascriptProjects,
     searchSymbol: searchSymbol,
     fakeTableResult: fakeTableResult,
-    mutiplesDBCalls: mutiplesDBCalls,
-    oneDBCall: oneDBCall,
-    extractAllColunms: extractAllColunms,
-    extractSomeColumns: extractSomeColumns
 }
 
 function findImage(name: string): string{

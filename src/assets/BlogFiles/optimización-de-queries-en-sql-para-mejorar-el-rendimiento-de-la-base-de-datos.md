@@ -21,15 +21,51 @@ A veces no nos damos cuenta y hacemos un "SELECT *" de todos los datos de la tab
 
 **Recuperar todos los datos con todas las columnas**
   - Query: "SELECT * FROM fakeTable"
-  - Tiempo total: 12,6 segundos
+  - **Tiempo total: 12,6 segundos**
+  - Código: 
+  ``` javascript
+      async function fetchAllData() {
+        try {
+            console.time('ConsultaSQL');
+            await sql.connect(config);
+        
+            const query = `SELECT * FROM fakeTable`;
+            await sql.query(query);
 
-![Imagen demostración del tiempo que tarda SQL en realizar una búsqueda obteniendo todos los registros con sus respectivas propiedades](/assets/extraer-todos-datos-con-todas-columnas.png)
+        } catch (err) {
+          console.error('Error al recuperar datos:', err);
+        } finally {
+          sql.close();
+          console.timeEnd('ConsultaSQL');
+        }
+      }
+
+      fetchAllData();
+  ```
 
 **Recuperar todos los datos con solo tres columnas**
   - Query: "SELECT Name, MiddleName, Gender FROM fakeTable"
-  - Tiempo total: 3,1 segundos
+  - **Tiempo total: 3,1 segundos**
+  - Código: 
+  ``` javascript
+      async function fetchAllData() {
+        try {
+            console.time('ConsultaSQL');
+            await sql.connect(config);
+        
+            const query = `SELECT Name, MiddleName, Gender FROM fakeTable`;
+            await sql.query(query);
 
-![Imagen demostración del tiempo que tarda SQL en realizar una búsqueda obteniendo todos los registros con tres propiedades de la tabla](/assets/extraer-todos-datos-con-tres-props.png)
+        } catch (err) {
+          console.error('Error al recuperar datos:', err);
+        } finally {
+          sql.close();
+          console.timeEnd('ConsultaSQL');
+        }
+      }
+
+      fetchAllData();
+  ```
 
 Como pueden ver, en el momento en donde pedimos más de lo necesario a la base de datos, el tiempo total de la query va a ser mucho más elevado.
 
@@ -48,15 +84,51 @@ Numero de las oficinas de las que vamos a recuperar sus trabajadores:
 
 **Iterar el array realizando múltiples llamadas a la base de datos**
   - Query: "SELECT Name, MiddleName, Gender FROM fakeTable where Office = 'x' "
-  - Tiempo total: 1 segundo
+  - **Tiempo total: 1 segundo**
+  - Código: 
+  ``` javascript
+      async function fetchAllData() {
+        try {
+            console.time('ConsultaSQL');
+            await sql.connect(config);
+        
+            for (const officeNumber of officeNumbers) {
+                const query = `SELECT Name, MiddleName, Gender FROM FakeTable WHERE Office = ${officeNumber}`;
+                await sql.query(query);
+            }
+        } catch (err) {
+          console.error('Error al recuperar datos:', err);
+        } finally {
+          sql.close();
+          console.timeEnd('ConsultaSQL');
+        }
+      }
 
-![Imagen demostración del tiempo que tarda SQL en realizar las distintas queries que le llegan debido a que están iterando un array](/assets/extraer-datos-iterando-array-multiples-llamadas.png)
+      fetchAllData();
+  ```
 
 **Hacer un join del array para realizar sólo una query**
   - Query: "SELECT Name, MiddleName, Gender FROM fakeTable where Office IN ('123', '100', ...)"
-  - Tiempo total: 0,7 segundos
+  - **Tiempo total: 0,7 segundos**
+  - Código: 
+  ``` javascript
+      async function fetchAllData() {
+        try {
+            console.time('ConsultaSQL');
+            await sql.connect(config);
+        
+            const officeNumbersString = officeNumbers.join(',');
+            const query = `SELECT Name, MiddleName, Gender FROM FakeTable WHERE Office IN (${officeNumbersString})`;
+            await sql.query(query);
 
-![Imagen demostración del tiempo que tarda SQL en realizar una única query](/assets/extraer-datos-where-array-una-unica-llamada.png)
+        } catch (err) {
+          console.error('Error al recuperar datos:', err);
+        } finally {
+          sql.close();
+          console.timeEnd('ConsultaSQL');
+        }
+      }
+  ```
 
 
 Como puede observar, en este ejemplo, la diferencia no es significativa debido a la cantidad limitada de oficinas incluidas. Sin embargo, es importante recordar que cada consulta que se realiza a la base de datos consume recursos del servidor y, en el caso de bases de datos alojadas en Azure, cada consulta implica costos adicionales.
