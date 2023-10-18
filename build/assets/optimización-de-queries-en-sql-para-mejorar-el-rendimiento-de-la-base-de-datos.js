@@ -19,17 +19,53 @@ Para los siguientes tips he creado una tabla con un millón de registros. Puedes
 \r
 A veces no nos damos cuenta y hacemos un "SELECT *" de todos los datos de la tabla cuando en realidad solo necesitamos algunas columnas. \r
 \r
-- Recuperar todos los datos con todas las columnas\r
+**Recuperar todos los datos con todas las columnas**\r
   - Query: "SELECT * FROM fakeTable"\r
-  - Tiempo total: 12,6 segundos\r
+  - **Tiempo total: 12,6 segundos**\r
+  - Código: \r
+  \`\`\` javascript\r
+      async function fetchAllData() {\r
+        try {\r
+            console.time('ConsultaSQL');\r
+            await sql.connect(config);\r
+        \r
+            const query = \`SELECT * FROM fakeTable\`;\r
+            await sql.query(query);\r
 \r
-![Imagen demostración del tiempo que tarda SQL en realizar una búsqueda obteniendo todos los registros con sus respectivas propiedades](/assets/extraer-todos-datos-con-todas-columnas.png)\r
+        } catch (err) {\r
+          console.error('Error al recuperar datos:', err);\r
+        } finally {\r
+          sql.close();\r
+          console.timeEnd('ConsultaSQL');\r
+        }\r
+      }\r
 \r
-- Recuperar todos los datos con solo tres columnas\r
+      fetchAllData();\r
+  \`\`\`\r
+\r
+**Recuperar todos los datos con solo tres columnas**\r
   - Query: "SELECT Name, MiddleName, Gender FROM fakeTable"\r
-  - Tiempo total: 3,1 segundos\r
+  - **Tiempo total: 3,1 segundos**\r
+  - Código: \r
+  \`\`\` javascript\r
+      async function fetchAllData() {\r
+        try {\r
+            console.time('ConsultaSQL');\r
+            await sql.connect(config);\r
+        \r
+            const query = \`SELECT Name, MiddleName, Gender FROM fakeTable\`;\r
+            await sql.query(query);\r
 \r
-![Imagen demostración del tiempo que tarda SQL en realizar una búsqueda obteniendo todos los registros con tres propiedades de la tabla](/assets/extraer-todos-datos-con-tres-props.png)\r
+        } catch (err) {\r
+          console.error('Error al recuperar datos:', err);\r
+        } finally {\r
+          sql.close();\r
+          console.timeEnd('ConsultaSQL');\r
+        }\r
+      }\r
+\r
+      fetchAllData();\r
+  \`\`\`\r
 \r
 Como pueden ver, en el momento en donde pedimos más de lo necesario a la base de datos, el tiempo total de la query va a ser mucho más elevado.\r
 \r
@@ -43,24 +79,61 @@ La mejor forma es construir una query que recoja todos los trabajadores que cont
 \r
 Hagamos la comparativa:\r
 \r
-Numero de las oficinas de las que vamos a recuperar sus trabajadores:  ["100", "136", "299", "287", "258", "268", "137", "122", "165", "170", "178"]\r
+Numero de las oficinas de las que vamos a recuperar sus trabajadores:  \r
+\\- ["100", "136", "299", "287", "258", "268", "137", "122", "165", "170", "178"]\r
 \r
-- Iterar el array realizando múltiples llamadas a la base de datos\r
+**Iterar el array realizando múltiples llamadas a la base de datos**\r
   - Query: "SELECT Name, MiddleName, Gender FROM fakeTable where Office = 'x' "\r
-  - Tiempo total: 1 segundo\r
+  - **Tiempo total: 1 segundo**\r
+  - Código: \r
+  \`\`\` javascript\r
+      async function fetchAllData() {\r
+        try {\r
+            console.time('ConsultaSQL');\r
+            await sql.connect(config);\r
+        \r
+            for (const officeNumber of officeNumbers) {\r
+                const query = \`SELECT Name, MiddleName, Gender FROM FakeTable WHERE Office = \${officeNumber}\`;\r
+                await sql.query(query);\r
+            }\r
+        } catch (err) {\r
+          console.error('Error al recuperar datos:', err);\r
+        } finally {\r
+          sql.close();\r
+          console.timeEnd('ConsultaSQL');\r
+        }\r
+      }\r
 \r
-![Imagen demostración del tiempo que tarda SQL en realizar las distintas queries que le llegan debido a que están iterando un array](/assets/extraer-datos-iterando-array-multiples-llamadas.png)\r
+      fetchAllData();\r
+  \`\`\`\r
 \r
-- Hacer un join del array para realizar sólo una query\r
+**Hacer un join del array para realizar sólo una query**\r
   - Query: "SELECT Name, MiddleName, Gender FROM fakeTable where Office IN ('123', '100', ...)"\r
-  - Tiempo total: 0,7 segundos\r
+  - **Tiempo total: 0,7 segundos**\r
+  - Código: \r
+  \`\`\` javascript\r
+      async function fetchAllData() {\r
+        try {\r
+            console.time('ConsultaSQL');\r
+            await sql.connect(config);\r
+        \r
+            const officeNumbersString = officeNumbers.join(',');\r
+            const query = \`SELECT Name, MiddleName, Gender FROM FakeTable WHERE Office IN (\${officeNumbersString})\`;\r
+            await sql.query(query);\r
 \r
-![Imagen demostración del tiempo que tarda SQL en realizar una única query](/assets/extraer-datos-where-array-una-unica-llamada.png)\r
+        } catch (err) {\r
+          console.error('Error al recuperar datos:', err);\r
+        } finally {\r
+          sql.close();\r
+          console.timeEnd('ConsultaSQL');\r
+        }\r
+      }\r
+  \`\`\`\r
 \r
 \r
 Como puede observar, en este ejemplo, la diferencia no es significativa debido a la cantidad limitada de oficinas incluidas. Sin embargo, es importante recordar que cada consulta que se realiza a la base de datos consume recursos del servidor y, en el caso de bases de datos alojadas en Azure, cada consulta implica costos adicionales.\r
 \r
-Conclusión:\r
+Conclusión: \\\r
 Es fundamental recordar que cuanto más datos solicitamos a la base de datos, más recursos, tiempo y dinero se requieren. Espero que estos consejos le ayuden a optimizar sus consultas y evitar la pérdida de usuarios. ¡La optimización es clave para un rendimiento eficiente de la base de datos!\r
 \r
 \r

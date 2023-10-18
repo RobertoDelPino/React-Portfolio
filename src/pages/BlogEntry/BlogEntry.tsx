@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet"
 import { useEffect, useState } from 'react'
 import remarkGfm from 'remark-gfm'
 import ReactMarkdown from 'react-markdown'
@@ -28,6 +29,7 @@ export const BlogEntry = () => {
             if(typeof(children[0]) == "string"){
               if(children[0].includes("title")){
                   const data = JSON.parse(children[0])
+                  setArticleTitle(data.title)
                   return <BlogEntryTitle data={data} />
               }
             }
@@ -78,6 +80,7 @@ export const BlogEntry = () => {
       }
 
       const [article, setArticle] = useState("");
+      const [articleTitle, setArticleTitle] = useState("");
       const [isLoading, setIsLoading] = useState(true);
       const {fileName} = useParams();
 
@@ -100,6 +103,9 @@ export const BlogEntry = () => {
       if(isLoading){
         return (
           <section className='dark:bg-gray-800 flex items-center justify-center h-[85%]'>
+            <Helmet>
+              <title>Roberto del Pino - Web Developer - Blog</title>
+            </Helmet>
             <h1 className='text-2xl dark:text-white font-bold text-center'>Cargando...</h1>
           </section>
         )
@@ -108,21 +114,27 @@ export const BlogEntry = () => {
       return article == "" 
         ? (
           <section className='dark:bg-gray-800 flex items-center justify-center h-[85%]'>
+            <Helmet>
+              <title>Roberto del Pino - Web Developer - Blog</title>
+            </Helmet>
             <h1 className='text-2xl dark:text-white font-bold text-center'>No se ha encontrado el articulo</h1>
           </section>
         )
         : (
           <section className=" 2xl:min-h-[95%] xl:min-h-[70%] md:min-h-[80%] dark:bg-gray-800">
-              <article className="max-w-screen-xl m-auto dark:algo">
-                  <ReactMarkdown 
-                      className='markdown-body' 
-                      components={components}
-                      remarkPlugins={[remarkGfm]}
-                      
-                      >
-                      {article}
-                  </ReactMarkdown>
-              </article>
+            <Helmet>
+              <title>Roberto del Pino - Web Developer - {articleTitle}</title>
+            </Helmet>
+            <article className="max-w-screen-xl m-auto dark:algo">
+                <ReactMarkdown 
+                    className='markdown-body' 
+                    components={components}
+                    remarkPlugins={[remarkGfm]}
+                    
+                    >
+                    {article}
+                </ReactMarkdown>
+            </article>
           </section>
     );
 }

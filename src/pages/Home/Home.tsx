@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet"
 import {TechnologiesList, ITechnology} from "@components/TecnologiesList/TechnologiesList.tsx";
 import { BlogEntryList } from "@components/BlogEntryList/BlogEntryList";
 import { findImage } from "@assets/Images/Images";
@@ -63,6 +64,9 @@ export const Home = () => {
     return (
         <>
             <section className="w-[100%] dark:bg-gray-800 min-h-[95%] pb-10">
+                <Helmet>
+                    <title>Roberto del Pino - Web Developer</title>
+                </Helmet>
                 <section className=" max-w-screen-xl m-auto flex flex-wrap w-[100%] justify-around py-12 dark:bg-gray-800 ">
                     <div className="flex justify-center flex-wrap px-6 mb-9 md:w-[45%] w-[100%]">
                         <div>

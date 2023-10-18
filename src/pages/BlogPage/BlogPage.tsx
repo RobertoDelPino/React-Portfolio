@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet"
 import { BlogEntryList } from "@components/BlogEntryList/BlogEntryList"
 import articles from "@domain/Repository/Articles.tsx";
 import { useState } from "react";
@@ -18,6 +19,9 @@ export const BlogPage = () => {
 
   return (
     <section className="px-5 min-h-full m-auto max-w-screen-xl md:w-[100%] dark:bg-gray-800">
+      <Helmet>
+        <title>Roberto del Pino - Web Developer - Blog</title>
+      </Helmet>
       <h1 className="text-2xl dark:text-white font-semibold mt-7">Todos los artículos publicados</h1>
       <section className="mt-3 relative w-full md:w-72">
         <label htmlFor="searchArticles_input" className="w-5 absolute right-0 h-[100%] align-middle mr-2 flex items-center"> <img src={findImage("searchSymbol")} alt="" /></label>
