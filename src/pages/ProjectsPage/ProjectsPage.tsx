@@ -15,12 +15,12 @@ export const ProjectsPage = () => {
             "Te presento el código de esta página, mi portfolio. Si deseas enviarme cualquier feedback contacta conmigo a través de mi correo.",
             "https://robertodelpino.dev",
             findImage("robertoPortfolio")),
-        new Project(
+        /*new Project(
             "https://www.github.com",
             "Hiriambg portfolio",
             "Te presento el portfolio de una estudiante de fotografía, Hiriam Bartolomé, quien ha estado en diversos eventos internacionales como JSDay Canarias.",
             "https://hiriambg.netlify.com",
-            findImage("hiriamPortfolio")),
+            findImage("hiriamPortfolio")),*/
         new Project(
             "https://github.com/RobertoDelPino/Javascript-Course-Projects",
             "Proyetos de aprendizaje de Javascript",
