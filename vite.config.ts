@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv, splitVendorChunkPlugin } from "vite"
 import react from "@vitejs/plugin-react"
 import { resolve } from "path"
+import viteCompression from 'vite-plugin-compression';
 
 const getAliases = () => {
   return {
@@ -17,20 +18,32 @@ export default defineConfig(({ command, mode }) => {
 
   if (command === "serve" && mode === "development") {
     return {
-      plugins: [react()],
+      plugins: [react(), viteCompression()],
       resolve: {
         alias: getAliases(),
       },
       server: {
         port: parseInt(env.VITE_PORT),
       },
+      build: {
+        outDir: "build",
+        chunkSizeWarningLimit: 2000,
+        minify: "esbuild",
+        rollupOptions: {
+          output: {
+            entryFileNames: `assets/[name].js`,
+            chunkFileNames: `assets/[name].js`,
+            assetFileNames: `assets/[name].[ext]`
+          }
+        }
+      }
     }
   } else {
     return {
-      plugins: [react(), splitVendorChunkPlugin()],
+      plugins: [react(), splitVendorChunkPlugin(), viteCompression()],
       build: {
         outDir: "build",
-        chunkSizeWarningLimit: 1000,
+        chunkSizeWarningLimit: 2000,
         minify: "esbuild",
         rollupOptions: {
           output: {

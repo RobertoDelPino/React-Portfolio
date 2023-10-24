@@ -133,7 +133,59 @@ Numero de las oficinas de las que vamos a recuperar sus trabajadores:  \r
 \r
 Como puede observar, en este ejemplo, la diferencia no es significativa debido a la cantidad limitada de oficinas incluidas. Sin embargo, es importante recordar que cada consulta que se realiza a la base de datos consume recursos del servidor y, en el caso de bases de datos alojadas en Azure, cada consulta implica costos adicionales.\r
 \r
-Conclusión: \\\r
+## 3. No traer todos los registros de la tabla a la vez\r
+\r
+En muchas páginas web de venta de productos, como amazon o pccomponentes, ocurre que, a medida que vas haciendo scroll hacia abajo se van cargando nuevos productos. ¿Por qué crees que hacen esto? Para asegurarse de que las peticiones son rápidas y porque no es necesario traerse toda la base de datos, eso supondría un gasto abismal de recursos por cada petición.\r
+\r
+Ahora, vamos a comparar el tiempo que tarda la base de datos en obtener todos los registros(recuerdo que son 1 millón) y sólo traer los 100 primeros\r
+\r
+**Traer todos los registros de la tabla**\r
+  - Query: "SELECT * FROM fakeTable"\r
+  - **Tiempo total: 15,4 segundos**\r
+  - Código: \r
+  \`\`\` javascript\r
+      async function fetchAllData() {\r
+        try {\r
+            console.time('ConsultaSQL');\r
+            await sql.connect(config);\r
+        \r
+            const query = \`SELECT * FROM FakeTable\`;\r
+            await sql.query(query);\r
+\r
+        } catch (err) {\r
+          console.error('Error al recuperar datos:', err);\r
+        } finally {\r
+          sql.close();\r
+          console.timeEnd('ConsultaSQL');\r
+        }\r
+      }\r
+  \`\`\`\r
+\r
+**Traer todos los registros de la tabla**\r
+  - Query: "SELECT TOP 100 * FROM fakeTable"\r
+  - **Tiempo total: 0,13 segundos**\r
+  - Código: \r
+  \`\`\` javascript\r
+      async function fetchAllData() {\r
+        try {\r
+            console.time('ConsultaSQL');\r
+            await sql.connect(config);\r
+        \r
+            const query = \`SELECT * FROM FakeTable LIMIT 100\`;\r
+            await sql.query(query);\r
+\r
+        } catch (err) {\r
+          console.error('Error al recuperar datos:', err);\r
+        } finally {\r
+          sql.close();\r
+          console.timeEnd('ConsultaSQL');\r
+        }\r
+      }\r
+  \`\`\`\r
+\r
+Como podeis observar, la consulta se ha vuelto mucho más rápida, pasando de 15 segundos a menos de 1 segundo solamente por obtener un número limitado de datos, lo que representa una mejora del 93%. Ahora os pregunto, ¿es realmente necesario que obtengais todos los registros de la base de datos?\r
+\r
+## Conclusión\r
 Es fundamental recordar que cuanto más datos solicitamos a la base de datos, más recursos, tiempo y dinero se requieren. Espero que estos consejos le ayuden a optimizar sus consultas y evitar la pérdida de usuarios. ¡La optimización es clave para un rendimiento eficiente de la base de datos!\r
 \r
 \r
