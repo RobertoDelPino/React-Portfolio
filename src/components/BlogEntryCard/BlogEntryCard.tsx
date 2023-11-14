@@ -1,24 +1,11 @@
 import {BlogEntryData} from "@domain/Entities/BlogEntryData.tsx";
 import { Link } from "react-router-dom"
 import {findImage} from "@assets/Images/Images";
-import { useEffect } from "react";
-
 
 export const BlogEntryCard = (props: { blogEntry: BlogEntryData }) => {
   const filePath = props.blogEntry.title.replaceAll(" ", "-").toLowerCase();
   const image = findImage(props.blogEntry.topic);
 
-  useEffect(() => {
-    const pedirDatos = async () => {
-      const data = await fetch("www.thecocktaildb.com/api/json/v1/1/search.php?f=a");
-      console.log(data)
-    }
-
-    pedirDatos()
-  })
-
-  
-  
   return (
     <article className="max-w-xl">
       <Link to={"/blog/" + filePath}>
