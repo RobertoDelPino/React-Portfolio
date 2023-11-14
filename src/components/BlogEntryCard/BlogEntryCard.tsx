@@ -7,8 +7,7 @@ export const BlogEntryCard = async (props: { blogEntry: BlogEntryData }) => {
   const filePath = props.blogEntry.title.replaceAll(" ", "-").toLowerCase();
   const image = findImage(props.blogEntry.topic);
 
-  const data = await fetch("www.thecocktaildb.com/api/json/v1/1/search.php?f=a");
-  console.log(data)
+  
   return (
     <article className="max-w-xl">
       <Link to={"/blog/" + filePath}>
