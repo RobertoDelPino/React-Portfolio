@@ -17,6 +17,7 @@ import hiriamPortfolio from "@assets/ProjectsPhotos/HiriamProject.webp"
 import javascriptProjects from "@assets/javascriptProjects.webp";
 import searchSymbol from "@assets/search-symbol.png";
 import fakeTableResult from "@assets/BlogImages/resultado-sql-fake-table.png"
+import realTimeChat from "@assets/ProjectsPhotos/realtimechat.webp"
 
 const IMAGES : Record<string, string> = {
     javascript: javascript,
@@ -38,6 +39,7 @@ const IMAGES : Record<string, string> = {
     javascriptProjects: javascriptProjects,
     searchSymbol: searchSymbol,
     fakeTableResult: fakeTableResult,
+    realTimeChat: realTimeChat
 }
 
 function findImage(name: string): string{
