@@ -52,8 +52,8 @@ export const Header = () => {
                         {openNav && navList}
                     </div>
                 </Collapse>
+                <hr className="max-w-screen-xl m-auto"/>
             </Navbar>
-            <hr className="max-w-screen-xl m-auto"/>
         </>
     );
 };

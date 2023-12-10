@@ -102,7 +102,7 @@ export const BlogEntry = () => {
 
       if(isLoading){
         return (
-          <section className='dark:bg-gray-800 flex items-center justify-center h-[85%]'>
+          <section className='dark:bg-gray-800 flex flex-col flex-grow items-center justify-center'>
             <Helmet>
               <title>Roberto del Pino - Web Developer - Blog</title>
             </Helmet>
@@ -113,7 +113,7 @@ export const BlogEntry = () => {
 
       return article == "" 
         ? (
-          <section className='dark:bg-gray-800 flex items-center justify-center h-[85%]'>
+          <section className='dark:bg-gray-800 flex flex-col flex-grow items-center justify-center'>
             <Helmet>
               <title>Roberto del Pino - Web Developer - Blog</title>
             </Helmet>
@@ -121,11 +121,11 @@ export const BlogEntry = () => {
           </section>
         )
         : (
-          <section className=" 2xl:min-h-[95%] xl:min-h-[70%] md:min-h-[80%] dark:bg-gray-800">
+          <section className="flex flex-col flex-grow dark:bg-gray-800">
             <Helmet>
               <title>Roberto del Pino - Web Developer - {articleTitle}</title>
             </Helmet>
-            <article className="max-w-screen-xl m-auto dark:algo">
+            <article className="max-w-screen-xl my-0 mx-auto">
                 <ReactMarkdown 
                     className='markdown-body' 
                     components={components}

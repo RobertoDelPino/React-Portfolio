@@ -3,7 +3,7 @@ import {GoMail} from "react-icons/go"
 
 export const Footer = () => (
     <>
-        <footer className="dark:bg-gray-800 w-[100%]">
+        <footer className="dark:bg-gray-800">
             <section className="dark:bg-gray-800 max-w-screen-xl m-auto md:flex md:justify-between dark:text-white px-10 py-3 pb-6">
                 <h2 className="text-center block font-bold">Roberto del Pino Hormiga</h2>
                 <section className="md:flex">

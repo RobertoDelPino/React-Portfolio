@@ -8,7 +8,7 @@ import { BlogPage } from "@pages/BlogPage/BlogPage";
 import { BlogEntry } from "@pages/BlogEntry/BlogEntry";
 
 const App = () => (
-    <div className="dark:bg-gray-800 min-h-full h-[100%]">
+    <div className="dark:bg-gray-800 min-h-full max-w-screen-2xl flex flex-col mx-auto">
         <BrowserRouter>
             <Header />
             <Routes>

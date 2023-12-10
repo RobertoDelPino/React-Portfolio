@@ -18,17 +18,17 @@ export const BlogPage = () => {
   }
 
   return (
-    <section className="px-5 min-h-full m-auto max-w-screen-xl md:w-[100%] dark:bg-gray-800">
+    <section className="px-5 max-w-screen-xl md:w-[100%] dark:bg-gray-800 mt-2 mb-10 mx-auto flex flex-col flex-grow">
       <Helmet>
         <title>Roberto del Pino - Web Developer - Blog</title>
       </Helmet>
-      <h1 className="text-2xl dark:text-white font-semibold mt-7">Todos los artículos publicados</h1>
+      <h1 className="text-2xl dark:text-white font-semibold mt-7 mb-4">Todos los artículos publicados</h1>
       <section className="mt-3 relative w-full md:w-72 mb-3">
         <label htmlFor="searchArticles_input" className="w-5 absolute right-0 h-[100%] align-middle mr-2 flex items-center"> <img src={findImage("searchSymbol")} alt="" /></label>
         <input className="p-1 border rounded w-[100%]" type="text" id="searchArticles_input" onKeyUp={(input) => searchArticle(input.currentTarget.value)} placeholder="Busca un artículo" />
       </section>
 
-      <section className="grid md:grid-cols-2 min-h-screen auto-rows-max">
+      <section className="grid md:grid-cols-2 auto-rows-max mt-7">
         {
           <BlogEntryList blogEntryList={articlesSearched}/>
         }

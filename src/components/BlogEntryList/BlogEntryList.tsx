@@ -8,7 +8,7 @@ export const BlogEntryList = ({ blogEntryList = null }: BlogEntryListProps ) => 
   if(blogEntryList.length == 0){
     return (
       <>
-        <p className="mt-4 dark:text-white">No se han encontrado artículos</p>
+        <p className="mt-4 dark:text-white text-center">No se han encontrado artículos</p>
       </>
     )
   }
