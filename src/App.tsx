@@ -6,6 +6,7 @@ import {Footer} from "@components/Footer/Footer.tsx";
 import {ProjectsPage} from "@pages/ProjectsPage/ProjectsPage.tsx";
 import { BlogPage } from "@pages/BlogPage/BlogPage";
 import { BlogEntry } from "@pages/BlogEntry/BlogEntry";
+import { NotFound } from "@pages/NotFound/Home";
 
 const App = () => (
     <div className="dark:bg-gray-800 min-h-full max-w-screen-2xl flex flex-col mx-auto">
@@ -17,6 +18,7 @@ const App = () => (
                 <Route path="/projects" element={ <ProjectsPage />}/>
                 <Route path="/blog" element={ <BlogPage/> }/>
                 <Route path="/blog/:fileName" element={ <BlogEntry/> } />
+                <Route path="/*" element={ <NotFound/> }/>
             </Routes>
             <Footer />
         </BrowserRouter>
