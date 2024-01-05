@@ -12,10 +12,6 @@ export const Header = () => {
     const [openNav, setOpenNav] = useState(false)
     const toggleOpen = () => setOpenNav(cur => !cur);
 
-    // Para añadir en un futuro
-    /*<li className="inline-block mx-1 p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600" role="link"><Link to="#">Blog</Link></li>
-    <li className="inline-block mx-1 p-1 transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-600" role="link"><Link to="#">Contacto</Link></li>*/
-    
     const navList = (
         <>
             <ul className="justify-end mr-3 mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6  dark:text-white h-[100%]" aria-label="links-pages-container">
@@ -37,22 +33,24 @@ export const Header = () => {
 
     return (
         <>
-            <Navbar className="border-0 text-current mx-auto max-w-screen-xl min-h-[64px] px-4 lg:px-8 dark:bg-gray-800 flex flex-wrap content-center justify-between rounded-md" >
+            <Navbar className="border-0 text-current mx-auto max-w-screen-xl min-h-[64px] px-4 lg:px-8 dark:bg-gray-800 rounded-md py-0" >
 
-                <h1 className="leading-10 dark:text-white text-xl font-bold w-[70%] lg:w-[25%] flex items-center"><Link to="/">roberto.ph</Link></h1>
-                <div className="flex justify-end w-[30%] lg:w-[75%]">
-                    <div className="hidden lg:block w-[90%]">{navList}</div>
-                    <DarkModeSwitcher/>
-                    <button onClick={toggleOpen} className="lg:hidden" aria-label="Toggle header list button">
-                        <HiMenuAlt3 role="graphics-document" className="dark:text-white"></HiMenuAlt3>
-                    </button>
-                </div>
-                <Collapse open={openNav} className="hidden w-[100%]">
-                    <div className="lg:hidden">
-                        {openNav && navList}
+                <section className="py-3 w-full flex flex-wrap content-center justify-between">
+                    <h1 className="leading-10 dark:text-white text-xl font-bold w-[70%] lg:w-[25%] flex items-center"><Link to="/">roberto.ph</Link></h1>
+                    <div className="flex justify-end w-[30%] lg:w-[75%]">
+                        <div className="hidden lg:block w-[90%]">{navList}</div>
+                        <DarkModeSwitcher/>
+                        <button onClick={toggleOpen} className="lg:hidden" aria-label="Toggle header list button">
+                            <HiMenuAlt3 role="graphics-document" className="dark:text-white"></HiMenuAlt3>
+                        </button>
                     </div>
-                </Collapse>
-                <hr className="max-w-screen-xl m-auto"/>
+                    <Collapse open={openNav} className="hidden w-[100%]">
+                        <div className="lg:hidden">
+                            {openNav && navList}
+                        </div>
+                    </Collapse>
+                </section>
+                <hr className="w-full"/>
             </Navbar>
         </>
     );
