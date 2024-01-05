@@ -121,11 +121,11 @@ export const BlogEntry = () => {
           </section>
         )
         : (
-          <section className=" dark:bg-gray-800 p-2">
+          <section className="dark:bg-gray-800 p-2">
             <Helmet>
               <title>Roberto del Pino - Web Developer - {articleTitle}</title>
             </Helmet>
-            <article className="max-w-screen-xl my-0 mx-auto">
+            <article className="max-w-screen-lg my-0 mx-auto">
                 <ReactMarkdown 
                     components={components}
                     remarkPlugins={[remarkGfm]}
