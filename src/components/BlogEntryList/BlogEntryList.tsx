@@ -12,19 +12,6 @@ export const BlogEntryList = ({ blogEntryList = null }: BlogEntryListProps ) => 
       </>
     )
   }
-
-  if(blogEntryList && blogEntryList.length > 0){
-    return (
-      <>
-        {
-            blogEntryList.map((blogEntry: BlogEntryData, index) => (
-                <BlogEntryCard key={index} blogEntry={blogEntry}/>
-            ))
-        }
-    </>
-    )
-  }
-
   
   return (
     <>
