@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet"
-import {TechnologiesList, ITechnology} from "@components/TecnologiesList/TechnologiesList.tsx";
 import { BlogEntryList } from "@components/BlogEntryList/BlogEntryList";
 import { findImage } from "@assets/Images/Images";
 import articles from "@domain/Repository/Articles.tsx";
+import { Technology } from "@components/Technology/Technology";
+import { ITechnology } from "@domain/Interfaces/ITechnology";
 
 export const Home = () => {
     const personalPhoto = findImage("personalPhoto");
@@ -93,7 +94,13 @@ export const Home = () => {
                 <section className="dark:bg-gray-800 dark:text-white max-w-screen-xl m-auto">
                     <h2 className="text-2xl text-bold text-center pt-10">Mi Stack Tecnológico</h2>
                     <p className="text-center mt-3 px-10">Herramientas que he estado utilizando en proyectos recientes</p>
-                    < TechnologiesList list={techList} />
+                    <section className="flex justify-center flex-wrap py-10 px-5 max-w-screen-lg m-auto">
+                        {
+                            techList.map((tech, index) => (
+                                <Technology key={index} tech={tech}/>
+                            ))
+                        }
+                    </section>
                 </section>
             </section>
         </section>

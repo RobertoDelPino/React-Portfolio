@@ -1,7 +1,13 @@
 import { Helmet } from "react-helmet"
-import {WorkExperienceList} from "@components/WorkExperienceList/WorkExperienceList.tsx";
-import {EducationExperienceList} from "@components/EducationExperienceList/EducationExperienceList.tsx";
-import {EventsList} from "@components/EventList/EventsList.tsx";
+import EducationExperiencies from "@domain/Repository/EducationExperiencies";
+import { EducationCard } from "@components/EducationCard/EducationCard";
+import WorkExperiencies from "@domain/Repository/WorkExperiencies";
+import { WorkExperienceCard } from "@components/WorkExperienceCard/WorkExperienceCard";
+import { EventCard } from "@components/EventCard/EventCard";
+import { WorkExperience } from "@domain/Interfaces/WorkExperience";
+import { EducationExperience } from "@domain/Interfaces/EducationExperience";
+import Events from "@domain/Repository/Events";
+import { Event } from "@domain/Interfaces/Event";
 
 {/*
 
@@ -13,6 +19,11 @@ Education       --> Educación
 
 
 export const About = () => {
+
+    const educationExperiencies = EducationExperiencies;
+    const workExperiencies = WorkExperiencies;
+    const events = Events;
+
     return (
         <>
             <section className="dark:bg-gray-800 flex flex-col flex-grow">
@@ -31,17 +42,23 @@ export const About = () => {
                     <article role="region" aria-label="Work experience region" className="my-10">
                         <h2 className="text-2xl font-extrabold tracking-wide dark:text-white my-4">Experiencia de
                             Trabajo</h2>
-                        <WorkExperienceList/>
+                            <section className="md:w-[70%] ">
+                                {workExperiencies.map((work: WorkExperience, index: number) => <WorkExperienceCard key={index} work={work}/>)}
+                            </section>
                     </article>
 
                     <article role="region" aria-label="Events region " className="my-10">
                         <h2 className="text-2xl font-extrabold tracking-wide dark:text-white my-4">Eventos asistidos</h2>
-                        <EventsList/>
+                        <section className="md:w-[70%]">
+                            {events.map((event: Event, index: number) => <EventCard key={index}  event={event}/>)}
+                        </section>
                     </article>
 
                     <article role="region" aria-label="Education region">
                         <h2 className="text-2xl font-extrabold tracking-wide dark:text-white my-4">Educación</h2>
-                        <EducationExperienceList/>
+                        <section className="md:w-[70%] ">
+                            {educationExperiencies.map((education: EducationExperience, index: number) => <EducationCard key={index} education={education}/>)}
+                        </section>
                     </article>
                 </section>
             </section>

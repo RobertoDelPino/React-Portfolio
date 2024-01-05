@@ -1,4 +1,4 @@
-import {ITechnology} from "@components/TecnologiesList/TechnologiesList.tsx";
+import { ITechnology } from "@domain/Interfaces/ITechnology";
 
 export const Technology = (props: { tech: ITechnology }) => (
     <article data-tooltip={props.tech.name} aria-label="technology" 
