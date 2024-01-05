@@ -12,10 +12,10 @@ export const WorkExperienceCard = ({work}: WorkExperienceCardProps) =>
                 <p className="inline-block bg-green-300 w-24 text-center rounded-3xl text-green-700 font-bold">{work.workday}</p>
             </article>
             <article className="flex justify-between mt-6 text-gray-500 dark:text-gray-300">
-                <p>🔠<a href={work.urlCompany} target="_blank"
+                <p className="w-[33%]">🔠<a href={work.urlCompany} target="_blank"
                     className="hover:border-b-2 py-1 hover:text-gray-800 dark:hover:text-gray-100 companyName">{work.company}</a></p>
-                <p>🗺️{work.workplace}</p>
-                <p>📅{work.time}</p>
+                <p className="w-[33%]">🗺️{work.workplace}</p>
+                <p className="w-[33%] text-right">📅{work.time}</p>
             </article>
         </article>
 
