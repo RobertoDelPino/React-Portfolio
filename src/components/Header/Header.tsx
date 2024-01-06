@@ -1,7 +1,7 @@
 import {Navbar} from "@material-tailwind/react/components/Navbar";
 import {Collapse} from "@material-tailwind/react/components/Collapse";
 import {DarkModeSwitcher} from "@components/DarkModeSwitcher/DarkModeSwitcher.tsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {BsGithub, BsInstagram, BsLinkedin} from "react-icons/bs"
 import {GoMail} from "react-icons/go"
 import {HiMenuAlt3} from "react-icons/hi"
@@ -11,6 +11,19 @@ export const Header = () => {
 
     const [openNav, setOpenNav] = useState(false)
     const toggleOpen = () => setOpenNav(cur => !cur);
+    const [isSticky, setIsSticky] = useState(false);
+
+    const handleScroll = () => {
+        if (window.scrollY > 0) {
+            setIsSticky(true);
+        } else {
+            setIsSticky(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+    }, []);
 
     const navList = (
         <>
@@ -33,7 +46,10 @@ export const Header = () => {
 
     return (
         <>
-            <Navbar className="border-0 text-current mx-auto max-w-screen-xl min-h-[64px] px-4 lg:px-8 dark:bg-gray-800 rounded-md py-0" >
+            <Navbar className={`border-0 text-current mx-auto max-w-screen-xl min-h-[64px] px-4 lg:px-8  py-0
+                ${isSticky ? "sticky top-0 z-50 dark:bg-gray-900 rounded-b-md rounded-t-none" : "rounded-md dark:bg-gray-800"} 
+                transition-colors duration-500
+            `} >
 
                 <section className="py-3 w-full flex flex-wrap content-center justify-between">
                     <h1 className="leading-10 dark:text-white text-xl font-bold w-[70%] lg:w-[25%] flex items-center"><Link to="/">roberto.ph</Link></h1>
@@ -50,7 +66,7 @@ export const Header = () => {
                         </div>
                     </Collapse>
                 </section>
-                <hr className="w-full"/>
+                <hr className={`w-full transition-all duration-700 ${isSticky ? "hidden" : "block"}`}/>
             </Navbar>
         </>
     );
