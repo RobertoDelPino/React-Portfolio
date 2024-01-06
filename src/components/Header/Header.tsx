@@ -46,8 +46,8 @@ export const Header = () => {
 
     return (
         <>
-            <Navbar className={`border-0 text-current mx-auto max-w-screen-xl min-h-[64px] bg-gray-200 py-0
-                ${isSticky ? "sticky top-0 z-50 dark:bg-gray-900 rounded-b-md rounded-t-none" : "rounded-md dark:bg-gray-800"} 
+            <Navbar className={`border-0 text-current mx-auto max-w-screen-xl min-h-[64px] py-0
+                ${isSticky ? "sticky top-0 z-50 dark:bg-gray-900 rounded-b-md rounded-t-none bg-gray-200" : " bg-white rounded-md dark:bg-gray-800"} 
                 transition-colors duration-500 border-b-2 border-gray-300 dark:border-gray-700 w-full
             `} >
 
