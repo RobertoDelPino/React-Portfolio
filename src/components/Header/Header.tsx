@@ -46,17 +46,17 @@ export const Header = () => {
 
     return (
         <>
-            <Navbar className={`border-0 text-current mx-auto max-w-screen-xl min-h-[64px] px-4 lg:px-8  py-0
+            <Navbar className={`border-0 text-current mx-auto max-w-screen-xl min-h-[64px] bg-gray-200 py-0
                 ${isSticky ? "sticky top-0 z-50 dark:bg-gray-900 rounded-b-md rounded-t-none" : "rounded-md dark:bg-gray-800"} 
-                transition-colors duration-500
+                transition-colors duration-500 border-b-2 border-gray-300 dark:border-gray-700 w-full
             `} >
 
-                <section className="py-3 w-full flex flex-wrap content-center justify-between">
-                    <h1 className="leading-10 dark:text-white text-xl font-bold w-[70%] lg:w-[25%] flex items-center"><Link to="/">roberto.ph</Link></h1>
-                    <div className="flex justify-end w-[30%] lg:w-[75%]">
+                <section className="py-3 w-full flex flex-wrap content-center justify-around">
+                    <h1 className="leading-10 dark:text-white text-xl font-bold w-[70%] lg:w-[25%] flex items-center pl-3 lg:pl-0"><Link to="/">roberto.ph</Link></h1>
+                    <div className="flex justify-end w-[30%] lg:w-[70%]">
                         <div className="hidden lg:block w-[90%]">{navList}</div>
                         <DarkModeSwitcher/>
-                        <button onClick={toggleOpen} className="lg:hidden" aria-label="Toggle header list button">
+                        <button onClick={toggleOpen} className="lg:hidden mr-3" aria-label="Toggle header list button">
                             <HiMenuAlt3 role="graphics-document" className="dark:text-white"></HiMenuAlt3>
                         </button>
                     </div>
@@ -66,7 +66,6 @@ export const Header = () => {
                         </div>
                     </Collapse>
                 </section>
-                <hr className={`w-full transition-all duration-700 ${isSticky ? "hidden" : "block"}`}/>
             </Navbar>
         </>
     );
