@@ -26,27 +26,27 @@ export const Header = () => {
     }, []);
 
 
-    useEffect(() => {
-        document.getElementById("home").classList.remove("dark:bg-blue-800")
-        document.getElementById("about").classList.remove("dark:bg-blue-800")
-        document.getElementById("projects").classList.remove("dark:bg-blue-800")
-        document.getElementById("blog").classList.remove("dark:bg-blue-800")
+    // useEffect(() => {
+    //     document.getElementById("home").classList.remove("dark:bg-blue-800")
+    //     document.getElementById("about").classList.remove("dark:bg-blue-800")
+    //     document.getElementById("projects").classList.remove("dark:bg-blue-800")
+    //     document.getElementById("blog").classList.remove("dark:bg-blue-800")
 
-        if(location.pathname.includes("about")){
-            document.getElementById("about").classList.add("dark:bg-blue-800")
-            return;
-        }
-        if(location.pathname.includes("projects")){
-            document.getElementById("projects").classList.add("dark:bg-blue-800")
-            return;
-        }
-        if(location.pathname.includes("blog")){
-            document.getElementById("blog").classList.add("dark:bg-blue-800")
-            return;
-        }
+    //     if(location.pathname.includes("about")){
+    //         document.getElementById("about").classList.add("dark:bg-blue-800")
+    //         return;
+    //     }
+    //     if(location.pathname.includes("projects")){
+    //         document.getElementById("projects").classList.add("dark:bg-blue-800")
+    //         return;
+    //     }
+    //     if(location.pathname.includes("blog")){
+    //         document.getElementById("blog").classList.add("dark:bg-blue-800")
+    //         return;
+    //     }
 
-        document.getElementById("home").classList.add("dark:bg-blue-800")
-    }, [location]);
+    //     document.getElementById("home").classList.add("dark:bg-blue-800")
+    // }, [location]);
 
     const navList = (
         <>
