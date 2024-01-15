@@ -8,11 +8,13 @@ import hljs from 'highlight.js/lib/core';
 import {useParams} from 'react-router-dom';
 import { BlogEntryTitle } from '@components/BlogEntryTitle/BlogEntryTitle';
 import javascript from 'highlight.js/lib/languages/javascript';
+import typescript from 'highlight.js/lib/languages/typescript';
 
 export const BlogEntry = () => {
     SyntaxHighlighter.registerLanguage('markdown', markdown);
     setTimeout(() => {
         hljs.registerLanguage('javascript', javascript);    
+        hljs.registerLanguage('typescript', typescript);    
         hljs.highlightAll();
     }, 10);
 
@@ -35,30 +37,37 @@ export const BlogEntry = () => {
             }
 
             return (
-              <p className='dark:text-white mt-6'>
+              <p className='dark:text-white my-3 inline-block'>
                 {p.children}
               </p>
             )
         },
         h1: (h1: React.DetailedHTMLProps<React.ParamHTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>) =>{
             return (
-              <h1 className='text-2xl dark:text-white my-8 font-bold'>
+              <h1 className='text-2xl dark:text-white mt-6 mb-3 font-bold'>
                 {h1.children}
               </h1>
             )
         },
         h2: (h2: React.DetailedHTMLProps<React.ParamHTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>) =>{
             return (
-              <h2 className='text-xl dark:text-white mt-10 mb-6 font-bold'>
+              <h2 className='text-xl dark:text-white mt-5 mb-2 font-bold'>
                 {h2.children}
               </h2>
             )
         },
         h3: (h2: React.DetailedHTMLProps<React.ParamHTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>) =>{
             return (
-              <h2 className='text-xl dark:text-white mt-10 mb-6 font-bold'>
+              <h3 className='text-xl dark:text-white mt-6 mb-3 font-bold'>
                 {h2.children}
-              </h2>
+              </h3>
+            )
+        },
+        h4: (h4: React.DetailedHTMLProps<React.ParamHTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>) =>{
+            return (
+              <h4 className='text-lg dark:text-white mt-6 mb-3'>
+                {h4.children}
+              </h4>
             )
         },
         ul: (ul: React.DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLUListElement>, HTMLUListElement>) =>{
@@ -71,11 +80,19 @@ export const BlogEntry = () => {
 
         li: (li: React.DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLLIElement>, HTMLLIElement>) =>{
           return (
-            <li className='dark:text-white'>
+            <li className='dark:text-white list-decimal list-inside'>
               {li.children}
             </li>
           )
         },
+
+        ol: (ol: React.DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLOListElement>, HTMLOListElement>) =>{
+          return (
+            <ol className='list-decimal ml-8'>
+              {ol.children}
+            </ol>
+          )
+        }
 
       }
 
