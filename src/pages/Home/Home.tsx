@@ -89,10 +89,10 @@ export const Home = () => {
                                 < BlogEntryList blogEntryList={articles.slice(0,4)} />
                             }
                             <article className="w-[576px] flex justify-center lg:justify-end mt-3">
-                                <article className="hover:border-b">
-                                    <Link className="font-semibold  transition-all relative bottom-0 hover:bottom-1" to={"/projects"}>Ver más</Link>
+                                <article className="hover:border-b transition border-b-0">
+                                    <Link className="font-semibold dark:text-white transition-all relative bottom-0 hover:bottom-1" to={"/projects"}>Ver más</Link>
                                 </article>
-                            </article>
+                            </article>  
                         </section>
                     </section>
                 </section>
