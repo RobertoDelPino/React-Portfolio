@@ -4,6 +4,7 @@ import { findImage } from "@assets/Images/Images";
 import articles from "@domain/Repository/Articles.tsx";
 import { Technology } from "@components/Technology/Technology";
 import { ITechnology } from "@domain/Interfaces/ITechnology";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
     const personalPhoto = findImage("personalPhoto");
@@ -71,7 +72,7 @@ export const Home = () => {
                 <section className=" max-w-screen-xl m-auto flex flex-wrap w-[100%] justify-around py-12 dark:bg-gray-800 ">
                     <div className="flex justify-center flex-wrap px-6 mb-9 md:w-[45%] w-[100%]">
                         <div>
-                            <img src={personalPhoto} alt="Photo of Roberto del Pino Hormiga"
+                            <img rel="preload" src={personalPhoto} alt="Photo of Roberto del Pino Hormiga"
                             className="w-48 h-48 lg:w-72 lg:h-72 rounded-full border-black border-2 dark:border-white
                             mb-5"/>
                         </div>
@@ -83,10 +84,15 @@ export const Home = () => {
 
                     <section className="lg:max-w-xl min-h-full h-4/5 m-auto w-[95%]">
                         <h1 className="text-2xl dark:text-white font-semibold text-center lg:text-left mb-5">Últimos artículos</h1>
-                        <section className="flex justify-center flex-wrap">
+                        <section className="flex flex-wrap justify-center">
                             {
                                 < BlogEntryList blogEntryList={articles.slice(0,4)} />
                             }
+                            <article className="w-[576px] flex justify-center lg:justify-end mt-3">
+                                <article className="hover:border-b">
+                                    <Link className="font-semibold  transition-all relative bottom-0 hover:bottom-1" to={"/projects"}>Ver más</Link>
+                                </article>
+                            </article>
                         </section>
                     </section>
                 </section>
