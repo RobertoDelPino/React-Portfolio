@@ -5,10 +5,10 @@ import {useEffect, useState} from "react";
 import {BsGithub, BsInstagram, BsLinkedin} from "react-icons/bs"
 import {GoMail} from "react-icons/go"
 import {HiMenuAlt3} from "react-icons/hi"
-import {Link, useLocation} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 export const Header = () => {
-    const location = useLocation();
+    // const location = useLocation();
     const [openNav, setOpenNav] = useState(false)
     const toggleOpen = () => setOpenNav(cur => !cur);
     const [isSticky, setIsSticky] = useState(false);
