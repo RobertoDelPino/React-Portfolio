@@ -92,6 +92,13 @@ export const BlogEntry = () => {
               {ol.children}
             </ol>
           )
+        },
+        blockquote: (bloquote: React.DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLQuoteElement>, HTMLQuoteElement>) =>{
+          return (
+            <blockquote className='border-l-4 border-gray-800 dark:border-white/60 pl-4 mb-2 mt-3 bg-gray-600/30 dark:bg-gray-600/50 '>
+              {bloquote.children}
+            </blockquote>
+          )
         }
 
       }

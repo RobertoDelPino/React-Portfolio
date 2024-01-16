@@ -41,7 +41,7 @@ En este post no se va a obtener toda la información ni los ejemplos para poder 
 
 
 
-Trabajar utilizando TDD ayuda a que entendamos mejor el código. Es importante que el conocimiento del equipo sobre el negocio sea lo más alto posible para poder realizar un software de calidad.
+> Trabajar utilizando TDD ayuda a que entendamos mejor el código. Es importante que el conocimiento del equipo sobre el negocio sea lo más alto posible para poder realizar un software de calidad.
 
 # Practicar a través de Katas
 
