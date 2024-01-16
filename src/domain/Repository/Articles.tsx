@@ -5,7 +5,7 @@ const blogEntriesList : BlogEntryData[] = [
     "title":"Introducción a TDD (Desarrollo Dirigido por Pruebas)", 
     "date":"15-01-2024",
     "description":"Te muestro qué he aprendido durante los primeros meses del trabajo",
-    "topic":"Javascript"
+    "topic":"tddLogo"
   },
   {
     "title":"Optimización de queries en SQL para mejorar el rendimiento de la base de datos", 
@@ -17,7 +17,7 @@ const blogEntriesList : BlogEntryData[] = [
     "title":"Descubriendo el mundo real de la Programacion Mi Primer Trabajo", 
     "date":"02-10-2023",
     "description":"Te muestro qué he aprendido durante los primeros meses del trabajo",
-    "topic":"tddlogo"
+    "topic":"javascript"
   }
 ]
 
