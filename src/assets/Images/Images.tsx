@@ -42,8 +42,8 @@ const IMAGES : Record<string, string> = {
     searchSymbol: searchSymbol,
     fakeTableResult: fakeTableResult,
     realTimeChat: realTimeChat,
-    stagesTDD: stagesTDD,
-    tddLogo: tdd
+    tdd: tdd,
+    stagesOfTDD: stagesTDD,
 }
 
 function findImage(name: string): string{

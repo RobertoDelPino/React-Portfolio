@@ -2,7 +2,7 @@
   "title":"Introducción al TDD (Desarrollo Dirigido por Pruebas)", 
   "date":"15-01-2024",
   "description":"",
-  "topic":"tddLogo",
+  "topic":"TDD",
   "toc":true
 }
 
