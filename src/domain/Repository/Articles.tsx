@@ -13,12 +13,12 @@ const blogEntriesList : BlogEntryData[] = [
     "description":"Te muestro qué he aprendido durante los primeros meses del trabajo",
     "topic":"javascript"
   }
-  ,{
-    "title":"Que es TDD tu primer ejercicio", 
-    "date":"15-01-2024",
-    "description":"Te muestro qué he aprendido durante los primeros meses del trabajo",
-    "topic":"Javascript"
-  }
+  // ,{
+  //   "title":"Que es TDD tu primer ejercicio", 
+  //   "date":"15-01-2024",
+  //   "description":"Te muestro qué he aprendido durante los primeros meses del trabajo",
+  //   "topic":"Javascript"
+  // }
 ]
 
 export default blogEntriesList;
