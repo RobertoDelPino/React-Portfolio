@@ -26,26 +26,26 @@ En este post no se va a obtener toda la información ni los ejemplos para poder 
 
 #### El cliente nos pide que desarollemos un código que sea capaz de indicar si un número es primo o no y en caso de que el número sea 10, se devuelve un error:
 
-- El cliente escribe la historia de usuario (indica las necesidades)
+1. El cliente escribe la historia de usuario (indica las necesidades)
 
-- El equipo de desarrollo junto al cliente escriben todos los posibles casos que pueden ocurrir
-  - El número indicado es 10, devolver error
-  - El número es primo
-  - El número no es primo
+2. El equipo de desarrollo junto al cliente escriben todos los posibles casos que pueden ocurrir
+    - El número indicado es 10, devolver error
+    - El número es primo
+    - El número no es primo
 
-- El equipo de desarrollo escoge el caso más simple y escribe una prueba unitaria
+3. El equipo de desarrollo escoge el caso más simple y escribe una prueba unitaria
 
-- Se comprueba que este test falla
+4. Se comprueba que este test falla
 
-- Se escribe el código que hace pasar el test
+5. Se escribe el código que hace pasar el test
 
-- Se ejecutan todos los tests
+6. Se ejecutan todos los tests
 
-- Se refactoriza y se intenta dejar más simple el código
+7. Se refactoriza y se intenta dejar más simple el código
 
-- Volver a pasar todos los tests para comprobar que no se ha roto nada.
+8. Volver a pasar todos los tests para comprobar que no se ha roto nada.
 
-- Pasamos al siguiente caso y volvemos a repetir desde el punto 4 hasta que terminemos el código.
+9. Pasamos al siguiente caso y volvemos a repetir desde el punto 4 hasta que terminemos el código.
 
 
 

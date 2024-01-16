@@ -37,7 +37,7 @@ export const BlogEntry = () => {
             }
 
             return (
-              <p className='dark:text-white my-3 inline-block'>
+              <p className='dark:text-white my-3 inline'>
                 {p.children}
               </p>
             )
@@ -80,7 +80,7 @@ export const BlogEntry = () => {
 
         li: (li: React.DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLLIElement>, HTMLLIElement>) =>{
           return (
-            <li className='dark:text-white list-decimal list-inside'>
+            <li className='dark:text-white list-decimal list-inside my-1'>
               {li.children}
             </li>
           )
@@ -88,7 +88,7 @@ export const BlogEntry = () => {
 
         ol: (ol: React.DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLOListElement>, HTMLOListElement>) =>{
           return (
-            <ol className='list-decimal ml-8'>
+            <ol className='list-decimal ml-8 my-2'>
               {ol.children}
             </ol>
           )
