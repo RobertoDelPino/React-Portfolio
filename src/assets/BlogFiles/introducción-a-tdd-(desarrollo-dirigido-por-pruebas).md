@@ -27,24 +27,16 @@ En este post no se va a obtener toda la información ni los ejemplos para poder 
 #### El cliente nos pide que desarollemos un código que sea capaz de indicar si un número es primo o no y en caso de que el número sea 10, se devuelve un error:
 
 1. El cliente escribe la historia de usuario (indica las necesidades)
-
 2. El equipo de desarrollo junto al cliente escriben todos los posibles casos que pueden ocurrir
     - El número indicado es 10, devolver error
     - El número es primo
     - El número no es primo
-
 3. El equipo de desarrollo escoge el caso más simple y escribe una prueba unitaria
-
 4. Se comprueba que este test falla
-
 5. Se escribe el código que hace pasar el test
-
 6. Se ejecutan todos los tests
-
 7. Se refactoriza y se intenta dejar más simple el código
-
 8. Volver a pasar todos los tests para comprobar que no se ha roto nada.
-
 9. Pasamos al siguiente caso y volvemos a repetir desde el punto 4 hasta que terminemos el código.
 
 
