@@ -18,7 +18,7 @@ Los valores de XP:
 4. Respeto
 5. Valor
 
-En este post no se va a obtener toda la información ni los ejemplos para poder ejecutar de manera eficiente TDD. Para ello, recomiendo un libro de Carlos Blé en donde explica a fondo TDD.
+En este post no se va a obtener toda la información ni los ejemplos para poder ejecutar de manera eficiente TDD. Para ello, recomiendo un [libro de Carlos Blé](https://savvily.es/libros/diseno-agil-con-tdd/) en donde explica a fondo TDD.
 
 ### Pasos a seguir en un caso real:
 
