@@ -5,10 +5,10 @@ import {useEffect, useState} from "react";
 import {BsGithub, BsInstagram, BsLinkedin} from "react-icons/bs"
 import {GoMail} from "react-icons/go"
 import {HiMenuAlt3} from "react-icons/hi"
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 export const Header = () => {
-    // const location = useLocation();
+    const location = useLocation();
     const [openNav, setOpenNav] = useState(false)
     const toggleOpen = () => setOpenNav(cur => !cur);
     const [isSticky, setIsSticky] = useState(false);
@@ -25,36 +25,39 @@ export const Header = () => {
         window.addEventListener("scroll", handleScroll);
     }, []);
 
-
-    // useEffect(() => {
-    //     document.getElementById("home").classList.remove("dark:bg-blue-800")
-    //     document.getElementById("about").classList.remove("dark:bg-blue-800")
-    //     document.getElementById("projects").classList.remove("dark:bg-blue-800")
-    //     document.getElementById("blog").classList.remove("dark:bg-blue-800")
-
-    //     if(location.pathname.includes("about")){
-    //         document.getElementById("about").classList.add("dark:bg-blue-800")
-    //         return;
-    //     }
-    //     if(location.pathname.includes("projects")){
-    //         document.getElementById("projects").classList.add("dark:bg-blue-800")
-    //         return;
-    //     }
-    //     if(location.pathname.includes("blog")){
-    //         document.getElementById("blog").classList.add("dark:bg-blue-800")
-    //         return;
-    //     }
-
-    //     document.getElementById("home").classList.add("dark:bg-blue-800")
-    // }, [location]);
-
     const navList = (
         <>
             <ul className="justify-end mr-3 mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6  dark:text-white h-[100%]" aria-label="links-pages-container">
-                <li className="inline-block mx-1 transition duration-300"><Link id="home" className="w-[100%] block p-2 rounded-md hover:bg-gray-800/[.1] dark:hover:bg-gray-600" to="/">Inicio</Link></li>
-                <li className="inline-block mx-1 transition duration-300"><Link id="about" className="w-[100%] block p-2 rounded-md hover:bg-gray-800/[.1] dark:hover:bg-gray-600" to="/about">Sobre mi</Link></li>
-                <li className="inline-block mx-1 transition duration-300"><Link id="projects" className="w-[100%] block p-2 rounded-md hover:bg-gray-800/[.1] dark:hover:bg-gray-600" to="/projects">Proyectos</Link></li>
-                <li className="inline-block mx-1 transition duration-300"><Link id="blog" className="w-[100%] block p-2 rounded-md hover:bg-gray-800/[.1] dark:hover:bg-gray-600" to="/blog">Blog</Link></li>
+                <li className="inline-block mx-1 transition duration-300">
+                    <Link 
+                        id="home" 
+                        className={`w-[100%] hover:border-b-2 block p-2 ${!location.pathname.includes("blog") 
+                            && !location.pathname.includes("projects") 
+                            && !location.pathname.includes("about") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
+                        to="/">Inicio
+                    </Link>
+                </li>
+                <li className="inline-block mx-1 transition duration-300">
+                    <Link 
+                        id="about" 
+                        className={`w-[100%] hover:border-b-2 block p-2 ${location.pathname.includes("about") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
+                        to="/about">Sobre mi
+                    </Link>
+                </li>
+                <li className="inline-block mx-1 transition duration-300">
+                    <Link 
+                        id="projects" 
+                        className={`w-[100%] hover:border-b-2 block p-2 ${location.pathname.includes("projects") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
+                        to="/projects">Proyectos
+                    </Link>
+                </li>
+                <li className="inline-block mx-1 transition duration-300">
+                    <Link
+                        id="blog"
+                        className={`w-[100%] hover:border-b-2 block p-2 ${location.pathname.includes("blog") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
+                        to="/blog">Blog
+                    </Link>
+                </li>
                 <li>
                     <ul className="flex ">
                         <li className="text-2xl mr-3 transition duration-300"><a aria-label="Link hacia mi LinkedIn page" className="p-2 h-[50px] flex items-center rounded-md hover:bg-gray-800/[.1] dark:hover:bg-gray-600" href="https://www.linkedin.com/in/robertodelpinohormiga/" target="_blank"> < BsLinkedin /> </a></li>
@@ -69,7 +72,7 @@ export const Header = () => {
 
     return (
         <>
-            <Navbar className={`border-0 text-current mx-auto max-w-screen-xl min-h-[64px] py-0
+             <Navbar className={`border-0 text-current mx-auto max-w-screen-xl min-h-[64px] py-0
                 ${isSticky ? "sticky top-0 z-50 dark:bg-gray-900 rounded-b-md rounded-t-none bg-gray-200" : " bg-white rounded-md dark:bg-gray-800"} 
                 transition-colors duration-500 border-b-2 border-gray-300 dark:border-gray-700 w-full px-0
             `} >
