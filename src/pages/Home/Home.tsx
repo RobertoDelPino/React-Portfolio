@@ -90,7 +90,7 @@ export const Home = () => {
                             }
                             <article className="w-[576px] flex justify-center lg:justify-end mt-3">
                                 <article className="hover:border-b transition border-b-0">
-                                    <Link className="font-semibold dark:text-white transition-all relative bottom-0 hover:bottom-1" to={"/projects"}>Ver más</Link>
+                                    <Link className="font-semibold dark:text-white transition-all relative bottom-0 hover:bottom-1" to={"/blog"}>Ver más</Link>
                                 </article>
                             </article>  
                         </section>
