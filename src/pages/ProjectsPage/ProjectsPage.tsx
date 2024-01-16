@@ -9,7 +9,7 @@ export const ProjectsPage = () => {
     const projects = Projects;
 
     return (
-        <section className="dark:bg-gray-800 py-10 flex flex-col flex-grow ">
+        <section className="dark:bg-gray-800 py-5 flex flex-col flex-grow ">
             <Helmet>
                 <title>Roberto del Pino - Web Developer - Projects</title>
             </Helmet>

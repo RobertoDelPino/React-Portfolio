@@ -145,7 +145,7 @@ export const BlogEntry = () => {
           </section>
         )
         : (
-          <section className="dark:bg-gray-800 p-8">
+          <section className="dark:bg-gray-800 px-8 py-4">
             <Helmet>
               <title>Roberto del Pino - Web Developer - {articleTitle}</title>
             </Helmet>
