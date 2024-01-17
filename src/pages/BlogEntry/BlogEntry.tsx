@@ -17,6 +17,10 @@ export const BlogEntry = () => {
     linkElement.rel = 'stylesheet';
 
     document.head.appendChild(linkElement);
+
+    return () => {
+      document.head.removeChild(linkElement);
+    }
   }, [])
 
     SyntaxHighlighter.registerLanguage('markdown', markdown);
