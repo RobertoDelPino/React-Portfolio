@@ -58,6 +58,9 @@ export const Header = () => {
                         to="/blog">Blog
                     </Link>
                 </li>
+                <li className="lg:block hidden">
+                    <a href="RobertoDelPinoCurriculum.pdf" target="_blank" className="text-sm transition duration-300 bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded dark:bg-gray-200 dark:hover:bg-gray-400 dark:text-gray-800">Descargar CV</a>
+                </li>
                 <li>
                     <ul className="flex ">
                         <li className="text-2xl mr-3 transition duration-300"><a aria-label="Link hacia mi LinkedIn page" className="p-2 h-[50px] flex items-center rounded-md hover:bg-gray-800/[.1] dark:hover:bg-gray-600" href="https://www.linkedin.com/in/robertodelpinohormiga/" target="_blank"> < BsLinkedin /> </a></li>
@@ -78,12 +81,12 @@ export const Header = () => {
             `} >
 
                 <section className="py-3 w-full flex flex-wrap content-center justify-around">
-                    <h1 className="leading-10 dark:text-white text-xl font-bold w-[70%] lg:w-[25%] flex items-center pl-3 lg:pl-0">
+                    <h1 className="leading-10 dark:text-white text-xl font-bold w-[70%] lg:w-[15%] flex items-center pl-3 lg:pl-0">
                         <Link 
                             className="transition duration-500 hover:scale-[1.1]"
                             to="/">roberto.ph</Link>
                     </h1>
-                    <div className="flex justify-end w-[30%] lg:w-[70%]">
+                    <div className="flex justify-end w-[30%] lg:w-[80%]">
                         <div className="hidden lg:block w-[90%]">{navList}</div>
                         <DarkModeSwitcher/>
                         <button onClick={toggleOpen} className="lg:hidden mr-3" aria-label="Toggle header list button">

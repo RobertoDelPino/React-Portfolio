@@ -80,6 +80,7 @@ export const Home = () => {
                             <b className="text-2xl text-center w-[100%] block">Roberto del Pino Hormiga</b>
                         </h1>
                         <h1 className="text-xl dark:text-white mt-1.5 lg:text-2xl w-[100%] text-center">Software Developer</h1>
+                        <a href="RobertoDelPinoCurriculum.pdf" target="_blank" className="block lg:hidden mt-3 text-sm transition duration-300 bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded dark:bg-gray-200 dark:hover:bg-gray-400 dark:text-gray-800">Descargar CV</a>
                     </div>
 
                     <section className="lg:max-w-xl min-h-full h-4/5 m-auto w-[95%]">
