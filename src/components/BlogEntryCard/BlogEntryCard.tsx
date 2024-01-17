@@ -7,7 +7,7 @@ export const BlogEntryCard = (props: { blogEntry: BlogEntryData }) => {
   const image = findImage(props.blogEntry.topic);
 
   return (
-    <article className="max-w-xl lg:w-[576px] w-full">
+    <article className="max-w-xl xl:w-[576px] w-full">
       <Link to={"/blog/" + filePath}>
         <div className="flex items-center mb-0.5 transition duration-300 hover:bg-gray-800/[.1] dark:hover:bg-gray-700 p-3 rounded group">
           <img className="w-[50px] h-[50px] group-hover:scale-[1.2] transition duration-500 opacity-80" src={image} alt="" />
