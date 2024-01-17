@@ -59,7 +59,7 @@ export const Header = () => {
                     </Link>
                 </li>
                 <li className="lg:block hidden">
-                    <a href="RobertoDelPinoCurriculum.pdf" target="_blank" className="text-sm transition duration-300 bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded dark:bg-gray-200 dark:hover:bg-gray-400 dark:text-gray-800">Descargar CV</a>
+                    <a href="/RobertoDelPinoCurriculum.pdf" target="_blank" className="text-sm transition duration-300 bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded dark:bg-gray-200 dark:hover:bg-gray-400 dark:text-gray-800">Descargar CV</a>
                 </li>
                 <li>
                     <ul className="flex ">
