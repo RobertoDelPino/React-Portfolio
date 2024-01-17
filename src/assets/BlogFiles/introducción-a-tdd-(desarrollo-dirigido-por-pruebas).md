@@ -46,15 +46,15 @@ En este post no se va a obtener toda la información ni los ejemplos para poder 
 5. Se escribe el código que hace pasar el test
 6. Se ejecutan todos los tests
 7. Se refactoriza y se intenta dejar más simple el código
-8. Volver a pasar todos los tests para comprobar que no se ha roto nada.
-9. Pasamos al siguiente caso y volvemos a repetir desde el punto 4 hasta que terminemos el código.
+8. Vuelven a pasar todos los tests para comprobar que no se ha roto nada.
+9. El equipo pasa al siguiente caso y vuelve a repetir desde el punto 4 hasta que terminemos el código.
 
 
-# Aplicando TDD en el caso propuesto anteriormente
+# Aplicando TDD en el caso propuesto anteriormente en Typescipt con Jest
 
 **Historia de usuario**: El cliente nos pide que desarollemos un código que sea capaz de indicar si un número es primo o no y en caso de que el número sea 10, se devuelve un error.
 
-Casos de uso:   
+**Casos de uso**:   
   - El número indicado es 10, devolver error.
   - El número es primo.
   - El número no es primo (si sabemos que un numero es primo, ya sabremos si no es primo. Vamos a añadir un test igualmente para comprobarlo).
