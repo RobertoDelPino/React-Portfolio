@@ -11,6 +11,14 @@ import javascript from 'highlight.js/lib/languages/javascript';
 import typescript from 'highlight.js/lib/languages/typescript';
 
 export const BlogEntry = () => {
+  useEffect(() => {
+    const linkElement = document.createElement('link');
+    linkElement.href = '//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/monokai-sublime.min.css'; // Replace with the actual URL to your external CSS file
+    linkElement.rel = 'stylesheet';
+
+    document.head.appendChild(linkElement);
+  }, [])
+
     SyntaxHighlighter.registerLanguage('markdown', markdown);
     setTimeout(() => {
         hljs.registerLanguage('javascript', javascript);    
