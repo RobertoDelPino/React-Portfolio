@@ -2,9 +2,15 @@ import { BlogEntryData } from "../Entities/BlogEntryData";
 
 const blogEntriesList : BlogEntryData[] = [
   {
+    "title":"Introducción a TDD 2. Tu primera kata", 
+    "date":"19-01-2024",
+    "description":"Realizando la kata FizzBuzz con TDD",
+    "topic":"tdd"
+  },
+  {
     "title":"Introducción a TDD (Desarrollo Dirigido por Pruebas)", 
     "date":"15-01-2024",
-    "description":"Te muestro qué he aprendido durante los primeros meses del trabajo",
+    "description":"Introducción a TDD (Desarrollo Dirigido por Pruebas)",
     "topic":"tdd"
   },
   {
