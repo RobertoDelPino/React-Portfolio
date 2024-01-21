@@ -15,57 +15,38 @@ Para los siguientes tips he creado una tabla con un millón de registros. Puedes
 
 ![Descripción de la imagen](/assets/resultado-sql-fake-table.png)
 
+El código que se va a utilizar para hacer la consulta y comprobar el tiempo que ha tardado es el siguiente:
+``` javascript
+      async function fetchAllData() {
+        try {
+            console.time('ConsultaSQL');
+            await sql.connect(config);
+        
+            const query = `SE CAMBIA LA CONSULTA EN CADA CASO`;
+            await sql.query(query);
+
+        } catch (err) {
+          console.error('Error al recuperar datos:', err);
+        } finally {
+          sql.close();
+          console.timeEnd('ConsultaSQL');
+        }
+      }
+
+      fetchAllData();
+  ```
+
 ## 1. Obtener las columnas mínimas y necesarias
 
 A veces no nos damos cuenta y hacemos un "SELECT *" de todos los datos de la tabla cuando en realidad solo necesitamos algunas columnas. 
 
 **Recuperar todos los datos con todas las columnas**
-  - Query: "SELECT * FROM fakeTable"
+  - **Query**: "SELECT * FROM fakeTable"
   - **Tiempo total: 12,6 segundos**
-  - Código: 
-  ``` javascript
-      async function fetchAllData() {
-        try {
-            console.time('ConsultaSQL');
-            await sql.connect(config);
-        
-            const query = `SELECT * FROM fakeTable`;
-            await sql.query(query);
-
-        } catch (err) {
-          console.error('Error al recuperar datos:', err);
-        } finally {
-          sql.close();
-          console.timeEnd('ConsultaSQL');
-        }
-      }
-
-      fetchAllData();
-  ```
 
 **Recuperar todos los datos con solo tres columnas**
-  - Query: "SELECT Name, MiddleName, Gender FROM fakeTable"
+  - **Query**: "SELECT Name, MiddleName, Gender FROM fakeTable"
   - **Tiempo total: 3,1 segundos**
-  - Código: 
-  ``` javascript
-      async function fetchAllData() {
-        try {
-            console.time('ConsultaSQL');
-            await sql.connect(config);
-        
-            const query = `SELECT Name, MiddleName, Gender FROM fakeTable`;
-            await sql.query(query);
-
-        } catch (err) {
-          console.error('Error al recuperar datos:', err);
-        } finally {
-          sql.close();
-          console.timeEnd('ConsultaSQL');
-        }
-      }
-
-      fetchAllData();
-  ```
 
 Como pueden ver, en el momento en donde pedimos más de lo necesario a la base de datos, el tiempo total de la query va a ser mucho más elevado.
 
@@ -83,52 +64,12 @@ Numero de las oficinas de las que vamos a recuperar sus trabajadores:
 \- ["100", "136", "299", "287", "258", "268", "137", "122", "165", "170", "178"]
 
 **Iterar el array realizando múltiples llamadas a la base de datos**
-  - Query: "SELECT Name, MiddleName, Gender FROM fakeTable where Office = 'x' "
+  - **Query**: "SELECT Name, MiddleName, Gender FROM fakeTable where Office = 'x' "
   - **Tiempo total: 1 segundo**
-  - Código: 
-  ``` javascript
-      async function fetchAllData() {
-        try {
-            console.time('ConsultaSQL');
-            await sql.connect(config);
-        
-            for (const officeNumber of officeNumbers) {
-                const query = `SELECT Name, MiddleName, Gender FROM FakeTable WHERE Office = ${officeNumber}`;
-                await sql.query(query);
-            }
-        } catch (err) {
-          console.error('Error al recuperar datos:', err);
-        } finally {
-          sql.close();
-          console.timeEnd('ConsultaSQL');
-        }
-      }
-
-      fetchAllData();
-  ```
 
 **Hacer un join del array para realizar sólo una query**
-  - Query: "SELECT Name, MiddleName, Gender FROM fakeTable where Office IN ('123', '100', ...)"
+  - **Query**: "SELECT Name, MiddleName, Gender FROM fakeTable where Office IN ('123', '100', ...)"
   - **Tiempo total: 0,7 segundos**
-  - Código: 
-  ``` javascript
-      async function fetchAllData() {
-        try {
-            console.time('ConsultaSQL');
-            await sql.connect(config);
-        
-            const officeNumbersString = officeNumbers.join(',');
-            const query = `SELECT Name, MiddleName, Gender FROM FakeTable WHERE Office IN (${officeNumbersString})`;
-            await sql.query(query);
-
-        } catch (err) {
-          console.error('Error al recuperar datos:', err);
-        } finally {
-          sql.close();
-          console.timeEnd('ConsultaSQL');
-        }
-      }
-  ```
 
 
 Como puede observar, en este ejemplo, la diferencia no es significativa debido a la cantidad limitada de oficinas incluidas. Sin embargo, es importante recordar que cada consulta que se realiza a la base de datos consume recursos del servidor y, en el caso de bases de datos alojadas en Azure, cada consulta implica costos adicionales.
@@ -140,48 +81,12 @@ En muchas páginas web de venta de productos, como amazon o pccomponentes, ocurr
 Ahora, vamos a comparar el tiempo que tarda la base de datos en obtener todos los registros(recuerdo que son 1 millón) y sólo traer los 100 primeros
 
 **Traer todos los registros de la tabla**
-  - Query: "SELECT * FROM fakeTable"
+  - **Query**: "SELECT * FROM fakeTable"
   - **Tiempo total: 15,4 segundos**
-  - Código: 
-  ``` javascript
-      async function fetchAllData() {
-        try {
-            console.time('ConsultaSQL');
-            await sql.connect(config);
-        
-            const query = `SELECT * FROM FakeTable`;
-            await sql.query(query);
-
-        } catch (err) {
-          console.error('Error al recuperar datos:', err);
-        } finally {
-          sql.close();
-          console.timeEnd('ConsultaSQL');
-        }
-      }
-  ```
 
 **Traer todos los registros de la tabla**
-  - Query: "SELECT TOP 100 * FROM fakeTable"
+  - **Query**: "SELECT TOP 100 * FROM fakeTable"
   - **Tiempo total: 0,13 segundos**
-  - Código: 
-  ``` javascript
-      async function fetchAllData() {
-        try {
-            console.time('ConsultaSQL');
-            await sql.connect(config);
-        
-            const query = `SELECT * FROM FakeTable LIMIT 100`;
-            await sql.query(query);
-
-        } catch (err) {
-          console.error('Error al recuperar datos:', err);
-        } finally {
-          sql.close();
-          console.timeEnd('ConsultaSQL');
-        }
-      }
-  ```
 
 Como podeis observar, la consulta se ha vuelto mucho más rápida, pasando de 15 segundos a menos de 1 segundo solamente por obtener un número limitado de datos, lo que representa una mejora del 93%. Ahora os pregunto, ¿es realmente necesario que obtengais todos los registros de la base de datos?
 
