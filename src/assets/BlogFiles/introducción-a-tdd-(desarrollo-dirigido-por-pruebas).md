@@ -34,7 +34,7 @@ En este post no se va a obtener toda la información ni los ejemplos para poder 
 
 ![Stages of TDD](/assets/tdd-stages.png)
 
-#### El cliente nos pide que desarollemos un código que sea capaz de indicar si un número es primo o no y en caso de que el número sea 10, se devuelve un error:
+#### El cliente nos pide que desarollemos un código que sea capaz de indicar si un número es primo o no:
 
 1. El cliente escribe la historia de usuario (indica las necesidades)
 2. El equipo de desarrollo junto al cliente escriben todos los posibles casos que pueden ocurrir
@@ -52,35 +52,14 @@ En este post no se va a obtener toda la información ni los ejemplos para poder 
 
 # Aplicando TDD en el caso propuesto anteriormente en Typescipt con Jest
 
-**Historia de usuario**: El cliente nos pide que desarollemos un código que sea capaz de indicar si un número es primo o no y en caso de que el número sea 10, se devuelve un error.
+**Historia de usuario**: El cliente nos pide que desarollemos un código que sea capaz de indicar si un número es primo o no.
 
 **Casos de uso**:   
-  - El número indicado es 10, devolver error.
   - El número es primo.
   - El número no es primo (si sabemos que un numero es primo, ya sabremos si no es primo. Vamos a añadir un test igualmente para comprobarlo).
 
 
-#### Red test: Número indicado es 10
-``` typescript
-it("throws error when number is 10", () => {
-    expect(() => isPrimeNumber(10)).toThrowError("Invalid number");
-});
-```
-
-#### Green test
-``` typescript
-function isPrimeNumber(number: number): boolean {
-    if (number == 10) {
-        throw new Error("Invalid number");
-    }
-    
-    return false;
-}
-```
-
-### Siguiente caso de uso: Es un número primo
-
-#### Red test: isPrimeNumber is not defined
+#### Red test: El número es primo.
 ``` typescript
 it("indicates true when number is prime", () => {
     const result = isPrimeNumber(3);
@@ -93,15 +72,10 @@ it("indicates true when number is prime", () => {
 
 ``` typescript
 function isPrimeNumber(number: number): boolean {
-    if (number == 10) {
-        throw new Error("Invalid number");
-    }
-
     let isPrime = true;
     for (let i = 2; i < number; i++) {
         if (number % i == 0) {
             isPrime = false;
-            break;
         }
     }
 
@@ -116,15 +90,10 @@ function isPrimeNumber(number: number): boolean {
 #### Refactor
 ``` typescript
 function isPrimeNumber(number: number): boolean {
-    if (number == 10) {
-        throw new Error("Invalid number");
-    }
-
     let isPrime = true;
     for (let i = 2; i < number; i++) {
         if (number % i == 0) {
             isPrime = false;
-            break;
         }
     }
 
