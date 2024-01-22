@@ -29,7 +29,7 @@ Tu función debe cumplir las siguientes normas adicionales:
 - Si el número es múltiplo de cinco, devolverá la palabra "Buzz".
 - Si el número es múltiplo de tres y de cinco, devolverá la palabra "FizzBuzz".
 
-Por ejemplo, dados los números del 1 al 15 en orden, la función devolvería:`
+Por ejemplo, dados los números del 1 al 15 en orden, la función devolvería:
 
 ```
 - 1  
