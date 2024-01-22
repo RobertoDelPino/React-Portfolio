@@ -87,7 +87,7 @@ export const Home = () => {
                         <h1 className="text-2xl dark:text-white font-semibold text-center lg:text-left mb-5">Últimos artículos</h1>
                         <section className="flex flex-wrap justify-center">
                             {
-                                < BlogEntryList blogEntryList={articles.slice(0,4)} />
+                                < BlogEntryList blogEntryList={articles.slice(0,3)} />
                             }
                             <article className="w-[576px] flex justify-center lg:justify-end mt-3">
                                 <article className="hover:border-b-black dark:hover:border-b-white transition duration-300 border-b border-b-transparent">
