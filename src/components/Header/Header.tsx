@@ -5,7 +5,7 @@ import {useEffect, useState} from "react";
 import {BsGithub, BsInstagram, BsLinkedin} from "react-icons/bs"
 import {GoMail} from "react-icons/go"
 import {HiMenuAlt3} from "react-icons/hi"
-import {Link, useLocation, useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import { flushSync } from "react-dom";
 
 export const Header = () => {
