@@ -7,3 +7,49 @@ body, html, #root{
     height: 100%;
     width: 100%;
 }
+
+section#blog{
+    view-transition-name: pageTransition;
+}
+
+section#projects{
+    view-transition-name: pageTransition;
+}
+
+section#about{
+    view-transition-name: pageTransition;
+}
+
+section#home{
+    view-transition-name: pageTransition;
+}
+
+section#blogEntry{
+    view-transition-name: pageTransition;
+}
+
+::view-transition-old(pageTransition) {
+    animation: fade-and-scale-out 0.2s ease-in-out 1 forwards;
+}
+::view-transition-new(pageTransition) {
+    animation: fade-and-scale-in .3s ease-in-out 1 forwards;
+}
+
+@keyframes fade-and-scale-in {
+    from {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@keyframes fade-and-scale-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

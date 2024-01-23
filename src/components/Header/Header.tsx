@@ -5,7 +5,8 @@ import {useEffect, useState} from "react";
 import {BsGithub, BsInstagram, BsLinkedin} from "react-icons/bs"
 import {GoMail} from "react-icons/go"
 import {HiMenuAlt3} from "react-icons/hi"
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
+import { flushSync } from "react-dom";
 
 export const Header = () => {
     const location = useLocation();
@@ -25,38 +26,55 @@ export const Header = () => {
         window.addEventListener("scroll", handleScroll);
     }, []);
 
+    const navigate = useNavigate();
+    const viewNavigate = (newRoute: string) => {
+        if (!document.startViewTransition) {
+            return navigate(newRoute);
+        } else {
+            return document.startViewTransition(() => {
+                flushSync(() => {
+                    navigate(newRoute);
+                });
+            });
+        }
+    };
+
     const navList = (
         <>
             <ul className="justify-end mr-3 mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6  dark:text-white h-[100%]" aria-label="links-pages-container">
                 <li className="inline-block mx-1 transition duration-300">
-                    <Link 
+                    <button 
                         id="home" 
                         className={`w-[100%] hover:border-b-2 block p-2 ${!location.pathname.includes("blog") 
                             && !location.pathname.includes("projects") 
                             && !location.pathname.includes("about") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
-                        to="/">Inicio
-                    </Link>
+                        onClick={() => viewNavigate("/")}
+                        >Inicio
+                    </button>
                 </li>
                 <li className="inline-block mx-1 transition duration-300">
-                    <Link 
+                    <button 
                         id="about" 
                         className={`w-[100%] hover:border-b-2 block p-2 ${location.pathname.includes("about") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
-                        to="/about">Sobre mi
-                    </Link>
+                        onClick={() => viewNavigate("/about")}
+                        >Sobre mi
+                    </button>
                 </li>
                 <li className="inline-block mx-1 transition duration-300">
-                    <Link 
+                    <button 
                         id="projects" 
                         className={`w-[100%] hover:border-b-2 block p-2 ${location.pathname.includes("projects") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
-                        to="/projects">Proyectos
-                    </Link>
+                        onClick={() => viewNavigate("/projects")}
+                        >Proyectos
+                    </button>
                 </li>
                 <li className="inline-block mx-1 transition duration-300">
-                    <Link
+                    <button
                         id="blog"
                         className={`w-[100%] hover:border-b-2 block p-2 ${location.pathname.includes("blog") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
-                        to="/blog">Blog
-                    </Link>
+                        onClick={() => viewNavigate("/blog")}
+                        >Blog
+                    </button>
                 </li>
                 <li className="lg:block hidden">
                     <a href="/RobertoDelPinoCurriculum.pdf" target="_blank" className="text-sm transition duration-300 bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded dark:bg-gray-200 dark:hover:bg-gray-400 dark:text-gray-800">Descargar CV</a>

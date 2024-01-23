@@ -138,7 +138,7 @@ export const BlogEntry = () => {
 
       if(isLoading){
         return (
-          <section className='dark:bg-gray-800 flex flex-col flex-grow items-center justify-center'>
+          <section id="blogEntry" className='dark:bg-gray-800 flex flex-col flex-grow items-center justify-center'>
             <Helmet>
               <title>Roberto del Pino - Web Developer - Blog</title>
             </Helmet>
@@ -149,7 +149,7 @@ export const BlogEntry = () => {
 
       return article == "" 
         ? (
-          <section className='dark:bg-gray-800 flex flex-col flex-grow items-center justify-center'>
+          <section id="blogEntry" className='dark:bg-gray-800 flex flex-col flex-grow items-center justify-center'>
             <Helmet>
               <title>Roberto del Pino - Web Developer - Blog</title>
             </Helmet>
@@ -157,7 +157,7 @@ export const BlogEntry = () => {
           </section>
         )
         : (
-          <section className="dark:bg-gray-800 px-8 py-4">
+          <section id="blogEntry" className="dark:bg-gray-800 px-8 py-4">
             <Helmet>
               <title>Roberto del Pino - Web Developer - {articleTitle}</title>
             </Helmet>

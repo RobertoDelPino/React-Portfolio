@@ -18,7 +18,7 @@ export const BlogPage = () => {
   }
 
   return (
-    <section className="px-5 max-w-screen-xl md:w-[100%] dark:bg-gray-800 mt-2 mb-10 mx-auto flex flex-col flex-grow">
+    <section id="blog" className="px-5 max-w-screen-xl md:w-[100%] dark:bg-gray-800 mt-2 mb-10 mx-auto flex flex-col flex-grow">
       <Helmet>
         <title>Roberto del Pino - Web Developer - Blog</title>
       </Helmet>

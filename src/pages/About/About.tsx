@@ -26,7 +26,7 @@ export const About = () => {
 
     return (
         <>
-            <section className="dark:bg-gray-800 flex flex-col flex-grow">
+            <section id="about" className="dark:bg-gray-800 flex flex-col flex-grow">
                 <Helmet>
                     <title>Roberto del Pino - Web Developer - About</title>
                 </Helmet>
