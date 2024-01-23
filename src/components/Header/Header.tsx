@@ -100,9 +100,10 @@ export const Header = () => {
 
                 <section className="py-3 w-full flex flex-wrap content-center justify-around">
                     <h1 className="leading-10 dark:text-white text-xl font-bold w-[70%] lg:w-[10%] flex items-center pl-3 lg:pl-0">
-                        <Link 
+                        <button 
                             className="transition duration-500 hover:scale-[1.1]"
-                            to="/">roberto.ph</Link>
+                            onClick={() => viewNavigate("/")}
+                            >roberto.ph</button>
                     </h1>
                     <div className="flex justify-end w-[30%] lg:w-[87%]">
                         <div className="hidden lg:block w-[90%]">{navList}</div>
