@@ -33,7 +33,7 @@ export const About = () => {
                 <section className="dark:bg-gray-800 max-w-screen-xl my-0 mx-auto lg:px-8 px-4 py-4">
                     <article role="region" aria-label="About me region" className="mb-8 mt-0">
                         <h2 className="text-2xl font-extrabold tracking-wide dark:text-white my-4">Sobre mi</h2>
-                        <p className="dark:text-gray-100 w-[100%] lg:w-[70%]">Apasionado por el desarollo de software.
+                        <p className="dark:text-gray-100 w-[100%] lg:w-[70%] text-lg">Apasionado por el desarollo de software.
                             Invierto mi tiempo en aprender diversas arquitecturas como Arquitectura Hexagonal o Arquitectura limpia. Además,
                             desde que hice las prácticas en LeanMind, me gusta aplicar TDD en todos los proyectos que pueda.
                         </p>

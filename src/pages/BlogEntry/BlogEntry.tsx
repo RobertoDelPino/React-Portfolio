@@ -49,35 +49,35 @@ export const BlogEntry = () => {
             }
 
             return (
-              <p className='dark:text-white my-3 inline-block'>
+              <p className='dark:text-white my-3 inline-block text-lg'>
                 {p.children}
               </p>
             )
         },
         h1: (h1: React.DetailedHTMLProps<React.ParamHTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>) =>{
             return (
-              <h1 className='text-2xl dark:text-white mt-6 mb-3 font-bold'>
+              <h1 className='text-3xl dark:text-white mt-6 mb-3 font-bold'>
                 {h1.children}
               </h1>
             )
         },
         h2: (h2: React.DetailedHTMLProps<React.ParamHTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>) =>{
             return (
-              <h2 className='text-xl dark:text-white mt-5 mb-2 font-bold'>
+              <h2 className='text-2xl dark:text-white mt-5 mb-2 font-bold'>
                 {h2.children}
               </h2>
             )
         },
         h3: (h2: React.DetailedHTMLProps<React.ParamHTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>) =>{
             return (
-              <h3 className='text-xl dark:text-white mt-6 mb-3 font-bold'>
+              <h3 className='text-2xl dark:text-white mt-6 mb-3 font-bold'>
                 {h2.children}
               </h3>
             )
         },
         h4: (h4: React.DetailedHTMLProps<React.ParamHTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>) =>{
             return (
-              <h4 className='text-lg dark:text-white mt-6 mb-3'>
+              <h4 className='text-xl dark:text-white mt-6 mb-3'>
                 {h4.children}
               </h4>
             )
@@ -92,7 +92,7 @@ export const BlogEntry = () => {
 
         li: (li: React.DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLLIElement>, HTMLLIElement>) =>{
           return (
-            <li className='dark:text-white list-decimal list-inside my-1'>
+            <li className='dark:text-white list-decimal list-inside my-1 text-lg'>
               {li.children}
             </li>
           )
