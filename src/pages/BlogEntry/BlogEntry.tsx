@@ -140,7 +140,7 @@ export const BlogEntry = () => {
         return (
           <section id="blogEntry" className='dark:bg-gray-800 flex flex-col flex-grow items-center justify-center'>
             <Helmet>
-              <title>Roberto del Pino - Web Developer - Blog</title>
+              <title>{articleTitle} - Roberto del Pino - Web Developer - Blog</title>
             </Helmet>
             <h1 className='text-2xl dark:text-white font-bold text-center'>Cargando...</h1>
           </section>
@@ -151,7 +151,7 @@ export const BlogEntry = () => {
         ? (
           <section id="blogEntry" className='dark:bg-gray-800 flex flex-col flex-grow items-center justify-center'>
             <Helmet>
-              <title>Roberto del Pino - Web Developer - Blog</title>
+              <title>{articleTitle} - Roberto del Pino - Web Developer - Blog</title>
             </Helmet>
             <h1 className='text-2xl dark:text-white font-bold text-center'>No se ha encontrado el articulo</h1>
           </section>
@@ -159,7 +159,7 @@ export const BlogEntry = () => {
         : (
           <section id="blogEntry" className="dark:bg-gray-800 px-8 py-4">
             <Helmet>
-              <title>Roberto del Pino - Web Developer - {articleTitle}</title>
+              <title>{articleTitle} - Roberto del Pino - Web Developer</title>
             </Helmet>
             <article className="max-w-screen-lg my-0 mx-auto">
                 <ReactMarkdown 
