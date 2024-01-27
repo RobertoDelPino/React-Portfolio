@@ -80,10 +80,9 @@ export const Header = () => {
                     <a href="/RobertoDelPinoCurriculum.pdf" target="_blank" className="text-sm transition duration-300 bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded dark:bg-gray-200 dark:hover:bg-gray-400 dark:text-gray-800">Descargar CV</a>
                 </li>
                 <li>
-                    <ul className="flex ">
+                    <ul className="flex justify-center">
                         <li className="text-2xl mr-3 transition duration-300"><a aria-label="Link hacia mi LinkedIn page" className="p-2 h-[50px] flex items-center rounded-md hover:bg-gray-800/[.1] dark:hover:bg-gray-600" href="https://www.linkedin.com/in/robertodelpinohormiga/" target="_blank"> < BsLinkedin /> </a></li>
                         <li className="text-2xl mr-3 transition duration-300"><a aria-label="Link hacia mi Github page" className="p-2 h-[50px] flex items-center rounded-md hover:bg-gray-800/[.1] dark:hover:bg-gray-600" href="https://github.com/RobertoDelPino" target="_blank"> < BsGithub /> </a></li>
-                        <li className="text-2xl mr-3 transition duration-300"><a aria-label="Link hacia mi instagram page" className="p-2 h-[50px] flex items-center rounded-md hover:bg-gray-800/[.1] dark:hover:bg-gray-600" href="https://www.instagram.com/roberto.ph03/" target="_blank"> <BsInstagram/> </a></li>
                         <li className="text-2xl transition duration-300"><a aria-label="¿Deseas enviarme un correo electrónico? Pulsa aquí" className="p-2 h-[50px] flex items-center rounded-md hover:bg-gray-800/[.1] dark:hover:bg-gray-600" href="mailto:robertodelpino11@gmail.com" target="_blank"> <GoMail /> </a></li>
                     </ul>
                 </li>
