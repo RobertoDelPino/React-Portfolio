@@ -1,4 +1,4 @@
-import {BsGithub, BsInstagram, BsLinkedin} from "react-icons/bs"
+import {BsGithub, BsLinkedin} from "react-icons/bs"
 import {GoMail} from "react-icons/go"
 
 export const Footer = () => (

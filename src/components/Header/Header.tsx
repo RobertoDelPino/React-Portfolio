@@ -2,7 +2,7 @@ import {Navbar} from "@material-tailwind/react/components/Navbar";
 import {Collapse} from "@material-tailwind/react/components/Collapse";
 import {DarkModeSwitcher} from "@components/DarkModeSwitcher/DarkModeSwitcher.tsx";
 import {useEffect, useState} from "react";
-import {BsGithub, BsInstagram, BsLinkedin} from "react-icons/bs"
+import {BsGithub, BsLinkedin} from "react-icons/bs"
 import {GoMail} from "react-icons/go"
 import {HiMenuAlt3} from "react-icons/hi"
 import {useLocation, useNavigate} from "react-router-dom";
