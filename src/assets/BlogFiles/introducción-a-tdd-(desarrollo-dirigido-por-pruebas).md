@@ -36,9 +36,9 @@ En este post no se va a obtener toda la información ni los ejemplos para poder 
 
 #### El cliente nos pide que desarollemos un código que sea capaz de indicar si un número es primo o no:
 
-1. El cliente escribe la historia de usuario (indica las necesidades)
-2. El equipo de desarrollo junto al cliente escriben todos los posibles casos que pueden ocurrir
-    - El número indicado es 10, devolver error
+1. El cliente escribe la historia de usuario (indica las necesidades).
+2. El equipo de desarrollo junto al cliente escriben todos los posibles casos que pueden ocurrir.  
+    Ejemplo:
     - El número es primo
     - El número no es primo
 3. El equipo de desarrollo escoge el caso más simple y escribe una prueba unitaria
@@ -104,10 +104,6 @@ function isPrimeNumber(number: number): boolean {
 #### Más refactors: 
 ``` typescript
 function isPrimeNumber(number: number): boolean {
-    if (number == 10) {
-        throw new Error("Invalid number");
-    }
-
     for (let i = 2; i < number; i++) {
         if (number % i == 0) {
             return false;
