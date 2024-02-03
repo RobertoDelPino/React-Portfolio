@@ -29,7 +29,7 @@ section#blogEntry{
 }
 
 ::view-transition-old(pageTransition) {
-    animation: fade-and-scale-out 0.2s ease-in-out 1 forwards;
+    animation: fade-and-scale-out 0s ease-in-out 1 forwards;
 }
 ::view-transition-new(pageTransition) {
     animation: fade-and-scale-in .3s ease-in-out 1 forwards;
