@@ -20,15 +20,7 @@ Los valores de XP:
 
 En este post no se va a obtener toda la información ni los ejemplos para poder ejecutar de manera eficiente TDD. Para ello, recomiendo un [libro de Carlos Blé](https://savvily.es/libros/diseno-agil-con-tdd/) en donde explica a fondo TDD.
 
-### Ventajas de utilizar TDD:
-1. **Código más robusto**.
-2. **Código más seguro**. Siempre que hagas un cambio a un método de un service que sea utilizado en otros lugares del proyecto, si tiene tests, puedes comprobar que esas funcionalidades que utilizan el service siguen funcionando o están fallando.
-3. **Código más mantenible**. Una buena práctica si tienes tests en tu proyecto y tienes que revisar/cambiar código antiguo con una funcionalidad compleja, es revisar cómo funciona el código a través de los tests. El *describe* de cada test debería de explicar, de forma sencilla, un comportamiento de la funcionalidad.
-4. **Mayor rapidez en el desarollo**. Durante la creación de proyectos, las empresas suelen añadir los tests al final del desarrollo. Esto puede llevar a no completar el proyecto en el plazo indicado por culpa de descubrir errores importantes durante la creación de los tests.
-
-### Desventajas de utilizar TDD:
-1. **Hay que utilizarlo mucho y tener mucho conocimiento para llegar a ser productivo.**
-2. **Bases de datos (repositorios)**. Cuando se desea hacer pruebas de código que traigan información de un repositorio, se utilizan MockObjects (objetos simulados) y aprender a utilizarlo requiere tiempo.
+Comenzaremos explicando los diferentes pasos a seguir durante la creación de código con TDD. Tras ello, veremos las ventajas y desventajas que veo y cómo podemos practicar TDD.
 
 ### Pasos a seguir en un caso real:
 
@@ -124,6 +116,18 @@ it("indicates false when number is not prime", () => {
     expect(result).toBe(false);
 });
 ```
+
+Ahora que hemos visto un pequeño ejemplo en donde se emplea TDD, veamos las ventajas y desventajas que tiene:
+
+### Ventajas de utilizar TDD:
+1. **Código más robusto**.
+2. **Código más seguro**. Siempre que hagas un cambio a un método de un service que sea utilizado en otros lugares del proyecto, si tiene tests, puedes comprobar que esas funcionalidades que utilizan el service siguen funcionando o están fallando.
+3. **Código más mantenible**. Una buena práctica si tienes tests en tu proyecto y tienes que revisar/cambiar código antiguo con una funcionalidad compleja, es revisar cómo funciona el código a través de los tests. El *describe* de cada test debería de explicar, de forma sencilla, un comportamiento de la funcionalidad.
+4. **Mayor rapidez en el desarollo**. Durante la creación de proyectos, las empresas suelen añadir los tests al final del desarrollo. Esto puede llevar a no completar el proyecto en el plazo indicado por culpa de descubrir errores importantes durante la creación de los tests.
+
+### Desventajas de utilizar TDD:
+1. **Hay que utilizarlo mucho y tener mucho conocimiento para llegar a ser productivo.**
+2. **Bases de datos (repositorios)**. Cuando se desea hacer pruebas de código que traigan información de un repositorio, se utilizan MockObjects (objetos simulados) y aprender a utilizarlo requiere tiempo.
 
 > Trabajar utilizando TDD ayuda a que entendamos mejor el código. Es importante que el conocimiento del equipo sobre el negocio sea lo más alto posible para poder realizar un software de calidad.  
 
