@@ -28,15 +28,15 @@ export const Header = () => {
 
     const navigate = useNavigate();
     const viewNavigate = (newRoute: string) => {
+        if (newRoute === window.location.pathname) return;
         if (!document.startViewTransition) {
             return navigate(newRoute);
-        } else {
-            return document.startViewTransition(() => {
-                flushSync(() => {
-                    navigate(newRoute);
-                });
-            });
         }
+        return document.startViewTransition(() => {
+            flushSync(() => {
+                navigate(newRoute);
+            });
+        });
     };
 
     const navList = (

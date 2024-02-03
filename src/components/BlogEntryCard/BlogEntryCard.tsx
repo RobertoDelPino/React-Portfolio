@@ -7,17 +7,17 @@ export const BlogEntryCard = (props: { blogEntry: BlogEntryData }) => {
   const filePath = props.blogEntry.title.replaceAll(" ", "-").toLowerCase();
   const image = findImage(props.blogEntry.topic);
   const navigate = useNavigate();
-    const viewNavigate = (newRoute: string) => {
-        if (!document.startViewTransition) {
-            return navigate(newRoute);
-        } else {
-            return document.startViewTransition(() => {
-                flushSync(() => {
-                    navigate(newRoute);
-                });
-            });
-        }
-    };
+  const viewNavigate = (newRoute: string) => {
+    if (newRoute === window.location.pathname) return;
+    if (!document.startViewTransition) {
+        return navigate(newRoute);
+    }
+    return document.startViewTransition(() => {
+      flushSync(() => {
+          navigate(newRoute);
+      });
+    });
+  };
 
   return (
     <article className="max-w-xl xl:w-[576px] w-full min-h-[100px]">
