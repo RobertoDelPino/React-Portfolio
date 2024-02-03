@@ -49,7 +49,7 @@ Por ejemplo, dados los números del 1 al 15 en orden, la función devolvería:
 - FizzBuzz
 ```
 
-## Reflexiones anteriores a comenzar la kata
+## Reflexiones antes de comenzar la kata
 
 ¿Cómo se comprueba que un número es múltiplo de otro número? Bastante sencillo, si el resto de la división de los números da 0, significa que el número es múltiplo del otro número.
 
@@ -194,4 +194,8 @@ A mi parecer el código está finalizado. Si tienen alguna propuesta, no duden e
 3. **Que el código sea simple no significa que sea fácil de entender**
 
 
-En el siguiente artículo aplicaremos TDD para desarrollar un código donde se utiliza un repositorio para acceder a base de datos (Es importante tener algún conocimiento sobre arquitectura hexagonal). ¡Espero que este artículo te haya sido de ayuda!
+**En futuros artículos seguiré explicando TDD**. Algunas ideas que me han surgido por ahora son:
+1. Refactoring
+2. Realizar tests durante el desarrollo del código vs realizar tests al final del desarrollo
+
+Si te surgen dudas o incluso te gustaría que hablase en un artículo sobre un tema que crees interesante, no dudes en ponerte en contacto conmigo a través de Linkedin o del correo. ¡Espero que este artículo te haya sido de ayuda!
