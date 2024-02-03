@@ -21,10 +21,10 @@ Los valores de XP:
 En este post no se va a obtener toda la información ni los ejemplos para poder ejecutar de manera eficiente TDD. Para ello, recomiendo un [libro de Carlos Blé](https://savvily.es/libros/diseno-agil-con-tdd/) en donde explica a fondo TDD.
 
 ### Ventajas de utilizar TDD:
-1. Código más robusto.
-2. Código más seguro.
-3. Código más mantenible.
-4. Mayor rapidez en el desarollo.
+1. **Código más robusto**.
+2. **Código más seguro**. Siempre que hagas un cambio a un método de un service que sea utilizado en otros lugares del proyecto, si tiene tests, puedes comprobar que esas funcionalidades que utilizan el service siguen funcionando o están fallando.
+3. **Código más mantenible**. Una buena práctica si tienes tests en tu proyecto y tienes que revisar/cambiar código antiguo con una funcionalidad compleja, es revisar cómo funciona el código a través de los tests. El *describe* de cada test debería de explicar, de forma sencilla, un comportamiento de la funcionalidad.
+4. **Mayor rapidez en el desarollo**. Durante la creación de proyectos, las empresas suelen añadir los tests al final del desarrollo. Esto puede llevar a no completar el proyecto en el plazo indicado por culpa de descubrir errores importantes durante la creación de los tests.
 
 ### Desventajas de utilizar TDD:
 1. **Hay que utilizarlo mucho y tener mucho conocimiento para llegar a ser productivo.**
@@ -36,7 +36,7 @@ En este post no se va a obtener toda la información ni los ejemplos para poder 
 
 #### El cliente nos pide que desarollemos un código que sea capaz de indicar si un número es primo o no:
 
-1. El cliente escribe la historia de usuario (indica las necesidades).
+1. El cliente escribe la historia de usuario (indica las necesidades). 
 2. El equipo de desarrollo junto al cliente escriben todos los posibles casos que pueden ocurrir.  
     Ejemplo:
     - El número es primo
@@ -50,7 +50,7 @@ En este post no se va a obtener toda la información ni los ejemplos para poder 
 9. El equipo pasa al siguiente caso y vuelve a repetir desde el punto 4 hasta que terminemos el código.
 
 
-# Aplicando TDD en el caso propuesto anteriormente en Typescipt con Jest
+# Aplicando TDD en el caso propuesto anteriormente en Typescript con Jest
 
 **Historia de usuario**: El cliente nos pide que desarollemos un código que sea capaz de indicar si un número es primo o no.
 
@@ -139,4 +139,7 @@ Las katas de código son ejercicios de programación diseñados para mejorar las
 
 En última instancia, adoptar el enfoque del Desarrollo Dirigido por Pruebas no solo se traduce en un código más sólido y seguro, sino que también promueve una comprensión más profunda del negocio por parte del equipo de desarrollo. Al abrazar la simplicidad, la comunicación efectiva y la práctica constante, no solo mejoramos nuestras habilidades, sino que también avanzamos hacia un desarrollo de software más ágil y de alta calidad.
 
+En el siguiente artículo desarrollo la Kata de FizzBuzz, es interesante ver cómo se desarrolla con TDD un código con más casos de uso: [Introducción de TDD 2. Tu primera Kata](/blog/introducción-a-tdd-2.-tu-primera-kata)
+
 ¡Si tienes cualquier duda, no dudes en contactar conmigo a través de Linkedin!
+
