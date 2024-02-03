@@ -184,7 +184,7 @@ function fizzBuzz(number: number): string | number {
 
 ### Refactor
 
-Ninguno a mi parecer, hemos finalizado
+A mi parecer el código está finalizado. Si tienen alguna propuesta, no duden en contactarme por Linkedin y charlemos sobre ello.
 
 
 ## Aclaraciones antes de finalizar el artículo
