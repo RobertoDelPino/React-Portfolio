@@ -31,7 +31,7 @@ Tu función debe cumplir las siguientes normas adicionales:
 
 Por ejemplo, dados los números del 1 al 15 en orden, la función devolvería:
 
-```
+``` javascript
 - 1  
 - 2  
 - Fizz  
