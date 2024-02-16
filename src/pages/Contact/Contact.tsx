@@ -34,11 +34,11 @@ const Contact = () => {
 
   return (
     <section id="contact" className="max-w-screen-xl dark:text-white text-black mb-5 h-full min-h-[95%] md:mx-auto flex flex-col lg:flex-grow ">
-        <h2 className="text-3xl text-center mt-5 mb-5 font-bold tracking-wider">Contacto</h2>
+        <h2 className="text-3xl text-center my-5 font-bold tracking-wider">Contacto</h2>
 
         <section className="flex flex-wrap flex-row gap-10 justify-center w-full  ">
             <form onSubmit={submitForm} className="flex flex-col space-y-5 w-[90%] lg:w-[50%] dark:bg-transparent bg-gray-200 p-4 rounded-md">
-                <p className="mt-5 leading-7 dark:text-white text-black">
+                <p className="leading-7 dark:text-white text-black">
                     Si tienes alguna duda, propuesta o proyecto, estoy aquí para ayudarte. Si 
                     estás listo para empezar, envíame un correo electrónico a  <strong className=" bg-gray-300 hover:bg-gray-400 p-1 rounded-sm text-black"><a href="mailto:robertodelpino11@gmail.com">robertodelpino11@gmail.com</a></strong> o utiliza 
                     el formulario de contacto a continuación. ¡Espero con ansias conocer más sobre lo que tienes 
@@ -58,7 +58,7 @@ const Contact = () => {
                             className="input-field px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#c0b2a2] text-black"
                         />
                     </article>
-                    <article className="flex flex-col w-[100%] lg:w-[49%]">
+                    <article className="flex flex-col w-[100%] lg:w-[49%] mt-1 md:mt-0">
                         <label htmlFor="email" className="dark:text-white text-black mb-3">Email</label>
                         <input 
                             name="email"
@@ -72,8 +72,8 @@ const Contact = () => {
                         />
                     </article>
                 </section>
-                <section className="flex flex-col">
-                    <label htmlFor="message" className="dark:text-white text-black my-3">Mensaje</label>
+                <section className="flex flex-col space-y-0">
+                    <label htmlFor="message" className="dark:text-white text-black mb-3">Mensaje</label>
                     <textarea
                         name="message"
                         id="message"
