@@ -39,7 +39,7 @@ const Contact = () => {
         <section className="flex flex-wrap flex-row gap-10 justify-center w-full  ">
             <form onSubmit={submitForm} className="flex flex-col space-y-5 w-[90%] lg:w-[50%] dark:bg-transparent bg-gray-200 p-4 rounded-md">
                 <p className="mt-5 leading-7 dark:text-white text-black">
-                    Hablemos sobre tu próximo proyecto. Estoy aquí para hacer realidad tus visiones creativas. Si 
+                    Si tienes alguna duda, propuesta o proyecto, estoy aquí para ayudarte. Si 
                     estás listo para empezar, envíame un correo electrónico a  <strong className=" bg-gray-300 hover:bg-gray-400 p-1 rounded-sm text-black"><a href="mailto:robertodelpino11@gmail.com">robertodelpino11@gmail.com</a></strong> o utiliza 
                     el formulario de contacto a continuación. ¡Espero con ansias conocer más sobre lo que tienes 
                     en mente y cómo puedo ayudar!
