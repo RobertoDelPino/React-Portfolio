@@ -34,7 +34,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="max-w-screen-xl dark:text-white text-black mb-5 h-full min-h-[95%] md:mx-auto flex flex-col lg:flex-grow ">
-        <h2 className="text-3xl text-center my-10 font-bold tracking-wider">Contacto</h2>
+        <h2 className="text-3xl text-center mt-5 mb-5 font-bold tracking-wider">Contacto</h2>
 
         <section className="flex flex-wrap flex-row gap-10 justify-center w-full  ">
             <form onSubmit={submitForm} className="flex flex-col space-y-5 w-[90%] lg:w-[50%] dark:bg-transparent bg-gray-200 p-4 rounded-md">
