@@ -28,6 +28,10 @@ section#blogEntry{
     view-transition-name: pageTransition;
 }
 
+section#contact{
+    view-transition-name: pageTransition;
+}
+
 ::view-transition-old(pageTransition) {
     animation: fade-and-scale-out 0s ease-in-out 1 forwards;
 }

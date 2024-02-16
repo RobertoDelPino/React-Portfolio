@@ -47,7 +47,8 @@ export const Header = () => {
                         id="home" 
                         className={`w-[100%] hover:border-b-2 block p-2 ${!location.pathname.includes("blog") 
                             && !location.pathname.includes("projects") 
-                            && !location.pathname.includes("about") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
+                            && !location.pathname.includes("about")
+                            && !location.pathname.includes("contact") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
                         onClick={() => viewNavigate("/")}
                         >Inicio
                     </button>
@@ -74,6 +75,14 @@ export const Header = () => {
                         className={`w-[100%] hover:border-b-2 block p-2 ${location.pathname.includes("blog") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
                         onClick={() => viewNavigate("/blog")}
                         >Blog
+                    </button>
+                </li>
+                <li className="inline-block mx-1 transition duration-300">
+                    <button
+                        id="blog"
+                        className={`w-[100%] hover:border-b-2 block p-2 ${location.pathname.includes("contact") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
+                        onClick={() => viewNavigate("/contact")}
+                        >Contacto
                     </button>
                 </li>
                 <li className="lg:block hidden">
