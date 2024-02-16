@@ -33,12 +33,12 @@ const Contact = () => {
     }
 
   return (
-    <section id="contact" className="max-w-screen-xl text-white mb-5 h-full min-h-[95%] md:mx-auto flex flex-col lg:flex-grow ">
+    <section id="contact" className="max-w-screen-xl dark:text-white text-black mb-5 h-full min-h-[95%] md:mx-auto flex flex-col lg:flex-grow ">
         <h2 className="text-3xl text-center my-10 font-bold tracking-wider">Contacto</h2>
 
-        <section className="flex flex-wrap flex-row gap-10 justify-center w-full">
-            <form onSubmit={submitForm} className="flex flex-col space-y-5 w-[90%] lg:w-[52%]">
-                <p className="mt-5 leading-7">
+        <section className="flex flex-wrap flex-row gap-10 justify-center w-full  ">
+            <form onSubmit={submitForm} className="flex flex-col space-y-5 w-[90%] lg:w-[50%] dark:bg-transparent bg-gray-200 p-4">
+                <p className="mt-5 leading-7 dark:text-white text-black">
                     Hablemos sobre tu próximo proyecto. Estoy aquí para hacer realidad tus visiones creativas. Si 
                     estás listo para empezar, envíame un correo electrónico a  <strong className=" bg-gray-300 hover:bg-gray-400 p-1 rounded-sm text-black"><a href="mailto:robertodelpino11@gmail.com">robertodelpino11@gmail.com</a></strong> o utiliza 
                     el formulario de contacto a continuación. ¡Espero con ansias conocer más sobre lo que tienes 
@@ -46,7 +46,7 @@ const Contact = () => {
                 </p>
                 <section className="flex justify-between flex-wrap">
                     <article className="flex flex-col w-[100%] mb-3 lg:w-[49%]">
-                        <label htmlFor="name" className="text-white mb-3">Nombre</label>
+                        <label htmlFor="name" className="dark:text-white text-black mb-3">Nombre</label>
                         <input
                             name="name"
                             id="name"
@@ -59,7 +59,7 @@ const Contact = () => {
                         />
                     </article>
                     <article className="flex flex-col w-[100%] lg:w-[49%]">
-                        <label htmlFor="email" className="text-white mb-3">Email</label>
+                        <label htmlFor="email" className="dark:text-white text-black mb-3">Email</label>
                         <input 
                             name="email"
                             id="email"
@@ -73,7 +73,7 @@ const Contact = () => {
                     </article>
                 </section>
                 <section className="flex flex-col">
-                    <label htmlFor="message" className="text-white my-3">Mensaje</label>
+                    <label htmlFor="message" className="dark:text-white text-black my-3">Mensaje</label>
                     <textarea
                         name="message"
                         id="message"
