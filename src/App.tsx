@@ -16,7 +16,7 @@ function ScrollToTop() : null {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [pathname]); // escucha los cambios en pathname
+    }, [pathname]);
 
     return null;
 }
