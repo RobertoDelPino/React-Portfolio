@@ -8,7 +8,6 @@ import react from "../../assets/TechIcons/react.webp"
 import typescript from "../../assets/TechIcons/typescript.webp"
 import visualStudio from "../../assets/TechIcons/visual-studio.webp"
 import visualStudioCode from "../../assets/TechIcons/vscode.webp"
-import webstorm from "../../assets/TechIcons/webstorm.webp"
 import netCore from "../../assets/TechIcons/netcore.webp"
 import tailwind from "../../assets/TechIcons/tailwind.webp"
 import personalPhoto from "../../assets/fotoPerfil-1.webp"
@@ -32,7 +31,6 @@ const IMAGES : Record<string, string> = {
     typescript: typescript,
     visualStudio: visualStudio,
     visualStudioCode: visualStudioCode,
-    webstorm: webstorm,
     netCore: netCore,
     tailwind: tailwind,
     personalPhoto: personalPhoto,

@@ -3,65 +3,11 @@ import { BlogEntryList } from "@components/BlogEntryList/BlogEntryList";
 import { findImage } from "@assets/Images/Images";
 import articles from "@domain/Repository/Articles.tsx";
 import { Technology } from "@components/Technology/Technology";
-import { ITechnology } from "@domain/Interfaces/ITechnology";
 import NavigationButton from "@components/NavigationButton/NavigationButton";
+import { frontendTechList, backendTechList, toolsTechList } from "@domain/Repository/Technologies";
 
 export const Home = () => {
     const personalPhoto = findImage("personalPhoto");
-    const techList: ITechnology[] = [
-        {
-            name: "HTML",
-            image: findImage("html")
-        },
-        {
-            name: "CSS",
-            image: findImage("css")
-        },
-        {
-            name: "Javascript",
-            image: findImage("javascript")
-        },
-        {
-            name: "Bootstrap",
-            image: findImage("bootstrap")
-        },
-        {
-            name: "Tailwind",
-            image: findImage("tailwind")
-        },
-        {
-            name: "Github",
-            image: findImage("github")
-        },
-        {
-            name: "React",
-            image: findImage("react")
-        },
-        {
-            name: "Typescript",
-            image: findImage("typescript")
-        },
-        {
-            name: "ASP.NET Core",
-            image: findImage("netcore")
-        },
-        {
-            name: "MySQL",
-            image: findImage("mysql")
-        },
-        {
-            name: "Visual Studio",
-            image: findImage("visualStudio")
-        },
-        {
-            name: "Visual Studio Code",
-            image: findImage("visualStudioCode")
-        },
-        {
-            name: "WebStorm",
-            image: findImage("webstorm")
-        },
-    ]
 
     return (
         <section id="home" className="w-[100%] dark:bg-gray-800 min-h-[95%] pb-10 flex flex-col flex-grow">
@@ -102,7 +48,7 @@ export const Home = () => {
                     </section>
                 </section>
 
-                <section className="dark:bg-gray-800 dark:text-white max-w-screen-xl m-auto">
+                {/* <section className="dark:bg-gray-800 dark:text-white max-w-screen-xl m-auto">
                     <h2 className="text-2xl text-bold text-center pt-10">Mi Stack Tecnológico</h2>
                     <p className="text-center mt-3 px-10">Herramientas que he utilizado en proyectos recientes</p>
                     <section className="flex justify-center flex-wrap py-10 px-5 max-w-screen-lg m-auto">
@@ -112,7 +58,59 @@ export const Home = () => {
                             ))
                         }
                     </section>
-                </section>
+                </section> */}
+
+                <article className="w-[100%] max-w-screen-xl m-auto dark:bg-gray-800 dark:text-white">
+                    <h2 className="text-3xl font-semibold text-center pt-10">Tecnologías</h2>
+                    <p className="mb-10"></p>
+
+                    <section className="flex flex-wrap justify-center items-center gap-3">
+                        <article id="frontend" className="w-[27%] text-center relative rounded-2xl 
+                            p-6 dark:border  dark:border-dark-900 bg-gradient-to-b from-gray-200 to-gray-300
+                            dark:from-slate-700 dark:to-black/60 shadow-2xl overflow-hidden"
+                        >
+                            <h3 className="text-2xl font-semibold mb-7">Frontend</h3> {/* Change color to title */}
+                            <section className="flex flex-wrap justify-center flex-row gap-4">
+                                {
+                                    frontendTechList.map((tech, index) => (
+                                        <Technology key={index} tech={tech}/>
+                                    ))
+                                }
+                            </section>
+                        </article>
+
+                        <article id="backend" className="w-[27%] text-center relative rounded-2xl 
+                            p-6 dark:border  dark:border-dark-900 bg-gradient-to-b from-gray-200 to-gray-300
+                            dark:from-slate-700 dark:to-black/60 shadow-2xl overflow-hidden"
+                        >
+                            <h3 className="text-2xl font-semibold mb-7">Backend</h3> {/* Change color to title */}
+                            <section className="flex flex-wrap justify-center flex-row gap-4">
+                                {
+                                    backendTechList.map((tech, index) => (
+                                        <Technology key={index} tech={tech}/>
+                                    ))
+                                }
+                            </section>
+                        </article>
+
+                        <article id="tools" className="w-[27%] text-center relative rounded-2xl 
+                            p-6 dark:border  dark:border-dark-900 bg-gradient-to-b from-gray-200 to-gray-300
+                            dark:from-slate-700 dark:to-black/60 shadow-2xl overflow-hidden"
+                        >
+                            <h3 className="text-2xl font-semibold mb-7">Herramientas</h3> {/* Change color to title */}
+                            <section className="flex flex-wrap justify-center flex-row gap-4">
+                                {
+                                    toolsTechList.map((tech, index) => (
+                                        <Technology key={index} tech={tech}/>
+                                    ))
+                                }
+                            </section>
+                        </article>
+                    </section>
+
+                </article>
+
+
             </section>
         </section>
     );
