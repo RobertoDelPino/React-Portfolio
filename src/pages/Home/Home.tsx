@@ -4,7 +4,7 @@ import { findImage } from "@assets/Images/Images";
 import articles from "@domain/Repository/Articles.tsx";
 import { Technology } from "@components/Technology/Technology";
 import { ITechnology } from "@domain/Interfaces/ITechnology";
-import { Link } from "react-router-dom";
+import NavigationButton from "@components/NavigationButton/NavigationButton";
 
 export const Home = () => {
     const personalPhoto = findImage("personalPhoto");
@@ -91,7 +91,11 @@ export const Home = () => {
                             }
                             <article className="w-[576px] flex justify-center lg:justify-end mt-3">
                                 <article className="hover:border-b-black dark:hover:border-b-white transition duration-300 border-b border-b-transparent">
-                                    <Link className="font-semibold dark:text-white transition-all duration-300 relative bottom-0 hover:bottom-1" to={"/blog"}>Ver más</Link>
+                                    <NavigationButton 
+                                        className="font-semibold dark:text-white transition-all duration-300 relative bottom-0 hover:bottom-1"
+                                        newRoute="/blog/"
+                                        children="Ver más"
+                                    />
                                 </article>
                             </article>  
                         </section>

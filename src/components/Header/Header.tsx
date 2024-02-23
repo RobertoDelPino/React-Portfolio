@@ -5,8 +5,8 @@ import {useEffect, useState} from "react";
 import {BsGithub, BsLinkedin} from "react-icons/bs"
 import {GoMail} from "react-icons/go"
 import {HiMenuAlt3} from "react-icons/hi"
-import {useLocation, useNavigate} from "react-router-dom";
-import { flushSync } from "react-dom";
+import {useLocation} from "react-router-dom";
+import NavigationButton from "@components/NavigationButton/NavigationButton";
 
 export const Header = () => {
     const location = useLocation();
@@ -26,64 +26,54 @@ export const Header = () => {
         window.addEventListener("scroll", handleScroll);
     }, []);
 
-    const navigate = useNavigate();
-    const viewNavigate = (newRoute: string) => {
-        if (newRoute === window.location.pathname) return;
-        if (!document.startViewTransition) {
-            return navigate(newRoute);
-        }
-        return document.startViewTransition(() => {
-            flushSync(() => {
-                navigate(newRoute);
-            });
-        });
-    };
-
     const navList = (
         <>
             <ul className="justify-end mr-3 mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6  dark:text-white h-[100%]" aria-label="links-pages-container">
                 <li className="inline-block mx-1 transition duration-300">
-                    <button 
-                        id="home" 
+                    <NavigationButton 
                         className={`w-[100%] hover:border-b-2 block p-2 ${!location.pathname.includes("blog") 
                             && !location.pathname.includes("projects") 
                             && !location.pathname.includes("about")
                             && !location.pathname.includes("contact") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
-                        onClick={() => viewNavigate("/")}
-                        >Inicio
-                    </button>
+                        newRoute="/"
+                        children={"Inicio"}
+                        id="home" 
+                    />
+
                 </li>
                 <li className="inline-block mx-1 transition duration-300">
-                    <button 
-                        id="about" 
+                    <NavigationButton 
                         className={`w-[100%] hover:border-b-2 block p-2 ${location.pathname.includes("about") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
-                        onClick={() => viewNavigate("/about")}
-                        >Sobre mi
-                    </button>
+                        newRoute="/about"
+                        children={"Sobre mi"}
+                        id="about" 
+                    />
+
                 </li>
                 <li className="inline-block mx-1 transition duration-300">
-                    <button 
-                        id="projects" 
+                    <NavigationButton 
                         className={`w-[100%] hover:border-b-2 block p-2 ${location.pathname.includes("projects") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
-                        onClick={() => viewNavigate("/projects")}
-                        >Proyectos
-                    </button>
+                        newRoute="/projects"
+                        children={"Proyectos"}
+                        id="projects" 
+                    />
+
                 </li>
                 <li className="inline-block mx-1 transition duration-300">
-                    <button
-                        id="blog"
+                    <NavigationButton 
                         className={`w-[100%] hover:border-b-2 block p-2 ${location.pathname.includes("blog") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
-                        onClick={() => viewNavigate("/blog")}
-                        >Blog
-                    </button>
+                        newRoute="/blog"
+                        children={"Blog"}
+                        id="blog" 
+                    />
                 </li>
                 <li className="inline-block mx-1 transition duration-300">
-                    <button
-                        id="blog"
+                    <NavigationButton 
                         className={`w-[100%] hover:border-b-2 block p-2 ${location.pathname.includes("contact") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
-                        onClick={() => viewNavigate("/contact")}
-                        >Contacto
-                    </button>
+                        newRoute="/contact"
+                        children={"Contacto"}
+                        id="contact"
+                    />
                 </li>
                 <li className="lg:block hidden">
                     <a href="/RobertoDelPinoCurriculum.pdf" target="_blank" className="text-sm transition duration-300 bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded dark:bg-gray-200 dark:hover:bg-gray-400 dark:text-gray-800">Descargar CV</a>
@@ -108,10 +98,11 @@ export const Header = () => {
 
                 <section className="py-3 w-full flex flex-wrap content-center justify-around">
                     <h1 className="leading-10 dark:text-white text-xl font-bold w-[70%] lg:w-[10%] flex items-center pl-3 lg:pl-0">
-                        <button 
+                        <NavigationButton 
                             className="transition duration-500 hover:scale-[1.1]"
-                            onClick={() => viewNavigate("/")}
-                            >roberto.ph</button>
+                            newRoute="/"
+                            children={"roberto.ph"}
+                        />
                     </h1>
                     <div className="flex justify-end w-[30%] lg:w-[87%]">
                         <div className="hidden lg:block w-[90%]">{navList}</div>
