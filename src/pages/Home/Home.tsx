@@ -10,7 +10,7 @@ export const Home = () => {
     const personalPhoto = findImage("personalPhoto");
 
     return (
-        <section id="home" className="w-[100%] dark:bg-gray-800 min-h-[95%] pb-10 flex flex-col flex-grow">
+        <section id="homePage" className="w-[100%] dark:bg-gray-800 min-h-[95%] pb-10 flex flex-col flex-grow">
             <section className="dark:bg-gray-800">
                 <Helmet>
                     <title>Roberto del Pino - Web Developer</title>
