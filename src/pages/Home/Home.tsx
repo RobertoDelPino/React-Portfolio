@@ -65,7 +65,7 @@ export const Home = () => {
                     <p className="mb-10"></p>
 
                     <section className="flex flex-wrap justify-center items-center gap-3">
-                        <article id="frontend" className="lg:w-[27%] mx-3 lg:mx-0 text-center relative rounded-2xl 
+                        <article id="frontend" className="w-full lg:w-[27%] mx-3 lg:mx-0 text-center relative rounded-2xl 
                             p-6 dark:border  dark:border-dark-900 bg-gradient-to-b from-gray-200 to-gray-300
                             dark:from-slate-800 dark:to-slate-600 shadow-2xl overflow-hidden my-3"
                         >
@@ -79,7 +79,7 @@ export const Home = () => {
                             </section>
                         </article>
 
-                        <article id="backend" className="lg:w-[27%] mx-3 lg:mx-0 text-center relative rounded-2xl 
+                        <article id="backend" className="w-full lg:w-[27%] mx-3 lg:mx-0 text-center relative rounded-2xl 
                             p-6 dark:border  dark:border-dark-900 bg-gradient-to-b from-gray-200 to-gray-300
                             dark:from-slate-800 dark:to-slate-600 shadow-2xl overflow-hidden my-3"
                         >
@@ -93,7 +93,7 @@ export const Home = () => {
                             </section>
                         </article>
 
-                        <article id="tools" className="lg:w-[27%] mx-3 lg:mx-0 text-center relative rounded-2xl 
+                        <article id="tools" className="w-full lg:w-[27%] mx-3 lg:mx-0 text-center relative rounded-2xl 
                             p-6 dark:border  dark:border-dark-900 bg-gradient-to-b from-gray-200 to-gray-300
                             dark:from-slate-800 dark:to-slate-600  shadow-2xl overflow-hidden my-3"
                         >

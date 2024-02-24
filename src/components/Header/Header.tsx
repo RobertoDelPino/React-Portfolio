@@ -97,15 +97,15 @@ export const Header = () => {
             `} >
 
                 <section className="py-3 w-full flex flex-wrap content-center justify-around">
-                    <h1 className="leading-10 dark:text-white text-xl font-bold w-[70%] lg:w-[10%] flex items-center pl-3 lg:pl-0">
+                    <h1 className="leading-10 dark:text-white text-xl font-bold w-[70%] lg:w-[11%] flex items-center pl-3 lg:pl-0">
                         <NavigationButton 
                             className="transition duration-500 hover:scale-[1.1]"
                             newRoute="/"
                             children={"roberto.ph"}
                         />
                     </h1>
-                    <div className="flex justify-end w-[30%] lg:w-[87%]">
-                        <div className="hidden lg:block w-[90%]">{navList}</div>
+                    <div className="flex justify-end w-[30%] lg:w-[85%]">
+                        <div className="hidden lg:block w-[95%]">{navList}</div>
                         <DarkModeSwitcher/>
                         <button onClick={toggleOpen} className="lg:hidden mr-3" aria-label="Toggle header list button">
                             <HiMenuAlt3 role="graphics-document" className="dark:text-white"></HiMenuAlt3>
