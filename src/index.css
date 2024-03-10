@@ -8,27 +8,7 @@ body, html, #root{
     width: 100%;
 }
 
-section#blog{
-    view-transition-name: pageTransition;
-}
-
-section#projects{
-    view-transition-name: pageTransition;
-}
-
-section#about{
-    view-transition-name: pageTransition;
-}
-
-section#homePage{
-    view-transition-name: pageTransition;
-}
-
-section#blogEntry{
-    view-transition-name: pageTransition;
-}
-
-section#contact{
+section#blog, section#projects, section#about, section#homePage, section#blogEntry, section#contact{
     view-transition-name: pageTransition;
 }
 
@@ -36,13 +16,13 @@ section#contact{
     animation: fade-and-scale-out 0s ease-in-out 1 forwards;
 }
 ::view-transition-new(pageTransition) {
-    animation: fade-and-scale-in .3s ease-in-out 1 forwards;
+    animation: fade-and-scale-in .6s ease-in-out 1 forwards;
 }
 
 @keyframes fade-and-scale-in {
     from {
         opacity: 0;
-        transform: translateY(30%);
+        transform: translateY(10%);
     }
     to {
         opacity: 1;
