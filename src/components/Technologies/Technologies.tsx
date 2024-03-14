@@ -1,4 +1,3 @@
-import { Technology } from "@components/Technology/Technology";
 import { ITechnology } from "@domain/Interfaces/ITechnology";
 
 interface TechnologyProps {
@@ -16,7 +15,10 @@ const Technologies = ( props: TechnologyProps) => {
             <section className="flex flex-wrap justify-center flex-row gap-4">
                 {
                     techList.map((tech, index) => (
-                        <Technology key={index} tech={tech}/>
+                        <article data-tooltip={tech.name} aria-label="technology" className="relative text-center" key={index}>
+                            <img loading="lazy" src={tech.image} alt={tech.name} className="w-20 h-20 mx-auto"/>
+                            <p className="font-bold mt-2">{tech.name}</p>
+                        </article>
                     ))
                 }
             </section>
