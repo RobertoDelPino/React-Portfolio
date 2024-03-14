@@ -2,9 +2,9 @@ import { Helmet } from "react-helmet"
 import { BlogEntryList } from "@components/BlogEntryList/BlogEntryList";
 import { findImage } from "@assets/Images/Images";
 import articles from "@domain/Repository/Articles.tsx";
-import { Technology } from "@components/Technology/Technology";
 import NavigationButton from "@components/NavigationButton/NavigationButton";
 import { frontendTechList, backendTechList, toolsTechList } from "@domain/Repository/Technologies";
+import Technologies from "@components/Technologies/Technologies";
 
 export const Home = () => {
     const personalPhoto = findImage("personalPhoto");
@@ -48,66 +48,16 @@ export const Home = () => {
                     </section>
                 </section>
 
-                {/* <section className="dark:bg-gray-800 dark:text-white max-w-screen-xl m-auto">
-                    <h2 className="text-2xl text-bold text-center pt-10">Mi Stack Tecnológico</h2>
-                    <p className="text-center mt-3 px-10">Herramientas que he utilizado en proyectos recientes</p>
-                    <section className="flex justify-center flex-wrap py-10 px-5 max-w-screen-lg m-auto">
-                        {
-                            techList.map((tech, index) => (
-                                <Technology key={index} tech={tech}/>
-                            ))
-                        }
-                    </section>
-                </section> */}
-
                 <article className="w-[100%] max-w-screen-xl m-auto dark:bg-gray-800 dark:text-white">
                     <h2 className="text-3xl font-semibold text-center pt-10">Tecnologías</h2>
                     <p className="mb-10"></p>
 
                     <section className="flex flex-wrap justify-center items-center gap-3">
-                        <article id="frontend" className="w-full lg:w-[27%] mx-3 lg:mx-0 text-center relative rounded-2xl 
-                            p-6 bg-slate-700 shadow-2xl overflow-hidden my-3"
-                        >
-                            <h3 className="text-2xl font-semibold mb-7">Frontend</h3> {/* Change color to title */}
-                            <section className="flex flex-wrap justify-center flex-row gap-4">
-                                {
-                                    frontendTechList.map((tech, index) => (
-                                        <Technology key={index} tech={tech}/>
-                                    ))
-                                }
-                            </section>
-                        </article>
-
-                        <article id="backend" className="w-full lg:w-[27%] mx-3 lg:mx-0 text-center relative rounded-2xl 
-                            p-6 bg-slate-700 shadow-2xl overflow-hidden my-3"
-                        >
-                            <h3 className="text-2xl font-semibold mb-7">Backend</h3> {/* Change color to title */}
-                            <section className="flex flex-wrap justify-center flex-row gap-4">
-                                {
-                                    backendTechList.map((tech, index) => (
-                                        <Technology key={index} tech={tech}/>
-                                    ))
-                                }
-                            </section>
-                        </article>
-
-                        <article id="tools" className="w-full lg:w-[27%] mx-3 lg:mx-0 text-center relative rounded-2xl 
-                            p-6 bg-slate-700  shadow-2xl overflow-hidden my-3"
-                        >
-                            <h3 className="text-2xl font-semibold mb-7">Herramientas</h3> {/* Change color to title */}
-                            <section className="flex flex-wrap justify-center flex-row gap-4">
-                                {
-                                    toolsTechList.map((tech, index) => (
-                                        <Technology key={index} tech={tech}/>
-                                    ))
-                                }
-                            </section>
-                        </article>
+                        <Technologies techList={frontendTechList} name="Frontend" />
+                        <Technologies techList={backendTechList} name="Backend" />
+                        <Technologies techList={toolsTechList} name="Herramientas" />
                     </section>
-
                 </article>
-
-
             </section>
         </section>
     );
