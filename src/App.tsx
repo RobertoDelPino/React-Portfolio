@@ -10,6 +10,7 @@ import { NotFound } from "@pages/NotFound/Home";
 import { useEffect } from "react";
 import { ScrollToTopButton } from "@components/ScrollToTopButton/ScrollToTopButton.tsx";
 import Contact from "@pages/Contact/Contact";
+import RealTimeChatLanding from "@pages/ProjectsPage/Landings/RealTimeChatLanding";
 
 function ScrollToTop() : null {
     const { pathname } = useLocation();
@@ -29,6 +30,7 @@ const App = () => (
                 <Route path="/" element={ <Home />}/>
                 <Route path="/about" element={ <About />}/>
                 <Route path="/projects" element={ <ProjectsPage />}/>
+                <Route path="/projects/realtimechat" element={ <RealTimeChatLanding />}/>
                 <Route path="/blog" element={ <BlogPage/> }/>
                 <Route path="/blog/:fileName" element={ <BlogEntry/> } />
                 <Route path="/contact" element={ <Contact/> }/>
