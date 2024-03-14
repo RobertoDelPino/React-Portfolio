@@ -1,10 +1,10 @@
 const RealTimeChatLanding = () => {
   
     return (
-        <main className="w-[100%] max-w-screen-lg m-auto min-h-[95%] pb-10 flex flex-col flex-grow dark:text-white ">
-            <section className="flex justify-start mt-10">
+        <main className="w-[100%] max-w-screen-lg m-auto px-4 min-h-[95%] pb-10 flex flex-col flex-grow dark:text-white ">
+            <section className="flex justify-start flex-wrap mt-10">
                 <img className="aspect-video border lg:w-[50%]" src="" alt="" />
-                <div className="ml-9 lg:w-[45%]">
+                <div className="md:ml-9 lg:w-[45%]">
                     <h1 className="text-3xl font-bold text-title">RealTimeChat App</h1>
                     <p className="text-xl font-medium">FullStack</p>
                     <p className="mt-5 text-xl"><strong>Objetivo principal: </strong> 
@@ -16,7 +16,7 @@ const RealTimeChatLanding = () => {
             </section>
             <section>
                 <h2 className="text-2xl font-bold text-title mt-5">Descripción</h2>
-                <p className="text-lg mt-5">Este proyecto consiste en una aplicación de chat en tiempo real, parecido a 
+                <p className="text-lg mt-5 font-medium">Este proyecto consiste en una aplicación de chat en tiempo real, parecido a 
                 whatsapp pero más limitado en funcionalidades. El propósito principal es aprender a utilizar websocket 
                 y entender cómo funcionan los eventos, además de aprender a utilizar MongoDB como base de datos principal.</p>
             </section>
@@ -44,12 +44,12 @@ const RealTimeChatLanding = () => {
                         <ul className="list-disc ml-5">
                             <li>Front
                                 <ul className="list-disc ml-5">
-                                   <li>VITE_BACKEND_URL="http://localhost:3000" (ejemplo)</li> 
+                                   <li> VITE_BACKEND_URL= "http://localhost:3000" (ejemplo)</li> 
                                 </ul>
                             </li>
                             <li>Backend
                                 <ul className="list-disc ml-5">
-                                    <li>FRONTEND_URL="http://localhost:4000" (ejemplo)</li>
+                                    <li>FRONTEND_URL= "http://localhost:4000" (ejemplo)</li>
                                     <li>JWT_SECRET: String secreto para crear el JWT token</li>
                                     <li>PORT: Puerto que está abierto en el lado front</li>
                                     <li>MONGO_URI: Url de conexión a MongoDB</li>
