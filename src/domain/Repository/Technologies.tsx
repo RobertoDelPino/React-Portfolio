@@ -37,6 +37,14 @@ export const backendTechList: ITechnology[] = [
         image: "TechIcons/mysql.svg"
     },
     {
+        name: "Node.js",
+        image: "TechIcons/nodejs.svg"
+    },
+    {
+        name: "Express.js",
+        image: "TechIcons/expressjs.svg"
+    },
+    {
         name: "MongoDB",
         image: "TechIcons/mongodb-icon.svg"
     },
@@ -64,3 +72,58 @@ export const toolsTechList: ITechnology[] = [
         image: "TechIcons/vscode.svg"
     }
 ]
+
+interface Landing {
+    backendTechList: ITechnology[];
+    frontendTechList: ITechnology[];
+    toolsTechList: ITechnology[];
+}
+
+export const realTimeChatLanding : Landing = {
+    backendTechList: [
+        {
+            name: "Node.js",
+            image: "../../TechIcons/nodejs.svg"
+        },
+        {
+            name: "Express.js",
+            image: "../../TechIcons/expressjs.svg"
+        },
+        {
+            name: "MongoDB",
+            image: "../../TechIcons/mongodb-icon.svg"
+        },
+        {
+            name: "Socket.IO",
+            image: "../../TechIcons/socketio.svg"
+        },
+        {
+            name: "Nodemailer",
+            image: "../../TechIcons/nodemailer.png"
+        }
+    ],
+    frontendTechList: [
+        {
+            name: "React",
+            image: "../../TechIcons/react.svg"
+        },
+        {
+            name: "Tailwind",
+            image: "../../TechIcons/tailwind.svg"
+        },
+        {
+            name: "Socker.IO",
+            image: "../../TechIcons/socketio.svg"
+        }
+    ],
+    toolsTechList: [
+        {
+            name: "Github",
+            image: "../../TechIcons/github.svg"
+        },
+        {
+            name: "Visual Studio Code",
+            image: "../../TechIcons/vscode.svg"
+        }
+    ]
+}

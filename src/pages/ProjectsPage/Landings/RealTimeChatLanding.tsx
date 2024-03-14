@@ -1,5 +1,8 @@
+import Technologies from "@components/Technologies/Technologies"
+import { realTimeChatLanding } from "@domain/Repository/Technologies"
+
+
 const RealTimeChatLanding = () => {
-  
     return (
         <main className="w-[100%] max-w-screen-lg m-auto px-4 min-h-[95%] pb-10 flex flex-col flex-grow dark:text-white ">
             <section className="flex justify-start flex-wrap mt-10">
@@ -22,7 +25,11 @@ const RealTimeChatLanding = () => {
             </section>
             <section>
                 <h2 className="text-2xl font-bold text-title mt-5" >Tecnologías</h2>
-                {/* Aqui iria la lista de technologies */}
+                <section className="flex flex-wrap justify-center items-center gap-3">
+                        <Technologies techList={realTimeChatLanding.frontendTechList} name="Frontend" />
+                        <Technologies techList={realTimeChatLanding.backendTechList} name="Backend" />
+                        <Technologies techList={realTimeChatLanding.toolsTechList} name="Herramientas" />
+                </section>
             </section>
             <section>
                 <h2 className="text-2xl font-bold text-title mt-5" >Características</h2>
