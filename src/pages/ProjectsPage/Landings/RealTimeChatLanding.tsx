@@ -117,7 +117,7 @@ const RealTimeChatLanding = () => {
             </section>
 
             <section>
-                <h2 className="text-2xl font-bold text-title dark:text-title-dark mt-5" >Galería de Imágenes</h2>
+                <h2 className="text-2xl font-bold text-title dark:text-title-dark my-5 " >Galería de Imágenes</h2>
                 <div className="flex items-center justify-center flex-wrap gap-3">
                     <img className="border border-white rounded-md" loading="lazy" src="/ProjectImages/RealTimeChat/ChatPC.webp" alt="Chat versión PC" />
                     <img className="border border-white rounded-md" loading="lazy" src="/ProjectImages/RealTimeChat/ChatList.webp" alt="Lista de chats en el móvil" />
