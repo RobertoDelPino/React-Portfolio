@@ -47,8 +47,27 @@ export const Home = () => {
                     </section>
                 </section>
 
+                <article className="w-full m-auto">
+                    <h1 className="text-3xl font-semibold text-center pt-10">Últimos Proyectos</h1>
+                    
+                    <section className="flex flex-wrap justify-center items-center gap-3">
+                        <article className="w-full flex justify-center flex-wrap m-auto mt-10 p-4 bg-slate-200 rounded-2xl lg:w-8/12 dark:bg-slate-700">
+                            <div className="lg:w-[35%] m-0 lg:mr-2">
+                                <h2 className="text-2xl font-bold dark:text-title-dark text-title">Real Time Chat</h2>
+                                <p className="mt-1 font-semibold">30-01-24</p>
+                                <p className="mt-4 font-semibold">Aplicación de chat en tiempo real creada con React, Node.js, Express, MongoDB y Socket.io</p>
+                                <NavigationButton 
+                                    className="mt-3 font-semibold border-b border-transparent hover:border-b-black dark:hover:border-b-white transition duration-300"
+                                    newRoute="/projects/realtimechat"
+                                    children="Saber más"
+                                />
+                            </div>
+                            <img className="lg:w-[60%] mt-5 lg:m-0" src="/ProjectImages/RealTimeChat/ChatPC.webp" alt="Pantalla inicial para chatear" />
+                        </article>
+                    </section>
+                </article>
 
-                <article className="w-[100%] m-auto">
+                <article className="w-full m-auto">
                     <h2 className="text-3xl font-semibold text-center pt-10">Tecnologías</h2>
                     <p className="mb-10"></p>
 

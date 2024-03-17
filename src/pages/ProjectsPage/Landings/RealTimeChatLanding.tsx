@@ -10,7 +10,7 @@ const RealTimeChatLanding = () => {
                 <title>Real Time Chat Project - Roberto del Pino - Web Developer - Projects</title>
             </Helmet>
             <section className="flex justify-start flex-wrap mt-10">
-                <img className="aspect-auto border lg:w-[50%]" src="/ProjectImages/RealTimeChat/ChatPC.webp" alt="" />
+                <img className="aspect-auto border lg:w-[50%]" src="/ProjectImages/RealTimeChat/ChatPC.webp" alt="Pantalla inicial para chatear" />
                 <div className="mt-5 lg:mt-0 lg:ml-9 lg:w-[45%]">
                     <h1 className="text-3xl font-bold text-title dark:text-title-dark">RealTimeChat App</h1>
                     <p className="text-xl font-medium">FullStack</p>
