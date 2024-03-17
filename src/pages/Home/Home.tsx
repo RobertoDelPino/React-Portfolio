@@ -50,7 +50,7 @@ export const Home = () => {
                 <article className="w-full m-auto">
                     <h1 className="text-3xl font-semibold text-center pt-10">Últimos Proyectos</h1>
                     
-                    <section className="flex flex-wrap justify-center items-center gap-3">
+                    <section className="flex flex-wrap justify-center items-center gap-3 mx-3">
                         <article className="w-full flex justify-center flex-wrap m-auto mt-10 p-4 bg-slate-200 rounded-2xl lg:w-8/12 dark:bg-slate-700">
                             <div className="lg:w-[35%] m-0 lg:mr-2">
                                 <h2 className="text-2xl font-bold dark:text-title-dark text-title">Real Time Chat</h2>
