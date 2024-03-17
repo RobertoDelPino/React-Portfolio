@@ -8,7 +8,7 @@ const RealTimeChatLanding = () => {
             <section className="flex justify-start flex-wrap mt-10">
                 <img className="aspect-video border lg:w-[50%]" src="" alt="" />
                 <div className="md:ml-9 lg:w-[45%]">
-                    <h1 className="text-3xl font-bold text-title">RealTimeChat App</h1>
+                    <h1 className="text-3xl font-bold text-title dark:text-title-dark">RealTimeChat App</h1>
                     <p className="text-xl font-medium">FullStack</p>
                     <p className="mt-5 text-xl"><strong>Objetivo principal: </strong> 
                      aprender los fundamentos de los eventos con 
@@ -18,13 +18,13 @@ const RealTimeChatLanding = () => {
                 </div>
             </section>
             <section>
-                <h2 className="text-2xl font-bold text-title mt-5">Descripción</h2>
+                <h2 className="text-2xl font-bold text-title dark:text-title-dark mt-5">Descripción</h2>
                 <p className="text-lg mt-5 font-medium">Este proyecto consiste en una aplicación de chat en tiempo real, parecido a 
                 whatsapp pero más limitado en funcionalidades. El propósito principal es aprender a utilizar websocket 
                 y entender cómo funcionan los eventos, además de aprender a utilizar MongoDB como base de datos principal.</p>
             </section>
             <section>
-                <h2 className="text-2xl font-bold text-title mt-5" >Tecnologías</h2>
+                <h2 className="text-2xl font-bold text-title dark:text-title-dark mt-5" >Tecnologías</h2>
                 <section className="flex flex-wrap justify-center items-center gap-3">
                         <Technologies techList={realTimeChatLanding.frontendTechList} name="Frontend" />
                         <Technologies techList={realTimeChatLanding.backendTechList} name="Backend" />
@@ -32,7 +32,7 @@ const RealTimeChatLanding = () => {
                 </section>
             </section>
             <section>
-                <h2 className="text-2xl font-bold text-title mt-5" >Características</h2>
+                <h2 className="text-2xl font-bold text-title dark:text-title-dark mt-5" >Características</h2>
                 <ul className="list-disc ml-7 mt-5 font-medium text-lg">
                     <li>Chat en tiempo real</li>
                     <li>Base de datos MongoDB</li>
@@ -43,7 +43,7 @@ const RealTimeChatLanding = () => {
                 </ul>
             </section>
             <section>
-                <h2 className="text-2xl font-bold text-title mt-5" >Instalación</h2>
+                <h2 className="text-2xl font-bold text-title dark:text-title-dark mt-5" >Instalación</h2>
                 <ul className="list-decimal ml-7 mt-5 font-medium text-lg">
                     <li>Clonar el repositorio</li>
                     <li>Comando "npm install" dentro de cada carpeta</li>
@@ -88,7 +88,7 @@ const RealTimeChatLanding = () => {
             </section>
 
             <section>
-                <h2 className="text-2xl font-bold text-title mt-5" >Mejoras a futuro</h2>
+                <h2 className="text-2xl font-bold text-title dark:text-title-dark mt-5" >Mejoras a futuro</h2>
                 <ul className="list-disc ml-5 text-lg font-medium mt-5">
                     <li className="mb-2">Crear el backend pero con Arquitectura hexagonal y value objects. Además, me 
                         gustaría añadir tests para, en un futuro artículo, mostrar las ventajas de 
@@ -105,7 +105,7 @@ const RealTimeChatLanding = () => {
             </section>
 
             <section>
-                <h2 className="text-2xl font-bold text-title mt-5" >Galería de Imágenes</h2>
+                <h2 className="text-2xl font-bold text-title dark:text-title-dark mt-5" >Galería de Imágenes</h2>
                 <div className="flex items-center justify-center">
                     <img src="" alt="" />
                     <img src="" alt="" />

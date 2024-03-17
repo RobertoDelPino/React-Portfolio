@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        "title": "#50B3EA"
+        "title": "#1E3A8A",
+        "title-dark": "#50B3EA",
       }
     },
   },
