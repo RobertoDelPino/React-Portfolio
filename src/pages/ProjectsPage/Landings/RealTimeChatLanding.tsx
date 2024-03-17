@@ -1,3 +1,4 @@
+import NavigationButton from "@components/NavigationButton/NavigationButton"
 import Technologies from "@components/Technologies/Technologies"
 import { realTimeChatLanding } from "@domain/Repository/Technologies"
 import { Helmet } from "react-helmet"
@@ -9,7 +10,14 @@ const RealTimeChatLanding = () => {
             <Helmet>
                 <title>Real Time Chat Project - Roberto del Pino - Web Developer - Projects</title>
             </Helmet>
-            <section className="flex justify-start flex-wrap mt-10">
+            
+            <NavigationButton 
+                className="w-fit mt-5 font-semibold border-b border-transparent hover:border-b-black dark:hover:border-b-white transition duration-300"
+                newRoute="/projects"
+                children="Volver a los proyectos"
+            />
+
+            <section className="flex justify-start flex-wrap mt-5">
                 <img className="aspect-auto border lg:w-[50%]" src="/ProjectImages/RealTimeChat/ChatPC.webp" alt="Pantalla inicial para chatear" />
                 <div className="mt-5 lg:mt-0 lg:ml-9 lg:w-[45%]">
                     <h1 className="text-3xl font-bold text-title dark:text-title-dark">RealTimeChat App</h1>
