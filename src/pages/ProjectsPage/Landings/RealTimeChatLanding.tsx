@@ -10,7 +10,7 @@ const RealTimeChatLanding = () => {
                 <title>Real Time Chat Project - Roberto del Pino - Web Developer - Projects</title>
             </Helmet>
             <section className="flex justify-start flex-wrap mt-10">
-                <img className="aspect-video border lg:w-[50%]" src="" alt="" />
+                <img className="aspect-video border lg:w-[50%]" src="/ProjectImages/RealTimeChat/ChatPC.webp" alt="" />
                 <div className="md:ml-9 lg:w-[45%]">
                     <h1 className="text-3xl font-bold text-title dark:text-title-dark">RealTimeChat App</h1>
                     <p className="text-xl font-medium">FullStack</p>
@@ -110,11 +110,12 @@ const RealTimeChatLanding = () => {
 
             <section>
                 <h2 className="text-2xl font-bold text-title dark:text-title-dark mt-5" >Galería de Imágenes</h2>
-                <div className="flex items-center justify-center">
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
+                <div className="flex items-center justify-center flex-wrap gap-3">
+                    <img src="/ProjectImages/RealTimeChat/IniciarSesion.webp" alt="Iniciar sesión PC" />
+                    <img src="/ProjectImages/RealTimeChat/ChatPC.webp" alt="Chat versión PC" />
+                    <img src="/ProjectImages/RealTimeChat/ChatList.webp" alt="Lista de chats en el móvil" />
+                    <img src="/ProjectImages/RealTimeChat/ChatMobile.webp" alt="Chat versión móvil" />
+                    <img src="/ProjectImages/RealTimeChat/CrearCuenta.webp" alt="Crear cuenta PC" />
                 </div>
             </section>
         
