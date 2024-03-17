@@ -1,6 +1,6 @@
 import NavigationButton from "@components/NavigationButton/NavigationButton";
 import {Project} from "@domain/Entities/Project.tsx";
-import {BsGithub, BsLink} from "react-icons/bs";
+import {BsGithub} from "react-icons/bs";
 
 
 export const ProjectCard = (props: { project: Project }) => 
