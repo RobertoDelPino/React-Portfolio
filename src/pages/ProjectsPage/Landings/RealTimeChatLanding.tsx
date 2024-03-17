@@ -1,10 +1,14 @@
 import Technologies from "@components/Technologies/Technologies"
 import { realTimeChatLanding } from "@domain/Repository/Technologies"
+import { Helmet } from "react-helmet"
 
 
 const RealTimeChatLanding = () => {
     return (
         <main className="w-[100%] max-w-screen-lg m-auto px-4 min-h-[95%] pb-10 flex flex-col flex-grow dark:text-white ">
+            <Helmet>
+                <title>Real Time Chat Project - Roberto del Pino - Web Developer - Projects</title>
+            </Helmet>
             <section className="flex justify-start flex-wrap mt-10">
                 <img className="aspect-video border lg:w-[50%]" src="" alt="" />
                 <div className="md:ml-9 lg:w-[45%]">
