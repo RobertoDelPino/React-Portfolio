@@ -13,16 +13,16 @@ section#blog, section#projects, section#about, section#homePage, section#blogEnt
 }
 
 ::view-transition-old(pageTransition) {
-    animation: fade-and-scale-out 0s ease-in-out 1 forwards;
+    animation: fade-and-scale-out 0s ease-in-out 0s forwards;
 }
 ::view-transition-new(pageTransition) {
-    animation: fade-and-scale-in .6s ease-in-out 1 forwards;
+    animation: fade-and-scale-in .3s ease-in-out 0s forwards;
 }
 
 @keyframes fade-and-scale-in {
     from {
         opacity: 0;
-        transform: translateY(10%);
+        transform: translateY(5%);
     }
     to {
         opacity: 1;

@@ -52,7 +52,7 @@ export const Home = () => {
                     
                     <section className="flex flex-wrap justify-center items-center gap-3 mx-3">
                         <article className="w-full flex justify-center flex-wrap m-auto mt-10 p-4 bg-slate-200 rounded-2xl lg:w-8/12 dark:bg-slate-700">
-                            <div className="lg:w-[39%] m-0 lg:mr-2">
+                            <div className="md:w-[38%] mt-0 md:mt-2 md:mr-2">
                                 <h2 className="text-2xl font-bold dark:text-title-dark text-title">Real Time Chat</h2>
                                 <p className="mt-1 font-semibold">30-01-24</p>
                                 <p className="mt-4 font-semibold">Aplicación de chat en tiempo real creada con React, Node.js, Express, MongoDB y Socket.io</p>
@@ -62,7 +62,7 @@ export const Home = () => {
                                     children="Saber más"
                                 />
                             </div>
-                            <img className="lg:w-[60%] mt-5 lg:m-0" src="/ProjectImages/RealTimeChat/ChatPC.webp" alt="Pantalla inicial para chatear" />
+                            <img className="md:w-[60%] mt-5 md:m-0" src="/ProjectImages/RealTimeChat/ChatPC.webp" alt="Pantalla inicial para chatear" />
                         </article>
                     </section>
                 </article>

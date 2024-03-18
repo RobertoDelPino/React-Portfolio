@@ -14,6 +14,12 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({ newRoute, children,
 
   const viewNavigate = () => {
     if (newRoute === window.location.pathname) return;
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'instant'
+    });
+
     if (!document.startViewTransition) {
       return navigate(newRoute);
     }
