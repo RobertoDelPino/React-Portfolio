@@ -33,7 +33,7 @@ export const backendTechList: ITechnology[] = [
         image: "TechIcons/netcore.webp"
     },
     {
-        name: "MySQL",
+        name: "SQL",
         image: "TechIcons/mysql.svg"
     },
     {
