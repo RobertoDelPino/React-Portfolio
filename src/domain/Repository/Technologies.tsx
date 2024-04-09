@@ -34,7 +34,7 @@ export const backendTechList: ITechnology[] = [
     },
     {
         name: "SQL",
-        image: "TechIcons/mysql.svg"
+        image: "TechIcons/sql.svg"
     },
     {
         name: "Node.js",
