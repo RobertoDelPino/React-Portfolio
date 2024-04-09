@@ -1,14 +1,11 @@
 import { Helmet } from "react-helmet"
 import { BlogEntryList } from "@components/BlogEntryList/BlogEntryList";
-import { findImage } from "@assets/Images/Images";
 import articles from "@domain/Repository/Articles.tsx";
 import NavigationButton from "@components/NavigationButton/NavigationButton";
 import { frontendTechList, backendTechList, toolsTechList } from "@domain/Repository/Technologies";
 import Technologies from "@components/Technologies/Technologies";
 
 export const Home = () => {
-    const personalPhoto = findImage("personalPhoto");
-
     return (
         <section id="homePage" className="w-[100%] max-w-screen-xl m-auto dark:bg-gray-800 min-h-[95%] pb-10 flex flex-col flex-grow dark:text-white">
                 <Helmet>
@@ -17,7 +14,7 @@ export const Home = () => {
                 <section className="w-full m-auto flex flex-wrap justify-around py-12 dark:bg-gray-800 ">
                     <div className="flex justify-center flex-wrap px-6 mb-9 md:w-[45%] w-[100%]">
                         <div>
-                            <img rel="preload" src={personalPhoto} alt="Photo of Roberto del Pino Hormiga"
+                            <img rel="preload" src={"/profilePhoto.webp"} alt="Photo of Roberto del Pino Hormiga"
                             className="w-48 h-48 lg:w-72 lg:h-72 rounded-full border-black border-2 dark:border-white
                             mb-5"/>
                         </div>

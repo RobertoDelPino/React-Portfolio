@@ -2,7 +2,7 @@
   "title":"Optimización de queries en SQL para mejorar el rendimiento de la base de datos", 
   "date":"14-10-2023",
   "description":"",
-  "topic":"sql",
+  "topic":"mysql",
   "toc":true
 }
 

@@ -17,7 +17,7 @@ const blogEntriesList : BlogEntryData[] = [
     "title":"Optimización de queries en SQL para mejorar el rendimiento de la base de datos", 
     "date":"14-10-2023",
     "description":"Te muestro qué he aprendido durante los primeros meses del trabajo",
-    "topic":"sql"
+    "topic":"mysql"
   }
 ]
 
