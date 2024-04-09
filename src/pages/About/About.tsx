@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet"
 import EducationExperiencies from "@domain/Repository/EducationExperiencies";
-import { EducationCard } from "@components/EducationCard/EducationCard";
+import { EducationCard } from "@pages/About/components/EducationCard/EducationCard";
 import WorkExperiencies from "@domain/Repository/WorkExperiencies";
-import { WorkExperienceCard } from "@components/WorkExperienceCard/WorkExperienceCard";
-import { EventCard } from "@components/EventCard/EventCard";
+import { WorkExperienceCard } from "@pages/About/components/WorkExperienceCard/WorkExperienceCard";
+import { EventCard } from "@pages/About/components/EventCard/EventCard";
 import { WorkExperience } from "@domain/Interfaces/WorkExperience";
 import { EducationExperience } from "@domain/Interfaces/EducationExperience";
 import Events from "@domain/Repository/Events";

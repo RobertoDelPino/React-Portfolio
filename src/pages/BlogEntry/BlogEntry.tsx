@@ -6,7 +6,7 @@ import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import markdown from 'react-syntax-highlighter/dist/cjs/languages/prism/markdown';
 import hljs from 'highlight.js/lib/core';
 import {useNavigate, useParams} from 'react-router-dom';
-import { BlogEntryTitle } from '@components/BlogEntryTitle/BlogEntryTitle';
+import { BlogEntryTitle } from '@pages/BlogEntry/components/BlogEntryTitle/BlogEntryTitle';
 import javascript from 'highlight.js/lib/languages/javascript';
 import typescript from 'highlight.js/lib/languages/typescript';
 import { flushSync } from "react-dom";
