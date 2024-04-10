@@ -13,7 +13,7 @@ Sabiendo que por cada 100ms que tarde una consulta en dar respuesta son usuarios
 
 Para los siguientes tips he creado una tabla con un millón de registros. Puedes crearlo tu también siguiendo el siguiente tutorial: [Millones de datos aleatorios en SQL Server](https://datoptim.com/millones-de-datos-aleatorios-en-sql-server/)
 
-![Descripción de la imagen](/assets/resultado-sql-fake-table.png)
+![Descripción de la imagen](/BlogImages/resultado-sql-fake-table.png)
 
 El código que se va a utilizar para hacer la consulta y comprobar el tiempo que ha tardado es el siguiente:
 ``` javascript

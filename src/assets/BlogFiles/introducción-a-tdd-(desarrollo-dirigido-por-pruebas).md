@@ -2,7 +2,7 @@
   "title":"Introducción al TDD (Desarrollo Dirigido por Pruebas)", 
   "date":"15-01-2024",
   "description":"",
-  "topic":"TDD",
+  "topic":"tdd",
   "toc":true
 }
 
@@ -24,7 +24,7 @@ Comenzaremos explicando los diferentes pasos a seguir durante la creación de c�
 
 ### Pasos a seguir en un caso real:
 
-![Stages of TDD](/assets/tdd-stages.png)
+![Stages of TDD](/BlogImages/tdd-stages.png)
 
 #### El cliente nos pide que desarollemos un código que sea capaz de indicar si un número es primo o no:
 

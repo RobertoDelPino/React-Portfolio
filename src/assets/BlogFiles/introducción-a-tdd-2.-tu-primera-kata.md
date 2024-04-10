@@ -2,7 +2,7 @@
   "title":"Introducción a TDD 2. Tu primera Kata", 
   "date":"18-01-2024",
   "description":"",
-  "topic":"TDD",
+  "topic":"tdd",
   "toc":true
 }
 
@@ -15,7 +15,7 @@ Es una metodología de trabajo, dentro de XP (extreme programming), que consiste
 Los casos de usos son el resultado de dividir la necesidad del cliente en todas las posibles soluciones que pueda devolver un código. Ahora lo veremos con más detalle durante la realización de la Kata.
 
 Os dejo por aquí una imagen con los pasos a seguir con TDD:    
-![Stages of TDD](/assets/tdd-stages.png)    
+![Stages of TDD](/BlogImages/tdd-stages.png)    
 Ahora que hemos revisado lo fundamental, vamos a comenzar con la Kata.
 
 ## Instrucciones
