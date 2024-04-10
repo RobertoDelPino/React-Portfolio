@@ -50,7 +50,11 @@ export const Home = () => {
                     <section className="flex flex-wrap justify-center items-center gap-3 mx-3">
                         <article className="w-full flex justify-center flex-wrap m-auto mt-10 p-4 bg-slate-200 rounded-2xl lg:w-8/12 dark:bg-slate-700">
                             <div className="md:w-[38%] mt-0 md:mt-2 md:mr-2">
-                                <h2 className="text-2xl font-bold dark:text-title-dark text-title">Real Time Chat</h2>
+                                <NavigationButton 
+                                    className="text-2xl font-bold dark:text-title-dark text-title border-b border-b-transparent hover:border-b-black dark:hover:border-b-white transition duration-300"
+                                    newRoute="/projects/realtimechat"
+                                    children="Real Time Chat"
+                                />
                                 <p className="mt-1 font-semibold">30-01-24</p>
                                 <p className="mt-4 font-semibold">Aplicación de chat en tiempo real creada con React, Node.js, Express, MongoDB y Socket.io</p>
                                 <NavigationButton 
