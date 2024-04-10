@@ -37,7 +37,8 @@ export const Header = () => {
                             && !location.pathname.includes("contact") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
                         newRoute="/"
                         children={"Inicio"}
-                        id="home" 
+                        id="home"
+                        setOpenNav={setOpenNav} 
                     />
 
                 </li>
@@ -46,7 +47,8 @@ export const Header = () => {
                         className={`w-[100%] hover:border-b-2 block p-2 ${location.pathname.includes("about") ? "lg:dark:border-b-white lg:border-b-2 lg:border-b-gray-800" : ""}`}
                         newRoute="/about"
                         children={"Sobre mi"}
-                        id="about" 
+                        id="about"
+                        setOpenNav={setOpenNav}
                     />
 
                 </li>
@@ -56,6 +58,7 @@ export const Header = () => {
                         newRoute="/projects"
                         children={"Proyectos"}
                         id="projects" 
+                        setOpenNav={setOpenNav}
                     />
 
                 </li>
@@ -65,6 +68,7 @@ export const Header = () => {
                         newRoute="/blog"
                         children={"Blog"}
                         id="blog" 
+                        setOpenNav={setOpenNav}
                     />
                 </li>
                 <li className="inline-block mx-1 transition duration-300">
@@ -73,6 +77,7 @@ export const Header = () => {
                         newRoute="/contact"
                         children={"Contacto"}
                         id="contact"
+                        setOpenNav={setOpenNav}
                     />
                 </li>
                 <li className="lg:block hidden">
