@@ -7,10 +7,9 @@ import {resolve} from "path";
 const getAliases = () => {
     return {
         "@assets": resolve("src/assets"),
-        "@components": resolve("src/components"),
+        "@components": resolve("src/infrastructure/components"),
         "@domain": resolve("src/domain"),
-        "@infrastructure": resolve("src/infrastructure"),
-        "@pages": resolve("src/pages"),
+        "@pages": resolve("src/infrastructure/pages"),
     }
 }
 export default defineConfig({

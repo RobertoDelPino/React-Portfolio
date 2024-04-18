@@ -134,7 +134,6 @@ export const BlogEntry = () => {
           </blockquote>
         )
       }
-
     }
 
     const [article, setArticle] = useState("");
@@ -145,7 +144,7 @@ export const BlogEntry = () => {
     useEffect(() => {
       const image = async () => {
         try {
-          const data = await import(`../../assets/BlogFiles/${fileName?.toLowerCase()}.md?raw`);
+          const data = await import(`../../../assets/BlogFiles/${fileName?.toLowerCase()}.md?raw`);
           setArticle(data.default)
           setIsLoading(false)
         } catch (error) {

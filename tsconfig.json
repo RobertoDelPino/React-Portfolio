@@ -23,10 +23,9 @@
     "baseUrl": "src",
     "paths": {
       "@assets/*": ["assets/*"],
-      "@components/*": ["components/*"],
+      "@components/*": ["infrastructure/components/*"],
       "@domain/*": ["domain/*"],
-      "@infrastructure/*": ["infrastructure/*"],
-      "@pages/*": ["pages/*"]
+      "@pages/*": ["infrastructure/pages/*"]
     },
 
     /* Type Checking */
