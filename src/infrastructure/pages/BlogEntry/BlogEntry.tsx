@@ -48,7 +48,7 @@ export const BlogEntry = () => {
       a: (a: React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>) =>{
         if(!a.href.includes("http")){
           return (
-            <a onClick={() => viewNavigate(a.href)} className='underline hover:text-gray-800/[.5] dark:hover:text-white/60 cursor-pointer'>
+            <a onClick={(e) => {e.preventDefault(); viewNavigate(a.href)}} href={a.href} className='underline hover:text-gray-800/[.5] dark:hover:text-white/60 cursor-pointer'>
               {a.children}
             </a>
           )
