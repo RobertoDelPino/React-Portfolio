@@ -136,7 +136,7 @@ export const BlogEntry = () => {
       },
       img: (img: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>) => {
         return (
-          <img {...img} className="w-full h-96 object-cover object-center" />
+          <img {...img} className="w-full h-96 object-contain object-center" />
         )
       },
     }
