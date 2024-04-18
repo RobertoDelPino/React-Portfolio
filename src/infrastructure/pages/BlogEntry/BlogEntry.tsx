@@ -133,7 +133,12 @@ export const BlogEntry = () => {
             {bloquote.children}
           </blockquote>
         )
-      }
+      },
+      img: (img: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>) => {
+        return (
+          <img {...img} className="w-full h-96 object-cover object-center" />
+        )
+      },
     }
 
     const [article, setArticle] = useState("");
