@@ -10,7 +10,7 @@ export const EventCard = ({event}: EventCardProps) => <>
         <article className="flex justify-between">
             <h3 className="text-xl font-medium dark:text-white">{event.name}</h3>
             <a href={event.website} target="_blank"><p
-                className=" bg-amber-300 text-amber-700 font-bold dark:text-amber-700 dark:hover:bg-amber-400 inline-block rounded-xl w-24 text-center ">Website</p>
+                className=" bg-amber-300 text-black font-bold dark:hover:bg-amber-400 inline-block rounded-xl w-24 text-center ">Website</p>
             </a>
 
         </article>
@@ -21,7 +21,7 @@ export const EventCard = ({event}: EventCardProps) => <>
         <h3 className="text-lg font-medium dark:text-white">{event.name}</h3>
         <p className="text-gray-500 dark:text-gray-300 mt-4">📅 {event.time}</p>
         <p className="mt-3"><a href={event.website} target="_blank"
-                               className="bg-amber-300 font-bold dark:text-amber-700 dark:hover:bg-amber-400 inline-block rounded-xl w-24 text-center ">Website</a>
+                               className="bg-amber-300 font-bold dark:hover:bg-amber-400 inline-block rounded-xl w-24 text-center ">Website</a>
         </p>
     </article>
 </>;

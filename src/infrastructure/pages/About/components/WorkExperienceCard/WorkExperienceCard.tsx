@@ -9,7 +9,7 @@ export const WorkExperienceCard = ({work}: WorkExperienceCardProps) =>
         <article className="hidden md:block border-b-2 pb-4 mt-3 ">
             <article className="md:flex justify-between">
                 <h3 className="text-xl font-medium dark:text-white ">{work.name}</h3>
-                <p className="inline-block bg-green-300 w-24 text-center rounded-3xl text-green-700 font-bold">{work.workday}</p>
+                <p className="inline-block bg-green-300 w-24 text-center rounded-3xl text-black font-bold">{work.workday}</p>
             </article>
             <article className="flex justify-between mt-6 text-gray-500 dark:text-gray-300">
                 <p className="w-[33%]">🔠<a href={work.urlCompany} target="_blank"
@@ -25,7 +25,7 @@ export const WorkExperienceCard = ({work}: WorkExperienceCardProps) =>
                 <p>🔠<a href={work.urlCompany} target="_blank"
                     className="hover:border-b-2 py-1 text-gray-500 hover:text-gray-600 dark:text-gray-300 companyName">{work.company}</a>
                 </p>
-                <p className="inline-block bg-green-300 w-24 text-center rounded-3xl text-green-700 font-bold">{work.workday}</p>
+                <p className="inline-block bg-green-300 w-24 text-center rounded-3xl text-black font-bold">{work.workday}</p>
             </article>
             <p className="text-gray-500 dark:text-gray-300 my-3">🗺️{work.workplace}</p>
             <p className="text-gray-500 dark:text-gray-300">📅{work.time}</p>
