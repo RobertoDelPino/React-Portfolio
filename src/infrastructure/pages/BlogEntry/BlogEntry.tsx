@@ -114,7 +114,7 @@ export const BlogEntry = () => {
 
       li: (li: React.DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLLIElement>, HTMLLIElement>) =>{
         return (
-          <li className='dark:text-white list-decimal list-inside my-1 text-lg'>
+          <li className='dark:text-white list-decimal list-inside my-3 text-lg'>
             {li.children}
           </li>
         )

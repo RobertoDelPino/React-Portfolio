@@ -2,6 +2,12 @@ import { BlogEntryData } from "../Entities/BlogEntryData";
 
 const blogEntriesList : BlogEntryData[] = [
   {
+    "title":"Transformando mi aplicacion de chat. Una guia hacia la arquitectura hexagonal y TDD", 
+    "date":"05-05-2024",
+    "description":"",
+    "topic":"hexagonal-architecture",
+  },
+  {
     "title":"Introducción a TDD 2. Tu primera kata", 
     "date":"19-01-2024",
     "description":"Realizando la kata FizzBuzz con TDD",
