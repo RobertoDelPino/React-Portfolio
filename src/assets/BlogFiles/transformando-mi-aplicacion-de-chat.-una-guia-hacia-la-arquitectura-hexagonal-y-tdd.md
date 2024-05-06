@@ -22,7 +22,7 @@ La arquitectura hexagonal, también **conocida como "puertos y adaptadores"**, e
 
 En la siguiente imagen pueden ver una representación de cómo se distribuyen estas capas:
 
-![Stages of TDD](/TechIcons/arquitectura-hexagonal.png)
+![Hexagonal Architecture Layers](/TechIcons/arquitectura-hexagonal.png)
 
 # Ventajas
 
@@ -44,10 +44,88 @@ En la siguiente imagen pueden ver una representación de cómo se distribuyen es
 
 # Ejemplo aplicando Arquitectura Hexagonal en la aplicación
 
-Caso de uso: Obtener un chat. **Añadir fotos de cada paso**.   
-Pasos a explicar:  
-1. Capa de dominio: todas las interfaces y entidades creadas que son importantes para negocio: ChatRepository y Chat(entidad)
-2. Capa de aplicación: el caso de uso, qué es lo que va a hacer
+**Caso de uso: Al abrir un chat, traer los mensajes e información de los usuarios del chat.**
+
+En este caso, lo único que vamos a realizar es obtener todos los mensajes de un chat. Para ello, tenemos que acceder a base de datos, por lo que vamos a crear una interfaz con los métodos que, desde negocio, creemos que son importantes para este caso:
+
+**FindBy**, al que le pasaremos el id del chat y nos devolverá los datos mínimos necesarios para funcionar:
+``` typescript
+export interface IChatsRepository {
+    findBy(chatId: string): Promise<Chat>;
+}
+```
+
+Si os fijais, estamos devolviendo un objeto **Chat**. Es el siguiente:
+``` typescript
+export class Chat {
+    constructor(
+        public _id: string,
+        public users: User[],
+        public messages: Message[],
+        public isGroup: boolean,
+        public groupName: string,
+        public createdAt: Date
+    ) {}
+}
+```
+La clase **User**:
+``` typescript
+export class User {
+    constructor(
+        public _id?: string,
+        public name?: string,
+        public email?: string
+    ) {}
+}
+```
+La clase **Message**:
+``` typescript
+export class Message {
+    constructor(
+        public _id?: string,
+        public message?: string,
+        public sender?: User,
+        public createdAt?: Date,
+        public readed: boolean = false,
+    ) {}
+}
+```
+
+Después de definir la interfaz y las clases en la carpeta de Dominio, pasamos con el caso de uso.
+1. Creamos una interfaz con él método que va a ser público. Se realiza esto para que sea más sencillo testar el controller que va a utilizar el caso de uso.
+2. En la implementación de la interfaz, la única comprobación que vamos a realizar será que el chatId que llegue sea distinto de vacío.
+3. Para traer los datos de la base de datos, tenemos que añadir una propriedad a la clase con la interfaz que creamos anteriormente del *IChatRepository* e iniciarla en el constructor ya que será, a través del constructor, donde indicaremos que implementación vamos a utilizar.
+4. Llamar al repositorio pasandole el chatId y devolvemos los datos que devuelva.
+
+``` typescript
+import { IChatsRepository } from "../Domain/interfaces/chatsRepository";
+import { Chat } from "../Domain/Entities/Chat";
+
+export interface IGetChatUseCase {
+    execute(chatId: string): Promise<Chat>;
+}
+
+export class GetChatUseCase implements IGetChatUseCase {
+    constructor(private chatsRepository: IChatsRepository) {}
+
+    async execute(chatId: string): Promise<Chat> {
+        if (chatId === "") {
+            throw new Error("ChatId is required");
+        }
+        return this.chatsRepository.findBy(chatId);
+    }
+}
+```
+
+Ahora que hemos completado la capa de Aplicación, pasemos a la capa de Infraestructura:
+
+1. Controller
+2. Implementación del repository 
+
+
+
+
+
 3. Capa de infraestructura: la implementación de las interfaces (solo se va a mostrar el método utilizado en el caso de uso) y el controller
 4. Método de factoría del controller, mostrando que es en ese lugar donde se especifíca la implementación de base de datos que se va a utilizar
 
@@ -62,3 +140,12 @@ Pasos a explicar:
 4. Tiempo estimado de la creación de la nueva API
 5. Nuevas funcionalidades añadidas
 6. Futuras Mejoras -->
+
+<!-- 
+findAll(userId: string): Promise<Chat[]>;
+save(chat: Chat): Promise<Chat>;
+sendMessage(chatId: string, message: Message): Promise<Message>;
+exists(chatId: string): Promise<boolean>;
+updateMessageStatus(chatId: string, userId: string): Promise<void>;
+findChatByUsers(users: string[]): Promise<boolean>;
+ -->
