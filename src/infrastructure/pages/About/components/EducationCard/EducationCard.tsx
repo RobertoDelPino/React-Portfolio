@@ -10,7 +10,14 @@ export const EducationCard = ({education}: EducationCardProps) => <section>
             <h3 className="text-xl font-medium dark:text-white">{education.name}</h3>
             <p className="text-gray-500 dark:text-gray-300">📅{education.time}</p>
         </article>
-        <p className="mt-6 text-gray-500 dark:text-gray-300">🔠<a href={education.instituteUrl} target="_blank" className="hover:border-b-2 py-1 hover:text-gray-800 dark:hover:text-gray-200">{education.institute}</a> en {education.place}</p>
+        <p className="mt-6 text-gray-500 dark:text-gray-300">🔠
+            <a href={education.instituteUrl} 
+                target="_blank" 
+                className="hover:border-b-2 py-1 hover:text-gray-800 dark:hover:text-gray-200">
+                    {education.institute}
+            </a>
+            {education.place && <span> en {education.place}</span>} 
+        </p>
     </article>
 
     <article className="block md:hidden border-b-2 pb-4 my-8">

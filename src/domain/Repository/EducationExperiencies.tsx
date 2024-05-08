@@ -4,21 +4,19 @@ const EducationExperiencies : EducationExperience[] = [
     {
         name: "Curso de RabbitMQ",
         time: "Enero 2024 - Febrero 2024",
-        place: "San Cristóbal de La Laguna",
         institute: "Udemy",
         instituteUrl: "https://www.udemy.com/"
     },
     {
         name: "Curso de Docker🐋",
         time: "Noviembre 2023 - Diciembre 2023",
-        place: "San Cristóbal de La Laguna",
         institute: "Udemy",
         instituteUrl: "https://www.udemy.com/"
     },
     {
         name: "Desarrollo de Aplicaciones Web (DAW)",
         time: "Septiembre 2021 - Mayo 2023",
-        place: "San Cristóbal de La Laguna",
+        place: "Santa Cruz de Tenerife",
         institute: "CIFP César Manrique",
         instituteUrl: "https://www.cifpcesarmanrique.es"
     }
