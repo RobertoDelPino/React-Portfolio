@@ -215,7 +215,3 @@ Como toda aplicación que sigue evolucionando, se han añadido distintas funcion
 ![Chat Grupal](/BlogImages/chat-grupal-improvement.png)  
 
 ![Cambiar datos del usuario](/BlogImages/update-user-data.png)
-
-# Futuras mejoras
-
-1. 
