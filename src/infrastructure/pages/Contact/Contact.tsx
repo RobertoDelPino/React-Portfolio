@@ -93,8 +93,8 @@ const Contact = () => {
                     Enviar
                 </button>
                 
-                <p className="hidden bg-green-500 px-4 py-2 text-center w-[70%] m-auto">Se ha enviado correctamente el mensaje</p>
-                <p className="hidden bg-red-500 px-4 py-2 text-center w-[70%] m-auto">Debes rellenar todos los campos</p>
+                <p className="hidden bg-green-500 px-4 py-2 text-center w-[70%] m-auto text-black font-semibold">Se ha enviado correctamente el mensaje</p>
+                <p className="hidden bg-red-500 px-4 py-2 text-center w-[70%] m-auto text-white dark:text-black font-semibold">Debes rellenar todos los campos</p>
             </form>
         </section>
     </section>
