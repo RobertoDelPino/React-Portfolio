@@ -9,15 +9,6 @@ import { EducationExperience } from "@domain/Interfaces/EducationExperience";
 import Events from "@domain/Repository/Events";
 import { Event } from "@domain/Interfaces/Event";
 
-{/*
-
-About me        --> Sobre mi
-Work experience --> Experiencia de trabajo
-Education       --> Educación
-
-*/}
-
-
 export const About = () => {
 
     const educationExperiencies = EducationExperiencies;
