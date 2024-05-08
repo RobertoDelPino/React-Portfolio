@@ -37,7 +37,7 @@ const Contact = () => {
         <h2 className="text-3xl text-center my-5 font-bold tracking-wider">Contacto</h2>
 
         <section className="flex flex-wrap flex-row gap-10 justify-center w-full  ">
-            <form onSubmit={submitForm} className="flex flex-col space-y-5 w-[90%] lg:w-[50%] dark:bg-transparent bg-gray-200 p-4 rounded-md">
+            <form onSubmit={submitForm} className="flex flex-col space-y-5 w-[90%] lg:w-[50%] p-4 rounded-md">
                 <p className="leading-7 dark:text-white text-black">
                     Si tienes alguna duda, propuesta o proyecto, estoy aquí para ayudarte. Si 
                     estás listo para empezar, envíame un correo electrónico a  <strong className=" bg-gray-300 hover:bg-gray-400 p-1 rounded-sm text-black"><a href="mailto:robertodelpino11@gmail.com">robertodelpino11@gmail.com</a></strong> o utiliza 
