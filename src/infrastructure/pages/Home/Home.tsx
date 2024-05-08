@@ -21,12 +21,12 @@ export const Home = () => {
                         <h1 className=" w-[100%] lg:text-4xl">
                             <b className="text-2xl text-center w-[100%] block">Roberto del Pino Hormiga</b>
                         </h1>
-                        <h1 className="text-xl mt-1.5 lg:text-2xl w-[100%] text-center">Software Developer</h1>
+                        <h2 className="text-xl mt-1.5 lg:text-2xl w-[100%] text-center">Software Developer</h2>
                         <a href="RobertoDelPinoCurriculum.pdf" target="_blank" className="block lg:hidden mt-3 text-sm transition duration-300 bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded dark:bg-gray-200 dark:hover:bg-gray-400 dark:text-gray-800">Descargar CV</a>
                     </div>
 
                     <section className="lg:max-w-xl min-h-full h-4/5 m-auto w-[95%]">
-                        <h1 className="text-2xl font-semibold text-center lg:text-left mb-5">Últimos artículos</h1>
+                        <h2 className="text-2xl font-semibold text-center lg:text-left mb-5">Últimos artículos</h2>
                         <section className="flex flex-wrap justify-center">
                             {
                                 < BlogEntryList blogEntryList={articles.slice(0,3)} />
@@ -45,7 +45,7 @@ export const Home = () => {
                 </section>
 
                 <article className="w-full m-auto">
-                    <h1 className="text-3xl font-semibold text-center pt-10">Últimos Proyectos</h1>
+                    <h2 className="text-3xl font-semibold text-center pt-10">Últimos Proyectos</h2>
                     
                     <section className="flex flex-wrap justify-center items-center gap-3 mx-3">
                         <article className="w-full flex justify-center flex-wrap m-auto mt-10 p-4 bg-slate-200 rounded-2xl lg:w-8/12 dark:bg-slate-700">
