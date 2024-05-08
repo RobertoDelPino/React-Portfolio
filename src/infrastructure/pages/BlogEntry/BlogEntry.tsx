@@ -71,7 +71,7 @@ export const BlogEntry = () => {
           }
 
           return (
-            <p className='dark:text-white my-3 inline-block text-lg'>
+            <p className='dark:text-white my-3 inline-block w-full text-lg'>
               {p.children}
             </p>
           )

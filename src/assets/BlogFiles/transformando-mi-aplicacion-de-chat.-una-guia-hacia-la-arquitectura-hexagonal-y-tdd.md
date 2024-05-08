@@ -10,7 +10,7 @@ Hace un par de meses di por finalizada la primera parte del desarrollo de una ap
 
 En este artículo os presento la recreación del API, realizado con Arquitectura Hexagonal y TDD.
 
-# Empecemos por lo básico. ¿Qué es la Arquitectura Hexagonal?
+# Empecemos por lo básico, ¿qué es la Arquitectura Hexagonal?
 
 La arquitectura hexagonal, también **conocida como "puertos y adaptadores"**, es un enfoque de **diseño de software** que se centra en **separar las responsabilidades y desacoplar las diferentes capas de una aplicación**. Estas capas son las siguientes: **dominio, aplicación e infraescturctura**.
 
@@ -18,7 +18,7 @@ La arquitectura hexagonal, también **conocida como "puertos y adaptadores"**, e
 - **Capa de aplicación**. Contiene todos los casos de usos que se puede realizar en el sistema. Por ejemplo, obtener un usuario o actualizar un usuario.
 - **Capa de infraestructura**. Contiene todas las implementaciones de las interfaces creadas en la capa de dominio, es decir, es quien se va a conectar con el mundo exterior.
 
-> **Regla imprescindible**: las capas internas no deben conocer nada de las capas externas. Son las capas externas quienes conocen de las internas. El dominio no puede conocer ninguna implementación de sus interfaces (infraestructura) ni el caso de uso(aplicación) saber que base de datos se va a utilizar (infraestructura).
+**Regla imprescindible**: las capas internas no deben conocer nada de las capas externas. Son las capas externas quienes conocen de las internas. El dominio no puede conocer ninguna implementación de sus interfaces (infraestructura) ni el caso de uso(aplicación) saber que base de datos se va a utilizar (infraestructura).
 
 En la siguiente imagen pueden ver una representación de cómo se distribuyen estas capas:
 
@@ -94,7 +94,7 @@ export class Message {
 Después de definir la interfaz y las clases en la carpeta de Dominio, pasamos con el caso de uso.
 1. Creamos una interfaz con él método que va a ser público. Se realiza esto para que sea más sencillo testar el controller que va a utilizar el caso de uso.
 2. En la implementación de la interfaz, la única comprobación que vamos a realizar será que el chatId que llegue sea distinto de vacío.
-3. Para traer los datos de la base de datos, tenemos que añadir una propriedad a la clase con la interfaz que creamos anteriormente del *IChatRepository* e iniciarla en el constructor ya que será, a través del constructor, donde indicaremos que implementación vamos a utilizar.
+3. Para traer los datos de la base de datos, tenemos que añadir una propiedad a la clase con la interfaz que creamos anteriormente del *IChatRepository* e iniciarla en el constructor ya que será, a través del constructor, donde indicaremos que implementación vamos a utilizar.
 4. Llamar al repositorio pasandole el chatId y devolvemos los datos que devuelva.
 
 ``` typescript
@@ -120,32 +120,98 @@ export class GetChatUseCase implements IGetChatUseCase {
 Ahora que hemos completado la capa de Aplicación, pasemos a la capa de Infraestructura:
 
 1. Controller
-2. Implementación del repository 
+2. Implementación del repository
 
+Para el controller haremos lo mismo que para el caso de uso, crearemos una interfaz con un sólo método al que se le pase dos variables, **Request** y **Response**, propias de la librería express.js. Después, en la implementación de la interfaz, tendremos que añadir, a través del constructor, la interfaz del caso de uso que creamos anteriormente y por último, obtener el id de la request para llamar al caso de uso y que, con la respuesta de este la devolvamos.
 
+``` typescript
+import { IGetChatUseCase } from "../../Application/getChatUseCase";
+import { Request, Response } from "express";
 
+export interface IGetChatController {
+    execute(req: Request, res: Response): Promise<void>;
+}
 
+export class GetChatController {
+    constructor(private getChatUseCase: IGetChatUseCase) {}
 
-3. Capa de infraestructura: la implementación de las interfaces (solo se va a mostrar el método utilizado en el caso de uso) y el controller
-4. Método de factoría del controller, mostrando que es en ese lugar donde se especifíca la implementación de base de datos que se va a utilizar
+    async execute(req: Request, res: Response) {
+        try{
+            const chatId = req.params.chatId;
+            const chat = await this.getChatUseCase.execute(chatId);
+            res.status(200).json(chat);
+        }
+        catch(error){
+            res.status(400).json({error: error.message});
+        }
+    }
+}
+```
 
+En cuanto a la implementación del repositorio. vamos a crear una carpeta repositories dentro de la carpeta de infraestructura. Dentro de ella crearemos una implementación **MongoDbChatRepository** que implementará la interfaz del repositorio que hemos creado en la capa de dominio.
 
+``` typescript
+export class mongoDbChatRepository implements IChatsRepository{
+    async findBy(chatId: string): Promise<Chat> {
+        const chat = await MongoDbChat.findById(chatId)
+                            .select({messages: { $slice: -100 }})
+                            .select("-__v -createdAt -updatedAt")
+                            .populate({path: "users", select: "_id name email"})
+                            .populate({path: "messages", select: "_id readed message sender createdAt"})
+        
+        return createChat(chat);
 
+        function createChat(chat: any){
+            return new Chat(
+                chat._id,
+                chat.users.map(user => new User(
+                    user._id,
+                    user.name,
+                    user.email
+                )),
+                chat.messages.map(message => new Message(
+                    message._id,
+                    message.message,
+                    message.sender,
+                    message.createdAt,
+                    message.readed
+                )),
+                chat.isGroup,
+                chat.groupName,
+                new Date()
+            );
+        }
+    }
+}
+```
 
+Ahora sólo nos quedaría dos cosas por hacer:
 
-<!-- 
-2. ¿Qué es la arquitectura hexagonal?
-3. Ventajas y desventajas de Arquitectura hexagonal
-4. División de las capas dentro de la aplicación (añadir una foto de las carpetas)
-4. Tiempo estimado de la creación de la nueva API
-5. Nuevas funcionalidades añadidas
-6. Futuras Mejoras -->
+**Crear la factoría para este controlador**. Una factoría es un método estático que nos permite crear un objeto de manera dinámica. Para este caso, que es crear un controller, nos es útil tener un método de factoría para poder especificar, por ejemplo, en base a ciertos parámetros, qué implementación de base de datos utilizar. En este momento sólo hay una, que es MongoDB pero es posible que en el futuro se implemente otra base de datos como SQL. Os dejo un link muy interesante que habla acerca de este patrón de diseño de software: [Factory Method - Refactoring Guru](https://refactoring.guru/es/design-patterns/factory-method)
+``` typescript
+function createGetChatsController() {
+    const repository = new mongoDbChatRepository();
+    const useCase = new GetChatsUseCase(repository);
+    return new GetChatsController(useCase);
+}
+```
+**Especificar la ruta de este controlador**. En este caso he añadido un middleware (*checkAuth*) para comprobar que el usuario realiza la petición con un token válido.
+``` typescript
+const router = express.Router();
+const checkAuth = createCheckAuth();
+const getChatController = createGetChatController();
+router.get('/api/chats/:chatId', checkAuth.checkAuth.bind(checkAuth) , getChatController.execute.bind(getChatController));
+export default router;
+```
 
-<!-- 
-findAll(userId: string): Promise<Chat[]>;
-save(chat: Chat): Promise<Chat>;
-sendMessage(chatId: string, message: Message): Promise<Message>;
-exists(chatId: string): Promise<boolean>;
-updateMessageStatus(chatId: string, userId: string): Promise<void>;
-findChatByUsers(users: string[]): Promise<boolean>;
- -->
+# Nuevas funcionalidades añadidas
+
+Como toda aplicación que sigue evolucionando, se han añadido distintas funcionalidades nuevas: 
+
+1. **Chat Grupal**. A medida que se iba avanzando en la creación de la aplicación, se iba haciendo más complicado añadir nuevas funcionalidades. Decidí, entonces, dejar esta funcionalidad, tan necesaria a día de hoy, a la espera de crear la aplicación con un mejor diseño (con Arquitectura Hexagonal y TDD). 
+2. **Cambiar datos del usuario**. Fundamental esta funcionalidad. Lo mismo que el chat grupal, no se implementó por los problemas que surgieron a raíz del no uso de un mejor diseño.
+3. **Mejoras de accesibilidad**. Se han añadido nuevos datos a algunos endpoints para mostrar más información al usuario. 
+
+![Chat Grupal](/BlogImages/chat-grupal-improvement.png)  
+
+![Cambiar datos del usuario](/BlogImages/update-user-data.png)
