@@ -23,7 +23,7 @@ export const About = () => {
                 </Helmet>
                 <section className="dark:bg-gray-800 max-w-screen-lg my-0 mx-auto lg:px-8 px-4 py-4">
                     <article role="region" aria-label="About me region" className="mb-8 mt-0">
-                        <h2 className="text-2xl font-extrabold tracking-wide dark:text-title-dark my-4">Sobre mi</h2>
+                        <h1 className="text-2xl font-extrabold tracking-wide dark:text-title-dark my-4">Sobre mi</h1>
                         <p className="dark:text-gray-100 text-lg">Apasionado por el desarollo de software.
                             Invierto mi tiempo en aprender diversas arquitecturas como Arquitectura Hexagonal o Arquitectura limpia. Además,
                             desde que hice las prácticas en LeanMind, me gusta aplicar TDD en todos los proyectos que pueda.
