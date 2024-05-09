@@ -6,7 +6,7 @@
   "toc":true
 }
 
-Hace un par de meses di por finalizada la primera parte del desarrollo de una aplicación de chat. Suponía haber aprendido a **manejar eventos**, que era la finalidad del pet project. No obstante, habían cosas que no me gustaban, como el hecho de que no estuviera hecho con **Arquitectura Hexagonal y TDD**. Uno de los planes a futuro de la aplicación era cambiar el backend para que sea testeable y mantenible. 
+Hace un par de meses di por finalizada la primera parte del desarrollo de una aplicación de chat. Suponía haber aprendido a **manejar eventos**, que era la finalidad del pet project. No obstante, habían cosas que no me gustaban, como el hecho de que no estuviera hecho con **Arquitectura Hexagonal y TDD**. Uno de los planes a futuro de la aplicación era cambiar el backend para que sea testable y mantenible. 
 
 En este artículo os presento la recreación del API, realizado con Arquitectura Hexagonal y TDD.
 
@@ -14,9 +14,9 @@ En este artículo os presento la recreación del API, realizado con Arquitectura
 
 La arquitectura hexagonal, también **conocida como "puertos y adaptadores"**, es un enfoque de **diseño de software** que se centra en **separar las responsabilidades y desacoplar las diferentes capas de una aplicación**. Estas capas son las siguientes: **dominio, aplicación e infraescturctura**.
 
-- **Capa de dominio**. Contiene toda la lógica de negocio, en donde se incluyen las interfaces que la capa de aplicación utiliza para interactuar con el mundo exterior. Estas interfaces pueden ser de usuarios, bases de datos, servicios externos, etc. 
-- **Capa de aplicación**. Contiene todos los casos de usos que se puede realizar en el sistema. Por ejemplo, obtener un usuario o actualizar un usuario.
-- **Capa de infraestructura**. Contiene todas las implementaciones de las interfaces creadas en la capa de dominio, es decir, es quien se va a conectar con el mundo exterior.
+- **Capa de dominio**. Contiene toda la lógica de negocio y las reglas del sistema, en donde se incluyen las interfaces que la capa de aplicación utiliza para interactuar con el mundo exterior. Estas interfaces pueden ser de usuarios, bases de datos, servicios externos, etc.  Además, aquí se definen los objetos que son esenciales para el correcto funcionamiento, independientemente de cómo se implementen las interfaces.
+- **Capa de aplicación**. Contiene todos los casos de usos que se puede realizar en el sistema. Por ejemplo, obtener un usuario o actualizar un usuario. También se incluyen los servicios de aplicación y cualquier otra lógica que no pertenezca directamente al dominio pero que sea necesaria para coordinar las operaciones del sistema.
+- **Capa de infraestructura**. Contiene todas las implementaciones de las interfaces creadas en la capa de dominio, es decir, es quien se va a conectar con el mundo exterior. Por ejemplo, implementaciones de persistencia para interactuar con bases de datos, implementaciones de interfaz de usuario para interactuar con el usuario, etc.
 
 **Regla imprescindible**: las capas internas no deben conocer nada de las capas externas. Son las capas externas quienes conocen de las internas. El dominio no puede conocer ninguna implementación de sus interfaces (infraestructura) ni el caso de uso(aplicación) saber que base de datos se va a utilizar (infraestructura).
 
@@ -40,7 +40,9 @@ En la siguiente imagen pueden ver una representación de cómo se distribuyen es
 1. **Falta de Tests**. Durante todo el desarrollo vi como aparecían errores que no era capaz de entender, dado que no sabía que estaba realizando. Realizar TDD me permite entender qué quiero hacer antes de empezar a escribirlo.
 2. **Posibles cambios de base de datos**. En el planteamiento de la aplicación se ha acordado utilizar MongoDB para la BD. Es problable que, en el caso de que aumenten los usuarios, sea necesario utilizar otro tipo de base de datos.
 3. **Problemas a la hora de añadir nuevas funcionalidades**. Los chats grupales era un requisito mínimo para poder dar por terminada la aplicación. En cambio, no utilizar TDD y Arquitectura Hexagonal había retrasado mucho los tiempos entre cada funcionalidad. Se debían cambiar muchas partes de la aplicación y no se llegaba a saber si todo funcionaba correctamente hasta que no se probaba a mano.
-
+4. **Escalabilidad**. La Arquitectura Hexagonal facilita la escalabilidad de la aplicación al separar las preocupaciones y permitir que cada componente pueda ser escalado de forma independiente. Esto es especialmente importante en aplicaciones que esperan un crecimiento significativo en el número de usuarios o en la complejidad de las características.
+5. **Mantenibilidad a largo plazo**. La Arquitectura Hexagonal y el TDD promueven un código más limpio, modular y fácil de mantener. Esto reduce la deuda técnica y los costos de mantenimiento a largo plazo al hacer que sea más fácil entender, modificar y extender el código en el futuro.
+6. **Reusabilidad del código**. Al desacoplar las capas de la aplicación, existe la posibilidad de reutilizar el código en diferentes partes de la aplicación. Esto significa que los componentes de la aplicación, como los casos de uso y los repositorios, pueden ser utilizados en diferentes partes de la aplicación o incluso en otras aplicaciones sin necesidad de modificaciones significativas.
 
 # Ejemplo aplicando Arquitectura Hexagonal en la aplicación
 
