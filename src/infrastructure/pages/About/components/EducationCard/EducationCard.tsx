@@ -25,7 +25,7 @@ export const EducationCard = ({education}: EducationCardProps) => <section>
         <p className="mt-4">🔠<a href={education.instituteUrl} target="_blank"
                                className="hover:border-b-2 py-1 text-gray-500 hover:text-gray-600 dark:text-gray-300">{education.institute}</a>
         </p>
-        <p className="text-gray-500 dark:text-gray-300 my-3">🗺️{education.place}</p>
+        {education.place && <p className="text-gray-500 dark:text-gray-300 my-3">🗺️{education.place}</p> }
         <p className="text-gray-500 dark:text-gray-300">📅{education.time}</p>
     </article>
 </section>
