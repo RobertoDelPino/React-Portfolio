@@ -217,3 +217,10 @@ Como toda aplicación que sigue evolucionando, se han añadido distintas funcion
 ![Chat Grupal](/BlogImages/chat-grupal-improvement.png)  
 
 ![Cambiar datos del usuario](/BlogImages/update-user-data.png)
+
+
+Con este proceso he podido comprobar que es más sencillo añadir nuevas funcionalidades, a la par de cambiar las ya existentes. Ha sido, hasta el momento, un buen proyecto el cual no ha finalizado. En nuevos artículos os mostraré más información sobre otras partes de la aplicación.
+
+Links a GitHub de los dos proyectos:  
+**[Antigua API](https://github.com/RobertoDelPino/Real-Time-Chat/tree/main/RealTime_Chat_Users_Backend)**  
+**[Nueva API](https://github.com/RobertoDelPino/RealTimeChatBackend-Typescript)**
