@@ -31,9 +31,8 @@ export const About = () => {
                     </article>
 
                     <article role="region" aria-label="Work experience region" className="mb-8">
-                        <h2 className="text-2xl font-extrabold tracking-wide dark:text-title-dark my-4">Experiencia de
-                            Trabajo</h2>
-                            <section className="">
+                        <h2 className="text-2xl font-extrabold tracking-wide dark:text-title-dark my-4">Experiencia de Trabajo</h2>
+                            <section className="grid grid-cols-1 ml-5">
                                 {workExperiencies.map((work: WorkExperience, index: number) => <WorkExperienceCard key={index} work={work}/>)}
                             </section>
                     </article>
