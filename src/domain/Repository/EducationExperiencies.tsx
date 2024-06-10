@@ -14,7 +14,7 @@ const EducationExperiencies : EducationExperience[] = [
         instituteUrl: "https://www.udemy.com/"
     },
     {
-        name: "Desarrollo de Aplicaciones Web (DAW)",
+        name: "Desarrollo de Aplicaciones Web",
         time: "Septiembre 2021 - Mayo 2023",
         place: "Santa Cruz de Tenerife",
         institute: "CIFP César Manrique",

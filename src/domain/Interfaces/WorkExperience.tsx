@@ -9,6 +9,7 @@ export interface WorkExperience {
     urlCompany: string
     time: string
     workday: workday,
-    workplace: string
+    workplace: string,
+    description: string
 
 }

@@ -5,6 +5,16 @@ interface WorkExperienceCardProps {
 }
 
 export const WorkExperienceCard = ({work}: WorkExperienceCardProps) => 
+    <article className="relative mt-5 pl-12 border-l-2 border-solid border-l-[#12181b] ">
+        <div className="absolute -left-7 top-0 bg-slate-700 dark:bg-slate-800 w-14 h-14 rounded-[50%] flex items-center justify-center">
+            <i className="fas fa-briefcase text-xl text-white"></i>
+        </div>
+        <p className="py-1 px-3 bg-slate-300 dark:bg-slate-800 dark:text-white rounded-2xl inline-block text-xs uppercase font-medium">{work.time}</p>
+        <h5 className="pt-2 pb-4 px-0uppercase text-xl font-semibold dark:text-white">{work.name} - <a href={work.urlCompany} target="blank" className="text-black dark:text-[#b2becd] font-medium text-lg border-b-2 border-black hover:border-[#b2becd] dark:border-[#b2becd] dark:hover:border-gray-800">{work.company}</a></h5>
+        <p className="text-black dark:text-[#b2becd] max-w-lg">{work.description}</p>
+    </article>;
+
+export const OldWorkExperienceCard = ({work}: WorkExperienceCardProps) =>
     <section>
         <article className="hidden md:block border-b-2 pb-4 mt-3 ">
             <article className="md:flex justify-between">
