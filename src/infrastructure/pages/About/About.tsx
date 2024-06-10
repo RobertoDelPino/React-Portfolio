@@ -34,7 +34,7 @@ export const About = () => {
                             </p>
                         </article>
                         <article role="region" aria-label="Education region" className="mt-12 bg-slate-200 dark:bg-slate-700 p-4 rounded">
-                            <h2 className="text-2xl font-extrabold tracking-wide dark:text-title-dark mb-4">Educación</h2>
+                            <h2 className="text-2xl font-bold tracking-wide dark:text-title-dark mb-4">Educación</h2>
                             <section className=" ">
                                 {educationExperiencies.map((education: EducationExperience, index: number) => <EducationCard key={index} education={education}/>)}
                             </section>
@@ -42,14 +42,14 @@ export const About = () => {
                     </div>
                     <div className="hidden md:block">
                         <article role="region" aria-label="Work experience region" className="mb-8 bg-slate-200 dark:bg-slate-700 p-4 rounded">
-                            <h2 className="text-2xl font-extrabold tracking-wide dark:text-title-dark">Experiencia de Trabajo</h2>
+                            <h2 className="text-2xl font-bold tracking-wide dark:text-title-dark">Experiencia de Trabajo</h2>
                                 <section className="grid grid-cols-1 ml-5">
                                     {workExperiencies.map((work: WorkExperience, index: number) => <WorkExperienceCard key={index} work={work}/>)}
                                 </section>
                         </article>
 
                         <article role="region" aria-label="Events region " className="mb-8 mt-12 bg-slate-200 dark:bg-slate-700 p-4 rounded">
-                            <h2 className="text-2xl font-extrabold tracking-wide dark:text-title-dark mb-4">Eventos asistidos</h2>
+                            <h2 className="text-2xl font-bold tracking-wide dark:text-title-dark mb-4">Eventos asistidos</h2>
                             <section className="">
                                 {events.map((event: Event, index: number) => <EventCard key={index}  event={event}/>)}
                             </section>
@@ -67,21 +67,21 @@ export const About = () => {
                         </article>
                         
                         <article role="region" aria-label="Work experience region" className="mb-8 bg-slate-200 dark:bg-slate-700 p-4 rounded">
-                            <h2 className="text-2xl font-extrabold tracking-wide dark:text-title-dark">Experiencia de Trabajo</h2>
+                            <h2 className="text-2xl font-bold tracking-wide dark:text-title-dark">Experiencia de Trabajo</h2>
                                 <section className="grid grid-cols-1 ml-5">
                                     {workExperiencies.map((work: WorkExperience, index: number) => <WorkExperienceCard key={index} work={work}/>)}
                                 </section>
                         </article>
 
                         <article role="region" aria-label="Education region" className="mt-12 bg-slate-200 dark:bg-slate-700 p-4 rounded">
-                            <h2 className="text-2xl font-extrabold tracking-wide dark:text-title-dark mb-4">Educación</h2>
+                            <h2 className="text-2xl font-bold tracking-wide dark:text-title-dark mb-4">Educación</h2>
                             <section className=" ">
                                 {educationExperiencies.map((education: EducationExperience, index: number) => <EducationCard key={index} education={education}/>)}
                             </section>
                         </article>
 
                         <article role="region" aria-label="Events region " className="mb-8 mt-12 bg-slate-200 dark:bg-slate-700 p-4 rounded">
-                            <h2 className="text-2xl font-extrabold tracking-wide dark:text-title-dark mb-4">Eventos asistidos</h2>
+                            <h2 className="text-2xl font-bold tracking-wide dark:text-title-dark mb-4">Eventos asistidos</h2>
                             <section className="">
                                 {events.map((event: Event, index: number) => <EventCard key={index}  event={event}/>)}
                             </section>
