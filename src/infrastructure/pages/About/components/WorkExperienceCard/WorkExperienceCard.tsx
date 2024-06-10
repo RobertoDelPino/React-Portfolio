@@ -9,7 +9,7 @@ export const WorkExperienceCard = ({work}: WorkExperienceCardProps) =>
         <div className="absolute -left-7 top-0 bg-slate-700 w-14 h-14 rounded-[50%] flex items-center justify-center">
             <i className="fas fa-briefcase text-xl text-white"></i>
         </div>
-        <p className="py-1 px-3 bg-slate-200 dark:bg-[#2a2e35] rounded-2xl inline-block text-xs uppercase font-medium">{work.time}</p>
+        <p className="py-1 px-3 bg-slate-200 dark:bg-slate-700 dark:text-white rounded-2xl inline-block text-xs uppercase font-medium">{work.time}</p>
         <h5 className="pt-2 pb-4 px-0uppercase text-xl font-semibold dark:text-white">{work.name} - <a href={work.urlCompany} target="blank" className="text-black dark:text-[#b2becd] font-medium text-lg border-b-2 border-black hover:border-[#b2becd] dark:border-[#b2becd] dark:hover:border-gray-700">{work.company}</a></h5>
         <p className="text-black dark:text-[#b2becd] max-w-lg">
             {/* descripción */}
