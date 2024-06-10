@@ -18,7 +18,7 @@ export const EducationCard = ({education}: EducationCardProps) => <section>
             </a>
             {education.place && <span> en {education.place}</span>} 
         </p>
-        {education.certicateUrl && <a href={education.certicateUrl} target="_blank"><p className="p-1 rounded-xl mt-4 bg-slate-300 hover:bg-slate-400 dark:bg-slate-400 dark:hover:bg-slate-300 w-28 text-center text-sm font-semibold ">Ver certificado</p></a>}
+        {education.certicateUrl && <a href={education.certicateUrl} target="_blank" className="w-28 block"><p className="p-1 rounded-xl mt-4 bg-slate-300 hover:bg-slate-400 dark:bg-slate-400 dark:hover:bg-slate-300 w-28 text-center text-sm font-semibold ">Ver certificado</p></a>}
     </article>
 
     <article className="block md:hidden border-b-2 border-black dark:border-white pb-4 my-8">
@@ -28,6 +28,6 @@ export const EducationCard = ({education}: EducationCardProps) => <section>
         </p>
         {education.place && <p className="text-gray-500 dark:text-gray-300 my-3">🗺️{education.place}</p> }
         <p className="text-gray-500 dark:text-gray-300 leading-7">📅{education.time}</p>
-        {education.certicateUrl && <a href={education.certicateUrl} target="_blank"><p className="p-1 rounded-xl mt-4 bg-slate-300 hover:bg-slate-400 dark:bg-slate-400 dark:hover:bg-slate-300 w-28 text-center text-sm font-semibold ">Ver certificado</p></a>}
+        {education.certicateUrl && <a href={education.certicateUrl} target="_blank" className="w-28 block"><p className="p-1 rounded-xl mt-4 bg-slate-300 hover:bg-slate-400 dark:bg-slate-400 dark:hover:bg-slate-300 w-28 text-center text-sm font-semibold ">Ver certificado</p></a>}
     </article>
 </section>
