@@ -3,5 +3,6 @@ export interface EducationExperience {
     time: string,
     place?: string,
     institute: string,
-    instituteUrl: string
+    instituteUrl: string,
+    certicateUrl?: string
 }
