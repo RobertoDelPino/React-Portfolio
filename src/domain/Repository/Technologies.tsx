@@ -110,10 +110,6 @@ export const realTimeChatLanding : Landing = {
         {
             name: "Tailwind",
             image: "../../TechIcons/tailwind.svg"
-        },
-        {
-            name: "Socker.IO",
-            image: "../../TechIcons/socketio.svg"
         }
     ],
     toolsTechList: [
