@@ -48,7 +48,7 @@ export const About = () => {
                                 </section>
                         </article>
 
-                        <article role="region" aria-label="Events region " className="mb-8bg-slate-200 dark:bg-slate-700 p-4 rounded">
+                        <article role="region" aria-label="Events region " className="mb-8 bg-slate-200 dark:bg-slate-700 p-4 rounded">
                             <h2 className="text-2xl font-bold tracking-wide dark:text-title-dark mb-4">Eventos asistidos</h2>
                             <section className="">
                                 {events.map((event: Event, index: number) => <EventCard key={index}  event={event}/>)}
