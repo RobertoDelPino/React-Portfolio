@@ -1,3 +1,5 @@
+import { ITechnology } from "@domain/Interfaces/ITechnology"
+
 export class Project {
     githubUrl: string
     title: string
@@ -5,6 +7,7 @@ export class Project {
     previewUrl: string
     image: string
     viewMoreUrl: string
+    technologies: ITechnology[]
 
     constructor(
         githubUrl: string, 
@@ -12,7 +15,8 @@ export class Project {
         description: string, 
         previewUrl: string, 
         image: string,
-        viewMoreUrl: string
+        viewMoreUrl: string,
+        technologies: ITechnology[]
     ) {
         this.githubUrl = githubUrl;
         this.title = title;
@@ -20,5 +24,6 @@ export class Project {
         this.previewUrl = previewUrl;
         this.image = image;
         this.viewMoreUrl = viewMoreUrl;
+        this.technologies = technologies;
     }
 }

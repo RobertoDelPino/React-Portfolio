@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet"
 import {Project} from "@domain/Entities/Project.tsx";
 import Projects from "@domain/Repository/Projects";
-import { ProjectCard } from "@components/ProjectCard/ProjectCard";
+import { ProjectCard } from "@pages/ProjectsPage/components/ProjectCard/ProjectCard";
 
 
 export const ProjectsPage = () => {
