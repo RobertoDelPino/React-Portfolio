@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailJs from '@emailjs/browser';
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
 
@@ -34,6 +35,9 @@ const Contact = () => {
 
   return (
     <section id="contact" className="max-w-screen-xl dark:text-title-dark mb-5 h-full min-h-[95%] md:mx-auto flex flex-col lg:flex-grow ">
+        <Helmet>
+                <title>Roberto del Pino - Web Developer - Contact</title>
+        </Helmet>
         <h1 className="text-3xl text-center my-5 font-bold tracking-wider">Contacto</h1>
 
         <section className="flex flex-wrap flex-row gap-10 justify-center w-full  ">
