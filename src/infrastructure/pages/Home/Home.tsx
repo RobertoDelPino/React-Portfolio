@@ -51,6 +51,26 @@ export const Home = () => {
                         <article className="w-full flex justify-center flex-wrap m-auto mt-10 p-4 bg-slate-200 rounded-2xl lg:w-8/12 dark:bg-slate-700">
                             <div className="md:w-[38%] mt-0 md:mt-2 md:mr-2">
                                 <NavigationButton 
+                                    className="text-2xl font-bold dark:text-title-dark text-title border-b border-b-transparent hover:border-b-black dark:hover:border-b-white transition duration-300 text-left"
+                                    newRoute="/projects"
+                                    children="Refactor Backend"
+                                />
+                                <p className="mt-1 font-semibold">08-05-24</p>
+                                <p className="mt-4 font-semibold">Refactorización del backend de la aplicación de chat en tiempo real creada con Typescript. Se ha utilizado Arquitectura Hexagonal y TDD.</p>
+                                <NavigationButton 
+                                    className="mt-3 font-semibold border-b border-transparent hover:border-b-black dark:hover:border-b-white transition duration-300 text-left"
+                                    newRoute="/projects"
+                                    children="Saber más"
+                                />
+                            </div>
+                            <img className="md:w-[60%] mt-5 md:m-0" src="/ProjectImages/RealTimeChat/ChatPC.webp" alt="Pantalla inicial para chatear" />
+                        </article>
+                    </section>
+
+                    <section className="flex flex-wrap justify-center items-center gap-3 mx-3">
+                        <article className="w-full flex justify-center flex-wrap m-auto mt-10 p-4 bg-slate-200 rounded-2xl lg:w-8/12 dark:bg-slate-700">
+                            <div className="md:w-[38%] mt-0 md:mt-2 md:mr-2">
+                                <NavigationButton 
                                     className="text-2xl font-bold dark:text-title-dark text-title border-b border-b-transparent hover:border-b-black dark:hover:border-b-white transition duration-300"
                                     newRoute="/projects/realtimechat"
                                     children="Real Time Chat"
