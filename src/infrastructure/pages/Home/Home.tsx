@@ -53,7 +53,7 @@ export const Home = () => {
                                 <NavigationButton 
                                     className="text-2xl font-bold dark:text-title-dark text-title border-b border-b-transparent hover:border-b-black dark:hover:border-b-white transition duration-300 text-left"
                                     newRoute="/projects"
-                                    children="Refactor Backend"
+                                    children="Refactor Backend Real Time Chat"
                                 />
                                 <p className="mt-1 font-semibold">08-05-24</p>
                                 <p className="mt-4 font-semibold">Refactorización del backend de la aplicación de chat en tiempo real creada con Typescript. Se ha utilizado Arquitectura Hexagonal y TDD.</p>
