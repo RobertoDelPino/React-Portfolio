@@ -123,3 +123,43 @@ export const realTimeChatLanding : Landing = {
         }
     ]
 }
+
+export const realTimeChaBackendtRefactorLanding : Landing = {
+    backendTechList: [
+        {
+            name: "Typescript",
+            image: "../../TechIcons/typescript.svg"
+        },
+        {
+            name: "Node.js",
+            image: "../../TechIcons/nodejs.svg"
+        },
+        {
+            name: "Express.js",
+            image: "../../TechIcons/expressjs.svg"
+        },
+        {
+            name: "MongoDB",
+            image: "../../TechIcons/mongodb-icon.svg"
+        },
+        {
+            name: "Socket.IO",
+            image: "../../TechIcons/socketio.svg"
+        },
+        {
+            name: "Nodemailer",
+            image: "../../TechIcons/nodemailer.png"
+        }
+    ],
+    frontendTechList: [],
+    toolsTechList: [
+        {
+            name: "Github",
+            image: "../../TechIcons/github.svg"
+        },
+        {
+            name: "Visual Studio Code",
+            image: "../../TechIcons/vscode.svg"
+        }
+    ]
+}

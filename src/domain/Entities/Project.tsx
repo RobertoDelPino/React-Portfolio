@@ -4,7 +4,6 @@ export class Project {
     githubUrl: string
     title: string
     description: string
-    previewUrl: string
     image: string
     viewMoreUrl: string
     technologies: ITechnology[]
@@ -13,7 +12,6 @@ export class Project {
         githubUrl: string, 
         title: string, 
         description: string, 
-        previewUrl: string, 
         image: string,
         viewMoreUrl: string,
         technologies: ITechnology[]
@@ -21,7 +19,6 @@ export class Project {
         this.githubUrl = githubUrl;
         this.title = title;
         this.description = description;
-        this.previewUrl = previewUrl;
         this.image = image;
         this.viewMoreUrl = viewMoreUrl;
         this.technologies = technologies;
