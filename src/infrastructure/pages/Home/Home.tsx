@@ -45,7 +45,7 @@ export const Home = () => {
                 </section>
 
                 <article className="w-full m-auto">
-                    <h2 className="text-3xl font-semibold text-center pt-10">Últimos Proyectos</h2>
+                    <h2 className="text-3xl font-semibold text-center pt-10">Último Proyecto</h2>
                     
                     <section className="flex flex-wrap justify-center items-center gap-3 mx-3">
                         <article className="w-full flex justify-center flex-wrap m-auto mt-10 p-4 bg-slate-200 rounded-2xl lg:w-8/12 dark:bg-slate-700">
@@ -53,7 +53,7 @@ export const Home = () => {
                                 <NavigationButton 
                                     className="text-2xl font-bold dark:text-title-dark text-title border-b border-b-transparent hover:border-b-black dark:hover:border-b-white transition duration-300 text-left"
                                     newRoute="/projects"
-                                    children="Refactor Backend Real Time Chat"
+                                    children="Real Time Chat App Backend 2.0"
                                 />
                                 <p className="mt-1 font-semibold">08-05-24</p>
                                 <p className="mt-4 font-semibold">Refactorización del backend de la aplicación de chat en tiempo real creada con Typescript. Se ha utilizado Arquitectura Hexagonal y TDD.</p>
@@ -66,24 +66,15 @@ export const Home = () => {
                             <img className="md:w-[60%] mt-5 md:m-0" src="/ProjectImages/RealTimeChat/ChatPC.webp" alt="Pantalla inicial para chatear" />
                         </article>
                     </section>
-
-                    <section className="flex flex-wrap justify-center items-center gap-3 mx-3">
-                        <article className="w-full flex justify-center flex-wrap m-auto mt-10 p-4 bg-slate-200 rounded-2xl lg:w-8/12 dark:bg-slate-700">
-                            <div className="md:w-[38%] mt-0 md:mt-2 md:mr-2">
-                                <NavigationButton 
-                                    className="text-2xl font-bold dark:text-title-dark text-title border-b border-b-transparent hover:border-b-black dark:hover:border-b-white transition duration-300"
-                                    newRoute="/projects/realtimechat"
-                                    children="Real Time Chat"
-                                />
-                                <p className="mt-1 font-semibold">30-01-24</p>
-                                <p className="mt-4 font-semibold">Aplicación de chat en tiempo real creada con React, Node.js, Express, MongoDB y Socket.io</p>
-                                <NavigationButton 
-                                    className="mt-3 font-semibold border-b border-transparent hover:border-b-black dark:hover:border-b-white transition duration-300"
-                                    newRoute="/projects/realtimechat"
-                                    children="Saber más"
-                                />
-                            </div>
-                            <img className="md:w-[60%] mt-5 md:m-0" src="/ProjectImages/RealTimeChat/ChatPC.webp" alt="Pantalla inicial para chatear" />
+                    <section className="m-auto mt-10">
+                        <article 
+                            className="m-auto hover:border-b-black dark:hover:border-b-white transition duration-300 border-b border-b-transparent w-36"
+                        >
+                            <NavigationButton 
+                                className="font-semibold transition-all duration-300 relative bottom-0 hover:bottom-1"
+                                newRoute="/projects"
+                                children="Ver otros proyectos"
+                            />
                         </article>
                     </section>
                 </article>

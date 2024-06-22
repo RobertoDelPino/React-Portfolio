@@ -4,7 +4,7 @@ import { realTimeChatLanding, realTimeChaBackendtRefactorLanding } from "./Techn
 const Projects : Project[] = [
     new Project(
         "https://github.com/RobertoDelPino/RealTimeChatBackend-Typescript",
-        "Refactor Backend Real Time Chat",
+        "Real Time Chat Backend 2.0",
         "Refactorización del backend de la aplicación de chat en tiempo real creada con Typescript. Se ha utilizado Arquitectura Hexagonal y TDD.",
         "/ProjectsPhotos/realTimeChat.webp",
         "/projects",
