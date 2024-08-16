@@ -21,7 +21,7 @@ export const About = () => {
                 <Helmet>
                     <title>Roberto del Pino - Web Developer - About</title>
                 </Helmet>
-                <h1 className="text-2xl font-extrabold tracking-wide dark:text-title-dark mb-8 text-center pt-5">Sobre mi</h1>
+                <h1 className="text-3xl font-extrabold tracking-wide dark:text-title-dark mb-8 text-center pt-5">Sobre mi</h1>
                 <section className="dark:bg-gray-800 max-w-screen-xl my-0 mx-auto lg:px-8 px-4 py-4 flex flex-wrap justify-center gap-6">
 
                     {/* Desktop */}
