@@ -2,12 +2,18 @@ import { EducationExperience } from "@domain/Interfaces/EducationExperience";
 
 const EducationExperiencies : EducationExperience[] = [
     {
+        name: "Curso de Redis",
+        time: "Junio 2024 - Agosto 2024",
+        institute: "Udemy",
+        instituteUrl: "https://www.udemy.com/",
+        certicateUrl: "Certificates/redis.pdf"
+    },
+    {
         name: "Curso de RabbitMQ",
         time: "Enero 2024 - Febrero 2024",
         institute: "Udemy",
         instituteUrl: "https://www.udemy.com/",
         certicateUrl: "Certificates/rabbitmq.pdf"
-        
     },
     {
         name: "Curso de Docker🐋",
