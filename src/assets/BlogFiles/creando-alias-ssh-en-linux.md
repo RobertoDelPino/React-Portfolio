@@ -120,7 +120,7 @@ De esta manera, puedes añadir tantos hosts remotos como necesites y acceder a e
 
 Este es un método rápido para crear alias SSH de forma sencilla usando Bash.
 
-Abre el archivo \`~/.bashrc\` o \`~/.bash_profile\` en tu editor de texto preferido:
+Abre el archivo `~/.bashrc` o `~/.bash_profile` en tu editor de texto preferido:
 
 ```bash
 $ nano ~/.bashrc
