@@ -69,7 +69,6 @@ export const BlogEntry = () => {
                 const data = JSON.parse(children[0])
                 setArticleTitle(data.title)
                 setArticleDescription(data.description)
-                setArticleDate(data.date)
                 return <BlogEntryTitle data={data} />
             }
           }
@@ -147,7 +146,6 @@ export const BlogEntry = () => {
     const [article, setArticle] = useState("");
     const [articleTitle, setArticleTitle] = useState("");
     const [articleDescription, setArticleDescription] = useState("");
-    const [articleDate, setArticleDate] = useState("");
     const [isLoading, setIsLoading] = useState(true);
     const {fileName} = useParams();
 
