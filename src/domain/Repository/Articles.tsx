@@ -2,6 +2,12 @@ import { BlogEntryData } from "../Entities/BlogEntryData";
 
 const blogEntriesList : BlogEntryData[] = [
   {
+    "title":"Creando alias SSH en Linux", 
+    "date":"21-10-2024",
+    "description":"",
+    "topic":"terminal",
+  },
+  {
     "title":"Transformando mi aplicacion de chat. Una guia hacia la arquitectura hexagonal y TDD", 
     "date":"05-05-2024",
     "description":"",

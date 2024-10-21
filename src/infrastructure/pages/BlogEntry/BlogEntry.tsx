@@ -9,6 +9,7 @@ import {useNavigate, useParams} from 'react-router-dom';
 import { BlogEntryTitle } from '@pages/BlogEntry/components/BlogEntryTitle/BlogEntryTitle';
 import javascript from 'highlight.js/lib/languages/javascript';
 import typescript from 'highlight.js/lib/languages/typescript';
+import bash from 'highlight.js/lib/languages/bash';
 import { flushSync } from "react-dom";
 
 export const BlogEntry = () => {
@@ -28,6 +29,7 @@ export const BlogEntry = () => {
   setTimeout(() => {
       hljs.registerLanguage('javascript', javascript);    
       hljs.registerLanguage('typescript', typescript); 
+      hljs.registerLanguage('bash', bash);
       hljs.highlightAll();
   }, 10);
 
@@ -66,6 +68,8 @@ export const BlogEntry = () => {
             if(children[0].includes("title")){
                 const data = JSON.parse(children[0])
                 setArticleTitle(data.title)
+                setArticleDescription(data.description)
+                setArticleDate(data.date)
                 return <BlogEntryTitle data={data} />
             }
           }
@@ -111,10 +115,9 @@ export const BlogEntry = () => {
           </ul>
         )
       },
-
       li: (li: React.DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLLIElement>, HTMLLIElement>) =>{
         return (
-          <li className='dark:text-white list-decimal list-inside my-3 text-lg'>
+          <li className='dark:text-white list-inside my-3 text-lg'>
             {li.children}
           </li>
         )
@@ -143,11 +146,13 @@ export const BlogEntry = () => {
 
     const [article, setArticle] = useState("");
     const [articleTitle, setArticleTitle] = useState("");
+    const [articleDescription, setArticleDescription] = useState("");
+    const [articleDate, setArticleDate] = useState("");
     const [isLoading, setIsLoading] = useState(true);
     const {fileName} = useParams();
 
     useEffect(() => {
-      const image = async () => {
+      const getArticle = async () => {
         try {
           const data = await import(`../../../assets/BlogFiles/${fileName?.toLowerCase()}.md?raw`);
           setArticle(data.default)
@@ -158,7 +163,7 @@ export const BlogEntry = () => {
         
       }
       
-      image();
+      getArticle();
     }, [fileName])
     
 
@@ -186,6 +191,14 @@ export const BlogEntry = () => {
         <section id="blogEntry" className="dark:bg-gray-800 px-3 py-4">
           <Helmet>
             <title>{articleTitle} - Roberto del Pino - Web Developer</title>
+            <meta name="title" content={articleTitle} />
+            <meta name="description" content={articleDescription} />
+            <meta property="og:title" content={articleTitle} />
+            <meta property="og:description" content={articleDescription} />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content={`https://robertodelpino.com/blog/${fileName}`} />
+            <meta property="og:image" content={`https://robertodelpino.com/ogimage/${fileName}`} />
+            <link rel="canonical" href={`https://robertodelpino.com/blog/${fileName}`} />
           </Helmet>
           <article className="max-w-screen-lg my-0 mx-auto">
               <ReactMarkdown 
