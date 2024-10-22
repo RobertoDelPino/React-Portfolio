@@ -7,7 +7,7 @@ export const BlogEntryTitle = (props: { data: BlogEntryData }) => {
       <img className="absolute md:relative z-0 blur-2xl md:blur-none w-[80px] h-[80px] rounded" src={"/TechIcons/" + props.data.topic + ".svg"} alt="" />
       <div className="relative z-1 md:ml-5 bg-transparent">
         <h4 className="text-black dark:text-white z-1 md:z-0 text-3xl mb-2.5 font-bold">{props.data.title}</h4>
-        <time className="text-black dark:text-white/70 text-xs">Fecha de publicación: {props.data.date}</time>
+        <time dateTime={props.data.date} className="text-black dark:text-white/70 text-xs">Fecha de publicación: {props.data.date}</time>
         <p className="md:hidden text-black dark:text-white/70 text-xs capitalize">{props.data.topic}</p>
       </div>
     </div>

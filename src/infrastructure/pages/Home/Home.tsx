@@ -55,7 +55,7 @@ export const Home = () => {
                                     newRoute="/projects"
                                     children="Real Time Chat App Backend 2.0"
                                 />
-                                <time className="mt-1 font-semibold">08-05-24</time>
+                                <time dateTime="08-05-24" className="mt-1 font-semibold">08-05-24</time>
                                 <p className="mt-4 font-semibold">Refactorización del backend de la aplicación de chat en tiempo real creada con Typescript. Se ha utilizado Arquitectura Hexagonal y TDD.</p>
                                 <NavigationButton 
                                     className="mt-3 font-semibold border-b border-transparent hover:border-b-black dark:hover:border-b-white transition duration-300 text-left"

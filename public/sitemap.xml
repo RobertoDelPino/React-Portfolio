@@ -16,15 +16,18 @@
         <loc>https://robertodelpino.dev/blog/descubriendo-el-mundo-real-de-la-programacion-mi-primer-trabajo</loc>
     </url>
     <url>
-        <loc>https://robertodelpino.dev/blog/optimizaci%C3%B3n-de-queries-en-sql-para-mejorar-el-rendimiento-de-la-base-de-datos</loc>
+        <loc>https://robertodelpino.dev/blog/optimizacion-de-queries-en-sql-para-mejorar-el-rendimiento-de-la-base-de-datos</loc>
     </url>
     <url>
-        <loc>https://robertodelpino.dev/blog/introducci%C3%B3n-a-tdd-(desarrollo-dirigido-por-pruebas)</loc>
+        <loc>https://robertodelpino.dev/blog/introduccion-a-tdd-(desarrollo-dirigido-por-pruebas)</loc>
     </url>
     <url>
-        <loc>https://robertodelpino.dev/blog/introducci%C3%B3n-a-tdd-2.-tu-primera-kata</loc>
+        <loc>https://robertodelpino.dev/blog/introduccion-a-tdd-2.-tu-primera-kata</loc>
     </url>
     <url>
         <loc>https://robertodelpino.dev/blog/creando-alias-ssh-en-linux</loc>
+    </url>
+     <url>
+        <loc>https://robertodelpino.dev/blog/migracion-de-ajax-a-fetch</loc>
     </url>
 </urlset>
