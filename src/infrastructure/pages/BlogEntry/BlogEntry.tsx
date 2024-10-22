@@ -74,7 +74,7 @@ export const BlogEntry = () => {
           }
 
           return (
-            <p className='dark:text-white my-3 inline-block w-full text-lg'>
+            <p className='dark:text-white my-3 inline-block w-11/12 text-lg'>
               {p.children}
             </p>
           )
@@ -141,6 +141,27 @@ export const BlogEntry = () => {
           <img {...img} className="w-full h-40 md:h-96 object-contain object-center" />
         )
       },
+      table: (table: React.DetailedHTMLProps<React.TableHTMLAttributes<HTMLTableElement>, HTMLTableElement>) => {
+        return (
+          <table className='w-full my-10 dark:text-white border-collapse table-fixed'>
+            {table.children}
+          </table>
+        )
+      },
+      th: (th: React.DetailedHTMLProps<React.ThHTMLAttributes<HTMLTableHeaderCellElement>, HTMLTableHeaderCellElement>) => {
+        return (
+          <th className='border-b dark:border-slate-600 p-4 pl-8 pt-0 pb-3 font-bold dark:text-white text-left'>
+            {th.children}
+          </th>
+        )
+      },
+      td: (td: React.DetailedHTMLProps<React.TdHTMLAttributes<HTMLTableDataCellElement>, HTMLTableDataCellElement>) => {
+        return (
+          <td className='border-b border-slate-100 dark:border-slate-700 p-4 pl-8 dark:text-white/80'>
+            {td.children}
+          </td>
+        )
+      }
     }
 
     const [article, setArticle] = useState("");

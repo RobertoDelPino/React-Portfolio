@@ -19,7 +19,6 @@ Uno de los aspectos más importantes al utilizar `$.ajax` es su dependencia de j
 ### Tamaño y rendimiento
 
 - **Tamaño de la librería**: jQuery es una biblioteca grande que incluye muchas funcionalidades además de las solicitudes AJAX, como manipulación del DOM, animaciones y manejo de eventos. Aunque minificada, jQuery aún añade un tamaño considerable a tu aplicación. Esto puede afectar negativamente el rendimiento, especialmente en dispositivos móviles o en redes lentas. Usar jQuery únicamente para solicitudes AJAX introduce una sobrecarga innecesaria.
-  
 - **Rendimiento**: Cargar toda una biblioteca solo para hacer solicitudes HTTP no es eficiente. Cada recurso adicional que tu aplicación necesita cargar aumenta el tiempo de carga de la página, lo que puede traducirse en una experiencia más lenta para los usuarios.
 
 ### Complejidad innecesaria
@@ -99,6 +98,4 @@ fetch('https://api.example.com/data')
 
 Si bien `$.ajax` sigue siendo funcional y útil en algunos casos, es una tecnología que ha quedado algo obsoleta frente a soluciones más modernas como `fetch`. Migrar a `fetch` te permitirá reducir dependencias, mejorar el rendimiento y aprovechar las últimas características de JavaScript, como `async/await`, para simplificar tu código.
 
-Si estás comenzando un nuevo proyecto o buscando modernizar uno existente, considera migrar a `fetch` para hacer tu código más ligero, rápido y fácil de mantener.
-
-¡Dale una oportunidad a `fetch` y disfruta de sus ventajas!
+Si estás comenzando un nuevo proyecto o buscando modernizar uno existente, te recomiendo migrar a `fetch` para hacer tu código más ligero, rápido y fácil de mantener.
