@@ -9,7 +9,7 @@ export const BlogEntryCard = (props: { blogEntry: BlogEntryData }) => {
       <img className="w-[50px] h-[50px] group-hover:scale-[1.2] transition duration-500 opacity-80" src={"/TechIcons/" + props.blogEntry.topic + ".svg"} alt="" />
       <div className="ml-5 text-left">
         <p className="dark:text-white text-lg">{props.blogEntry.title}</p>
-        <p className="dark:text-white text-sm">{props.blogEntry.date}</p>
+        <time className="dark:text-white text-sm">{props.blogEntry.date}</time>
       </div>
     </div>
   );
