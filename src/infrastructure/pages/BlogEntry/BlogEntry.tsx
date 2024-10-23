@@ -143,21 +143,21 @@ export const BlogEntry = () => {
       },
       table: (table: React.DetailedHTMLProps<React.TableHTMLAttributes<HTMLTableElement>, HTMLTableElement>) => {
         return (
-          <table className='w-full my-10 dark:text-white border-collapse table-fixed'>
+          <table className='w-full my-10 dark:text-white border-collapse table-fixed overflow-hidden'>
             {table.children}
           </table>
         )
       },
       th: (th: React.DetailedHTMLProps<React.ThHTMLAttributes<HTMLTableHeaderCellElement>, HTMLTableHeaderCellElement>) => {
         return (
-          <th className='border-b dark:border-slate-600 p-4 pl-8 pt-0 pb-3 font-bold dark:text-white text-left'>
+          <th className='border-b dark:border-slate-600 p-4 pt-0 pb-3 font-bold dark:text-white text-left'>
             {th.children}
           </th>
         )
       },
       td: (td: React.DetailedHTMLProps<React.TdHTMLAttributes<HTMLTableDataCellElement>, HTMLTableDataCellElement>) => {
         return (
-          <td className='border-b border-slate-100 dark:border-slate-700 p-4 pl-8 dark:text-white/80'>
+          <td className='border-b border-slate-100 dark:border-slate-700 p-4 dark:text-white/80'>
             {td.children}
           </td>
         )
