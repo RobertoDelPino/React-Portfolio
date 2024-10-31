@@ -1,11 +1,3 @@
-{
-  "title":"Introducción a TDD 2. Tu primera Kata", 
-  "date":"18-01-2024",
-  "description":"",
-  "topic":"tdd",
-  "toc":true
-}
-
 Hace unos días publicaba un artículo en donde explicaba, de forma introductoria, [TDD](/blog/introducción-a-tdd-(desarrollo-dirigido-por-pruebas)). En este artículo me gustaría realizar una kata bastante sencilla con TDD en donde vaya explicando paso por paso lo que suelo tener en cuenta a la hora de desarrollar estas katas. **La kata que vamos a realizar se llama "Fizz Buzz Kata"**. 
 
 ## Repaso de los fundamentos de TDD

@@ -1,12 +1,3 @@
-{
-  "title":"Optimización de queries en SQL para mejorar el rendimiento de la base de datos", 
-  "date":"14-10-2023",
-  "description":"",
-  "topic":"sql",
-  "toc":true
-}
-
-
 Durante vuestra carrera profesional es posible que os hayais encontrado con tablas en SQL con miles de datos y decenas de columnas. Si no es así, es posible que algún dia os ocurra. Ahora, imaginense que tienen que hacer una query de esa tabla con miles de datos. ¿Cuánto tiempo creeis que tardará? Os hago un pequeño spoiler. Mucho, tardará mucho.
 
 Sabiendo que por cada 100ms que tarde una consulta en dar respuesta son usuarios que vamos a perder, es comprensible pensar en cómo podemos optimizar la query para que sea mucho más eficiente. Es por ello que hoy vengo a darles unos tips sobre optimización de queries.

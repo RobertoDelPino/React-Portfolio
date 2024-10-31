@@ -33,9 +33,9 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({ newRoute, children,
   };
 
   return (
-    <button id={id} className={className} onClick={viewNavigate}>
+    <a id={id} className={className + " cursor-pointer"} onClick={viewNavigate}>
       {children}
-    </button>
+    </a>
   );
 };
 

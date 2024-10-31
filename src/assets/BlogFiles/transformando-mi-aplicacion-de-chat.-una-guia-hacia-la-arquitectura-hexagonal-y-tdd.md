@@ -1,11 +1,3 @@
-{
-  "title":"Transformando mi aplicación de chat: Una guía hacia la Arquitectura Hexagonal y TDD", 
-  "date":"05-05-2024",
-  "description":"",
-  "topic":"Arquitectura Hexagonal",
-  "toc":true
-}
-
 Hace un par de meses di por finalizada la primera parte del desarrollo de una aplicación de chat. Suponía haber aprendido a **manejar eventos**, que era la finalidad del pet project. No obstante, habían cosas que no me gustaban, como el hecho de que no estuviera hecho con **Arquitectura Hexagonal y TDD**. Uno de los planes a futuro de la aplicación era cambiar el backend para que sea testable y mantenible. 
 
 En este artículo os presento la recreación del API, realizado con Arquitectura Hexagonal y TDD.

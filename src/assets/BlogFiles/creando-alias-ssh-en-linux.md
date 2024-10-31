@@ -1,10 +1,3 @@
-{
-  "title":"Creando alias SSH en Linux", 
-  "date":"21-10-2024",
-  "description":"Aprende a crear alias SSH para conexiones rápidas a sistemas remotos en Linux",
-  "topic":"terminal",
-  "toc":true
-}
 # Cómo crear un alias para conexiones SSH en Linux
 
 Si sueles conectarte a varios sistemas remotos mediante SSH, este truco te ahorrará tiempo. Puedes crear alias SSH para los sistemas que accedes con frecuencia. De esta manera, no tendrás que recordar todos los diferentes nombres de usuario, nombres de host, números de puerto SSH y direcciones IP. Además, evitarás la necesidad de escribir repetidamente la misma información cada vez que te conectes a un servidor Linux.

@@ -1,11 +1,3 @@
-{
-  "title":"Migración de Ajax a Fetch: Despídete de la Dependencia de jQuery para Mejorar tu Código", 
-  "date":"22-10-2024",
-  "description":"Descubre cómo migrar de Ajax a Fetch en tus proyectos web y despídete de la dependencia de jQuery. Aprende cómo fetch puede simplificar tu código, mejorar el rendimiento y ofrecerte una solución nativa y moderna para hacer solicitudes HTTP.",
-  "topic":"javascript",
-  "toc":true
-}
-
 # Migración de Ajax a Fetch: ¿Por qué deberías deshacerte de la dependencia de jQuery?
 
 Cuando desarrollamos aplicaciones web, la interacción con el servidor es una parte crucial. Tradicionalmente, `$.ajax` de jQuery ha sido una de las herramientas más populares para realizar solicitudes HTTP asíncronas. Sin embargo, con la introducción de la API nativa `fetch`, los desarrolladores ahora tienen acceso a una forma más moderna, eficiente y ligera para manejar las solicitudes HTTP en sus aplicaciones.

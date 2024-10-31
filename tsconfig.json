@@ -22,7 +22,7 @@
     /* Path Aliases */
     "baseUrl": "src",
     "paths": {
-      "@assets/*": ["assets/*"],
+      "@assets/*": ["./src/assets/*"],
       "@components/*": ["infrastructure/components/*"],
       "@domain/*": ["domain/*"],
       "@pages/*": ["infrastructure/pages/*"]

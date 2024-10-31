@@ -1,12 +1,3 @@
-{
-  "title":"Introducción al TDD (Desarrollo Dirigido por Pruebas)", 
-  "date":"15-01-2024",
-  "description":"",
-  "topic":"tdd",
-  "toc":true
-}
-
-
 # ¿Qué es TDD?
 
 TDD son las siglas de Test Driven Development y si lo traducimos, sería "Desarrollo Dirigido por Pruebas". Consiste en escribir primero el test, después el código que ponga en verde el test y por último, refactorizar el código para hacerlo más sencillo y comprensible. Además, es una práctica de XP (extreme programming), que es una metodológia de desarrollo que abarca desde la comunicación dentro del equipo hasta técnicas de programación.

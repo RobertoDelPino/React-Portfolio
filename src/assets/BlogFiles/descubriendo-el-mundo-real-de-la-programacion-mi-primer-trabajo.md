@@ -1,11 +1,3 @@
-{
-  "title":"Descubriendo el Mundo Real de la Programación: Mi Primer Trabajo", 
-  "date":"02-10-2023",
-  "description":"Te muestro qué he aprendido en los tres prmeros meses de trabajo",
-  "topic":"javascript",
-  "toc":true
-}
-
 Llevo desde junio, al acabar los estudios, trabajando en una empresa como programador web. Hoy os quiero contar todo lo que he aprendido hasta ahora, desde las prácticas de empresa hasta lo que he aprendido en el trabajo.
 
 ## Antes de empezar las prácticas de empresa
