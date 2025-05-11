@@ -34,7 +34,7 @@ export const About = () => {
                             </p>
                         </article>
                         <article role="region" aria-label="Education region" className="bg-slate-200 dark:bg-slate-700 p-4 rounded">
-                            <h2 className="text-2xl font-bold tracking-wide dark:text-title-dark mb-4">Educación</h2>
+                            <h2 className="text-2xl font-bold tracking-wide dark:text-title-dark mb-4">Formación</h2>
                             <section className=" ">
                                 {educationExperiencies.map((education: EducationExperience, index: number) => <EducationCard key={index} education={education}/>)}
                             </section>

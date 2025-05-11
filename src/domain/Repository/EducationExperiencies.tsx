@@ -2,6 +2,12 @@ import { EducationExperience } from "@domain/Interfaces/EducationExperience";
 
 const EducationExperiencies : EducationExperience[] = [
     {
+        name: "Programa Profesional en Inteligencia Artificial y Data Science",
+        time: "Octubre 2024 - Junio 2025",
+        institute: "UNIR (Universidad Internacional de la Rioja)",
+        instituteUrl: "https://www.unir.net/",
+    },
+    {
         name: "Curso de Redis",
         time: "Junio 2024 - Agosto 2024",
         institute: "Udemy",
